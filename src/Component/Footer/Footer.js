@@ -1,16 +1,14 @@
 import React from "react";
 import './Footer.css'
+import LinkList from "./LinkList";
+import LittleFooter from "./LittleFooter"
 
 const Footer = () =>{
 
     return(<footer>
-        <ul>
-            <li>Test1</li>
-            <li>Test2</li>
-            <li>Test3</li>
-            <li>Test4</li>
-        </ul>
-    </footer>
+        <LinkList></LinkList>
+        <LittleFooter></LittleFooter>
+        </footer>
     )
 } 
 
