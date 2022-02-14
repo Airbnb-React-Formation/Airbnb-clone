@@ -1,0 +1,7 @@
+.panel {
+    border-radius: 32px;
+    background-color: white;
+    position: absolute;
+    margin-top: 12px;
+    overflow: hidden;
+}

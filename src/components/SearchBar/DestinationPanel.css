@@ -1,0 +1,28 @@
+.destination-panel{
+    left: 0;
+    width: 500px;
+}
+
+.suggestions-list{
+ padding: 10px 0 10px 0;
+}
+.suggestion{
+    padding: 8px 16px 8px 32px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.suggestion:hover{
+    background-color: rgb(247,247,247);
+}
+.localisation-icon-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    border: 1px solid rgba(176,176,176,0.2);
+    background-color: rgb(241,241,241);
+    height: 48px;
+    width: 48px;
+    margin-right: 16px;
+}
