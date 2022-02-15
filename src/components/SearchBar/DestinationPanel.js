@@ -1,4 +1,3 @@
-import "./Panel.css"
 import "./DestinationPanel.css"
 import {useEffect, useState} from "react";
 
@@ -15,9 +14,8 @@ const DestinationPanel = ({search}) => {
             setResult(filteredPlaces.slice(0, 5))
         })
     }, [search])
-    console.log(result)
     return (
-        <div className="panel destination-panel">
+        result.length > 0 &&
             <div className="suggestions-list">
                 {result.map(({properties: {name, type, city, country, county}}) => (
                     <div className="suggestion">
@@ -40,7 +38,6 @@ const DestinationPanel = ({search}) => {
                     </div>
                 ))}
             </div>
-        </div>
     )
 }
 

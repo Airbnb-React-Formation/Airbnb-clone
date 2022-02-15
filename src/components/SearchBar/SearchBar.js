@@ -1,84 +1,106 @@
 import "./SearchBar.css"
 import DestinationPanel from "./DestinationPanel";
-import {useState} from "react";
+import {useEffect, useRef, useState} from "react";
+import GuestsPanel from "./GuestsPanel";
+import {FieldPanel, SearchBarField} from "./SearchBarField";
+import SearchButton from "./SearchButton";
 
 const SearchBar = () => {
-    const [showDestination, setShowDestination] = useState(false)
     const [search, setSearch] = useState('')
+    const [selectedField, setSelectedField] = useState('')
+    const searchBarRef = useRef()
+    const destinationInputRef = useRef()
+    useSearchBarClickOut(searchBarRef)
+
+    function useSearchBarClickOut(ref) {
+        useEffect(() => {
+            function handleClickOutside(event) {
+                if (ref.current && !ref.current.contains(event.target)) {
+                    setSelectedField(null);
+                }
+            }
+            document.addEventListener("mousedown", handleClickOutside);
+            return () => {
+                document.removeEventListener("mousedown", handleClickOutside);
+            };
+        }, [ref]);
+    }
+
+    const handleResetField = () => {
+        setSearch("")
+        destinationInputRef.current.focus()
+    }
+    const handleSelect = (fieldName) => {
+        setSelectedField(fieldName)
+    }
+
     return (
-        <div className="search-bar">
-            <div className="destination-container">
-                <label htmlFor="input-localisation" className="button destination">
-                    <div>
-                        <div>Destination</div>
-                        <input
-                            id="input-localisation"
-                            type="text"
-                            placeholder="Où allez-vous ?"
-                            value={search}
-                            autoComplete="off"
-                            onChange={(e) => setSearch(e.target.value)}
-                            onFocus={() => {
-                                document.querySelector('.btn-search-text').style.display = "block"
-                                setShowDestination(true)
-                            }}
-                            onBlur={() => {
-                                document.querySelector('.btn-search-text').style.display = "none"
-                                setShowDestination(false)
-                            }}/>
-                    </div>
-                </label>
-                {showDestination && <DestinationPanel search={search}/>}
-            </div>
-            <div className="button dates">
-                <div>
-                    <div>Arrivée</div>
-                    <div className="placeholder">Quand ?</div>
+            <div className={selectedField ? "search-bar search-bar-darker" : "search-bar"} ref={searchBarRef}>
+                <div className="destination-container">
+                    <SearchBarField
+                        title="Destination"
+                        placeholder="Où allez-vous ?"
+                        selectedField={selectedField}
+                        fieldName="destination"
+                        onSelect={handleSelect}
+                        inputValue={search}
+                        onInputValue={setSearch}
+                    >
+                        <FieldPanel>
+                            <DestinationPanel search={search}/>
+                        </FieldPanel>
+                    </SearchBarField>
                 </div>
-            </div>
-            <div className="button dates">
-                <div>
-                    <div>Départ</div>
-                    <div className="placeholder">Quand ?</div>
-                </div>
-            </div>
-            <div className="guests-container">
-                <div className="button guests">
-                    <div>
-                        <div>Voyageurs</div>
-                        <div className="placeholder">Qui ?</div>
-                    </div>
-                </div>
-                <div className="btn-search">
-                    <div style={{overflow: "hidden", boxSizing: "border-box", padding: "16px", display: "flex"}}>
-                        <div>
-                            <svg viewBox="0 0 32 32"
-                                 xmlns="http://www.w3.org/2000/svg"
-                                 aria-hidden="true"
-                                 role="presentation"
-                                 focusable="false"
-                                 style={{
-                                     display: "block",
-                                     fill: "none",
-                                     height: "16px",
-                                     width: "16px",
-                                     stroke: "white",
-                                     strokeWidth: "4",
-                                     overflow: "visible"
-                                 }}>
-                                <g fill="none">
-                                    <path
-                                        d="m13 24c6.0751322 0 11-4.9248678 11-11 0-6.07513225-4.9248678-11-11-11-6.07513225 0-11 4.92486775-11 11 0 6.0751322 4.92486775 11 11 11zm8-3 9 9"></path>
-                                </g>
-                            </svg>
-                        </div>
-                        <div className="btn-search-text">Rechercher</div>
-                    </div>
-                </div>
+                <div className="date-container">
+                    <SearchBarField
+                        title="Arrivée"
+                        placeholder="Quand ?"
+                        selectedField={selectedField}
+                        fieldName="start-date"
+                        onSelect={handleSelect}
+                        disabledInput={true}
+                        // inputValue={search}
+                        // onInputValue={setSearch}
+                    >
+                        <FieldPanel>
 
-
+                        </FieldPanel>
+                    </SearchBarField>
+                </div>
+                <div className="date-container">
+                    <SearchBarField
+                        title="Départ"
+                        placeholder="Quand ?"
+                        selectedField={selectedField}
+                        fieldName="end-date"
+                        onSelect={handleSelect}
+                        disabledInput={true}
+                        // inputValue={search}
+                        // onInputValue={setSearch}
+                    >
+                        <FieldPanel>
+                            <GuestsPanel/>
+                        </FieldPanel>
+                    </SearchBarField>
+                </div>
+                <div className="guests-container">
+                    <SearchBarField
+                        title="Voyageurs"
+                        placeholder="Qui ?"
+                        selectedField={selectedField}
+                        fieldName="guest"
+                        onSelect={handleSelect}
+                        disabledInput={true}
+                        // inputValue={search}
+                        // onInputValue={setSearch}
+                    >
+                        <SearchButton isExtended={selectedField}/>
+                        <FieldPanel align="right">
+                            <GuestsPanel/>
+                        </FieldPanel>
+                    </SearchBarField>
+                </div>
             </div>
-        </div>
     )
 }
 

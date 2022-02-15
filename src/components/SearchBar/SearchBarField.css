@@ -1,0 +1,64 @@
+.search-bar-panel {
+    border-radius: 32px;
+    background-color: white;
+    position: absolute;
+    margin-top: 12px;
+    overflow: hidden;
+    top: 100%;
+}
+
+.align-panel-right{
+    right: 0;
+}
+
+input {
+    border: none;
+    background:none;
+    outline: none;
+}
+.placeholder{
+    font-weight: normal;
+    color: grey;
+}
+.button{
+    height: 100%;
+    font-size: 13px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 14px 32px 14px 32px;
+    box-sizing: border-box;
+    flex: 1 0 0;
+}
+
+.button > div {
+    z-index: 5;
+    position: absolute;
+}
+
+
+.button:hover:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    border-radius: 32px;
+    background-color: rgb(235,235,235);
+}
+
+.selected-field:before{
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: white;
+    border-radius: 32px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+}
+
+.selected-field:hover:before{
+    background-color: white;
+}
