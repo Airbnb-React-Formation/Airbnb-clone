@@ -18,7 +18,7 @@ useEffect(()=>{
     .catch(error =>{
         console.log(error)
     })
-},[data] )
+},[tableau] )
 
 console.log(`les datas sont ${data}`)
     return(
