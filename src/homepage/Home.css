@@ -1,0 +1,28 @@
+.h__header, .h__main, .h__footer {
+  --home-color-black: #000000;
+  --home-color-white: #ffffff;
+  --home-color-verylightgray: #f7f7f7;
+  --home-color-verydarkgray: #222222;
+  --home-color-lightgray: #ebebeb;
+  --home-padding-h: 1.6rem;
+  padding: 0 var(--home-padding-h);
+}
+.h__header {
+  background-color: var(--home-color-black);
+}
+.h__footer {
+  background-color: var(--home-color-verylightgray);
+}
+
+/* Media queries */
+@media (min-width: 744px) {
+  .h__header, .h__main, .h__footer {
+    --home-padding-h: 2.6rem;
+  }
+}
+
+@media (min-width: 1128px) {
+  .h__header, .h__main, .h__footer {
+    --home-padding-h: 5rem;
+  }
+}
