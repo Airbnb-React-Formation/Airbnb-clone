@@ -8,11 +8,15 @@ import { asistance, communauté, acceuilEtVoyageur,aPropos } from "./datalinklis
 const Footer = () =>{
 
     return(<footer>
-        <LinkList title = "Asistance" tableau={asistance}/>
-        <LinkList title = "Communauté" tableau={communauté}/>
-        <LinkList title = "Accueil et voyaguer" tableau={acceuilEtVoyageur}/>
-        <LinkList title = "A Propos" tableau={aPropos}/>
+        <section className="resection">
+        <LinkList  title = "Asistance" tableau={asistance}/>
+        <LinkList  title = "Communauté" tableau={communauté}/>
+        <LinkList  title = "Accueil et voyaguer" tableau={acceuilEtVoyageur}/>
+        <LinkList  title = "A Propos" tableau={aPropos}/>
+        </section>
+        <section>
         <LittleFooter></LittleFooter>
+        </section>
         </footer>
     )
 } 

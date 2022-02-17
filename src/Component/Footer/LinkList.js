@@ -18,15 +18,15 @@ useEffect(()=>{
     .catch(error =>{
         console.log(error)
     })
-},[tableau] )
+}, [data, tableau] )
 
 console.log(`les datas sont ${data}`)
     return(
-    <section>
+    <section className="containerLink">
         <h3>{title}</h3> {/*pensez a renomer*/}
         <ul>
             {data.map((data)=>
-            <li key={data.id}><Link to={data.to}>{data.label}</Link></li>
+            <li key={data.id}><Link to={data.to} className="link">{data.label}</Link></li>
             )}
             
         </ul>

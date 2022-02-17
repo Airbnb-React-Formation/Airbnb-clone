@@ -1,3 +1,24 @@
+.containerLink{
+    display: inline-block;
+    box-sizing: border-box;
+    
+    
+}
+
 li{
+    display: flex;
     list-style-type: none;
+    justify-content: left;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+@media screen and (max-width: 1000px){
+    .containerLink{
+        display: inline;
+        max-width: 1000px;
+    }
 }
