@@ -1,8 +1,6 @@
 .containerLink{
     display: inline-block;
     box-sizing: border-box;
-    
-    
 }
 
 li{
@@ -16,9 +14,3 @@ li{
     color: black;
 }
 
-@media screen and (max-width: 1000px){
-    .containerLink{
-        display: inline;
-        max-width: 1000px;
-    }
-}
