@@ -7,7 +7,7 @@ import { asistance, communauté, acceuilEtVoyageur,aPropos } from "./datalinklis
 
 const Footer = () =>{
 
-    return(<footer>
+    return(<footer className='thefooter'>
         <section className="resection">
         <LinkList  title = "Asistance" tableau={asistance}/>
         <LinkList  title = "Communauté" tableau={communauté}/>
