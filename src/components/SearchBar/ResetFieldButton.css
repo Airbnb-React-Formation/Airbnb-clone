@@ -1,0 +1,15 @@
+.btn-reset{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    background-color: rgb(235,235,235);
+    color: rgb(34,34,34);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.btn-reset:hover{
+    background-color: rgb(200,200,200);
+}

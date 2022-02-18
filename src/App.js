@@ -1,12 +1,18 @@
 import './App.css';
+import SearchBar from "./components/SearchBar/SearchBar";
+import Home from './homepage/Home';
 import Footer from './Component/Footer/Footer';
 
 function App() {
   return (
     <div className="App">
-      <Footer/>
+      <SearchBar/>
+      <Home/>
+     <Footer/>
     </div>
   );
 }
 
 export default App;
+
+

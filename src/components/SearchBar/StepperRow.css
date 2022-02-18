@@ -1,0 +1,57 @@
+.stepper-row{
+    padding: 16px 4px 16px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 330px;
+}
+
+.stepper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 104px;
+}
+
+.stepper-button {
+    background: none;
+    height: 32px;
+    width: 32px;
+    border-color: rgb(176 176 176);
+    color: rgb(176,176,176);
+    border-width: 1px;
+    border-style: solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: lighter;
+    line-height: 32px;
+}
+
+.stepper-button:hover{
+    color: black;
+    border-color: black;
+
+}
+
+.stepper-button:disabled{
+    color : rgb(235,235,235);
+    border-color: rgb(235,235,235);
+    cursor: not-allowed;
+}
+
+.stepper-title{
+    font-weight: bold;
+}
+
+.stepper-subtitle{
+    font-size: 14px;
+    color: rgb(113,113,113);
+}
+
+.stepper-link a:link,a:visited {
+    color: rgb(34,34,34);
+}
