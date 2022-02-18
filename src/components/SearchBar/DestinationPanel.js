@@ -1,8 +1,9 @@
 import "./DestinationPanel.css"
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 
-const DestinationPanel = ({search}) => {
+const DestinationPanel = ({search,onSelect}) => {
     const [result, setResult] = useState([])
+    const destinationNameRef = useRef()
     useEffect(() => {
         const url = "https://photon.komoot.io/api/?q=" + search + "&lang=fr"
         fetch(url).then(res => res.json()).then(data => {
@@ -14,11 +15,12 @@ const DestinationPanel = ({search}) => {
             setResult(filteredPlaces.slice(0, 5))
         })
     }, [search])
+
     return (
         result.length > 0 &&
             <div className="suggestions-list">
                 {result.map(({properties: {name, type, city, country, county}}) => (
-                    <div className="suggestion">
+                    <div className="suggestion" onClick={()=>{onSelect(name)}}>
                         <div className="localisation-icon-container">
                             <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style={{
                                 height: "22px",
