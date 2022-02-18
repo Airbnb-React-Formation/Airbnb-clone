@@ -52,6 +52,6 @@
     color: rgb(113,113,113);
 }
 
-.stepper-link a:link,a:visited {
+.stepper-link a:link,.stepper-link a:visited {
     color: rgb(34,34,34);
 }

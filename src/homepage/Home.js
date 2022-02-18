@@ -3,55 +3,31 @@ import HomeHeaderCard from './HomeHeaderCard';
 import HomeHosting from './HomeHosting';
 import HomeExperiences from './HomeExperiences';
 import HomeGift from './HomeGift';
+import SearchBar from '../components/SearchBar/SearchBar';
+import Footer from '../Component/Footer/Footer';
 
 const Home = () => {
   return (
     <>
       <header className='h__header'>
-        <TmpHeaderMenu />
+        <SearchBar />
         <HomeHeaderCard />
       </header>
       <main className='h__main'>
         <HomeExperiences />
         <HomeGift />
         <HomeHosting />
-        <TmpInspiration />
+        <div style={{
+          width: '100%',
+          minHeight: '5rem',
+          textAlign: 'center'
+        }}>composant temporaire inspiration</div>
       </main>
       <footer className='h__footer'>
-        <TmpFooter/>
+        <Footer/>
       </footer>
     </>
   );
 }
 
 export default Home;
-
-// Composants temporaires, à remplacer par les vrais
-const TmpHeaderMenu = () => (
-  <div style={{
-    position: 'fixed',
-    width: '70vw',
-    minHeight: '10vmin',
-    backgroundColor: 'white',
-    color: 'black',
-    borderRadius: '50px',
-    margin: '3vmin calc((100% - 70vw)/4)',
-    display: 'grid',
-    alignItems: 'center',
-    justifyItems: 'center'
-  }}>header menu</div>
-);
-const TmpFooter = () => (
-  <div style={{
-    width: '100%',
-    minHeight: '5rem',
-    textAlign: 'center'
-  }}>footer</div>
-);
-const TmpInspiration = () => (
-  <div style={{
-    width: '100%',
-    minHeight: '5rem',
-    textAlign: 'center'
-  }}>inspiration</div>
-);

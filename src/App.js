@@ -1,15 +1,11 @@
-import './App.css';
-import SearchBar from "./components/SearchBar/SearchBar";
+import { BrowserRouter } from "react-router-dom";
 import Home from './homepage/Home';
-import Footer from './Component/Footer/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <SearchBar/>
+    <BrowserRouter>
       <Home/>
-     <Footer/>
-    </div>
+    </BrowserRouter>
   );
 }
 

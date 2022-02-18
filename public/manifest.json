@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Projet Airbnb clone",
+  "name": "Airbnb clone - Projet formation ReactJS",
   "icons": [
     {
       "src": "favicon.ico",
