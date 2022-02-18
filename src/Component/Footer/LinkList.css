@@ -3,7 +3,7 @@
     box-sizing: border-box;
 }
 
-.thefooter li{
+.containerLink li{
     display: flex;
     list-style-type: none;
     justify-content: left;

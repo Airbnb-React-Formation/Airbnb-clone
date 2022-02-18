@@ -5,7 +5,7 @@ import SocialComponents from "./SocialComponent";
 
 const LittleFooter = () =>{
 
-    return(<section>
+    return(<section className='thelittlefooter'>
         <Cgu/>
         <SocialComponents/>
     </section>
