@@ -1,0 +1,15 @@
+.cguUl{
+ display:flex;
+ /* float:left; */
+
+}
+
+.cguLi{
+    margin-right: 3px;
+    border-right: 2px solid gray;
+}
+
+.cguLi a{
+    text-decoration: none;
+    color: black;
+}
