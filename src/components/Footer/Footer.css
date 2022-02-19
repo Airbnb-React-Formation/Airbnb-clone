@@ -1,19 +1,15 @@
-.thefooter footer {
+.thefooter {
     margin: 0;
     padding: 0;
-    /* position: absolute;
-    bottom:0; */
-    /* width: 100%; */
-    /* background-color: lightgrey; */
-    display: flex;
-    flex-direction: column;
-    
+    box-sizing: border-box;
+
+
 }
 
 .resection{
     display: flex;
     justify-content: space-around;
-    
+    box-sizing: border-box;
 }
 
 

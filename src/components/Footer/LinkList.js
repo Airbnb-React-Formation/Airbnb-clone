@@ -26,7 +26,7 @@ console.log(`les datas sont ${data}`)
         <h3>{title}</h3> {/*pensez a renomer*/}
         <ul>
             {data.map((data)=>
-            <li key={data.id}><Link to={data.to} className="link">{data.label}</Link></li>
+            <li key={data.id} ><Link to={data.to} className="link">{data.label}</Link></li>
             )}
             
         </ul>
