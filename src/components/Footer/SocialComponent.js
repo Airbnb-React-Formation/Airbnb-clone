@@ -1,13 +1,14 @@
 import React from "react";
 import './SocialComponent.css'
+import {SiInstagram, SiFacebook, SiTwitter } from 'react-icons/si'
 
 const SocialComponents = () =>{
 
-    return(<div>
-        <img src="" alt="où est tu?"></img>
-        <img src="" alt="où est tu?"></img>
-        <img src="" alt="où est tu?"></img>
-    </div>)
+    return(<article className="thefooterlogo">
+        <SiFacebook />
+        <SiInstagram/>
+        <SiTwitter/> 
+    </article>)
 } 
 
 export default SocialComponents;

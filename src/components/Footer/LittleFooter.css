@@ -1,7 +1,17 @@
 
+.thelittlefooter{
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.thelittlefooter ul{
+  margin-left: 0%;
+  padding-left: 0%;
+}
 .thelittlefooter li{
     text-decoration: none;
-    display: flex; /* propriété du <li> de LinkList.css */
+    /*display: flex; propriété du <li> de LinkList.css */
     list-style-type: none; /* propriété du <li> de LinkList.css */
-    justify-content: left; /* propriété du <li> de LinkList.css */
+     /*justify-content: left;  propriété du <li> de LinkList.css */
 }
