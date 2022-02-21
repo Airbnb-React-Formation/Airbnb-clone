@@ -1,7 +1,7 @@
 import "./SearchButton.css"
-const SearchButton = ({isExtended}) => {
+const SearchButton = ({isExtended,onCLick}) => {
     return (
-        <div className="btn-search">
+        <div className="btn-search" onClick={onCLick} >
             <div style={{overflow: "hidden", boxSizing: "border-box", padding: "16px", display: "flex"}}>
                 <div>
                     <svg viewBox="0 0 32 32"

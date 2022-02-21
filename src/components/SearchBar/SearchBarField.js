@@ -2,23 +2,35 @@ import "./SearchBarField.css"
 import ResetFieldButton from "./ResetFieldButton";
 import {Children, cloneElement, useRef} from "react";
 
-const SearchBarField = ({title, placeholder, inputValue, onInputValue, selectedField, fieldName, onSelect,children,disabledInput}) => {
+const SearchBarField = ({
+                            title,
+                            placeholder,
+                            inputValue,
+                            onInputValue,
+                            selectedField,
+                            fieldName,
+                            onSelect,
+                            children,
+                            disabledInput,
+                            onReset
+                        }) => {
     const isSelected = selectedField === fieldName
     const inputRef = useRef()
     return (
         <>
             <div
                 className={isSelected ? "button selected-field" : "button"}
-                onClick={(e) => {
+                onClick={() => {
                     inputRef.current?.focus()
                     onSelect(fieldName)
                 }}
+                style={{overflow: "hidden",width:"100%"}}
             >
                 <div>
                     <div>{title}</div>
                     {
                         disabledInput ?
-                            <div className="placeholder">{placeholder}</div>
+                            <div className="placeholder">{inputValue ? inputValue : placeholder}</div>
                             :
                             <input disabled={disabledInput}
                                    ref={inputRef}
@@ -28,24 +40,32 @@ const SearchBarField = ({title, placeholder, inputValue, onInputValue, selectedF
                             />
                     }
                 </div>
+
             </div>
             {isSelected && inputValue
                 &&
-                <div className="btn-reset-container">
-                    <ResetFieldButton onClick={() => onInputValue('')}/>
+                <div style={{position: "relative", flex: "0 0 0%"}}>
+                    <div className="btn-reset-container">
+                        <ResetFieldButton onClick={onReset}/>
+                    </div>
                 </div>
             }
-            {Children.map(children,child => cloneElement(child,{isSelected:isSelected}))}
+
+            {Children.map(children, child => cloneElement(child, {isSelected: isSelected,fieldName:fieldName}))}
         </>
     )
 }
 
-const FieldPanel = ({children,align, isSelected}) => {
+const FieldPanel = ({children, align, isSelected,fieldName}) => {
     if (!isSelected) return null
     return (
         <>
             <div
-                className={align === "right" ? "search-bar-panel align-panel-right" : "search-bar-panel"}
+                className={
+                    (align === "right" ? "search-bar-panel align-panel-right" : "search-bar-panel")
+                    + (fieldName === 'startDate' ? " search-bar-panel-start-date" : "")
+                    + (fieldName === 'endDate' ? " search-bar-panel-end-date" : "")
+                }
             >
                 {children}
             </div>
