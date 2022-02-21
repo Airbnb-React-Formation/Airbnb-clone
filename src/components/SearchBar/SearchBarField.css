@@ -5,12 +5,21 @@
     margin-top: 12px;
     overflow: hidden;
     top: 100%;
+    /*left: -212px;*/
 }
 
 .align-panel-right{
     right: 0;
 }
 
+.search-bar-panel-start-date{
+    right: 0;
+    transform: translateX(50%);
+}
+.search-bar-panel-end-date{
+    left: 0;
+    transform: translateX(-50%);
+}
 .button input {
     border: none;
     background:none;
@@ -19,6 +28,10 @@
 .placeholder{
     font-weight: normal;
     color: grey;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 130px;
 }
 .button{
     height: 100%;
@@ -31,7 +44,7 @@
 }
 
 .button > div {
-    z-index: 5;
+    /*z-index: 5;*/
     position: absolute;
 }
 
@@ -56,7 +69,7 @@
     left: 0;
     background-color: white;
     border-radius: 32px;
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 6px 20px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 6px 20px;
 }
 
 .selected-field:hover:before{

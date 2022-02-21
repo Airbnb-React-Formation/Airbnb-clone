@@ -1,0 +1,87 @@
+.calendar-panel{
+    /*width: 850px;*/
+    /*height: 450px;*/
+    padding: 16px 32px 16px 32px;
+    box-sizing: border-box;
+}
+
+.DateInput,.DateRangePickerInput_arrow_svg {
+    display: none;
+}
+
+.DateRangePicker_picker{
+    top:0!important;
+    position:static;
+}
+.CalendarDay__selected_end,.CalendarDay__selected_start{
+    background-color: rgb(34,34,34);
+}
+.CalendarDay__selected{
+    border-radius: 50%;
+    border-width: 0;
+    background-color: rgb(34,34,34)!important;
+}
+.CalendarDay__selected:hover{
+    border-radius: 100%;
+    border-width: 1.5px;
+    background-color: rgb(34,34,34);
+    box-sizing: border-box;
+}
+
+.CalendarDay__default{
+    border: none;
+    position: relative;
+}
+
+.CalendarDay__default{
+    border: none;
+}
+
+
+.CalendarDay:hover{
+    border-width: 1.5px;
+    border-color: #222222;
+    border-radius: 100%;
+    border-style: solid;
+    background: none;
+    z-index: 2;
+}
+
+.CalendarDay__selected_span{
+    background-color: rgb(247,247,247);
+    color: #222222;
+
+}
+
+
+
+
+.CalendarDay__selected_span:hover{
+    background-color: rgb(247,247,247);
+    color: #222222;
+
+}
+
+.CalendarDay__hovered_span{
+    background-color: rgb(247,247,247);
+    color: black;
+}
+
+.CalendarDay__hovered_span:hover{
+    background-color: rgb(34,34,34);
+    color: white;
+    border-style: solid;
+}
+
+
+.CalendarMonth_table{
+    border-collapse: separate;
+}
+
+.CalendarDay__blocked_out_of_range{
+    border: none!important;
+}
+
+.DayPicker{
+    box-shadow: none;
+}
