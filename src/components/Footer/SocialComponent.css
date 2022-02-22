@@ -1,5 +1,12 @@
-/*.thefooterlogo{
-    width: 250px;
+.thefooterlogo{
+    
+}
+
+.thefooterlogo ul {
     display: flex;
-    justify-content: space-around;
-}*/
+    margin-right: 20px;
+}
+
+.thefooterlogo li{
+    list-style-type: none;
+}

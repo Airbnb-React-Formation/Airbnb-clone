@@ -1,8 +1,9 @@
 .containerLink{
-    display: inline;
     box-sizing: border-box; 
 }
 .containerLink ul{
+    display: grid;
+    grid-template-columns: 1fr;
     margin-left: 0px;
     padding-left: 0px;
 }
@@ -15,4 +16,8 @@
     color: black;
 }
 
-
+@media screen and (max-width: 1112px){
+  .containerLink ul{
+      grid-template-columns: repeat(3, 1fr);
+  }
+}

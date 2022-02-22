@@ -13,16 +13,16 @@
 }
 
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1112px){
     .resection{
     max-width: 100%;
+    display: inline-block;
     
     }
 }
 
 @media screen and (max-width: 600px){
     .resection{
-        
         flex-direction: column;
     }
 }
