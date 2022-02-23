@@ -14,3 +14,25 @@
   display: block !important;
   border-radius: 12px !important;
 }
+
+.header-profile-menu-button {
+  svg{
+    height: 20px;
+    width: 20px;
+    margin-left: 12px;
+  }
+  background-color: transparent;
+  padding: 10px 10px 10px 10px;
+  display: inline-flex;
+  flex-direction: row;
+  appearance: none;
+  border: none;
+  cursor: pointer;
+}
+.header-profile-menu-parent-button {
+  background-color: white;
+  border-radius: 40%;
+  padding: 2px;
+  width:  80px;
+  position: relative;
+}

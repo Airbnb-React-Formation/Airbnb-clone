@@ -1,0 +1,52 @@
+$header-padding: 3%;
+.header {
+  display: grid;
+  grid-column: 3;
+  padding-left: $header-padding;
+  padding-right: $header-padding;
+  padding-top: 2em;
+  >.grid-one-one{
+    grid-row: 1;
+    grid-column: 1;
+  }
+  >.grid-one-two{
+    grid-row: 1;
+    grid-column: 2;
+  }
+  >.grid-one-three{
+    grid-row: 1;
+    grid-column: 3;
+  }
+}
+
+
+.tab-underline{
+ display: inline;
+  margin-right: 3%;
+  position: relative;
+}
+.underline-menu-element{
+  color: white;
+  margin-right:2%;
+  &:hover{
+    color:darkgrey ;
+  }
+
+}
+
+.underline-menu-element-selected{
+  color: white;
+  margin-right:2%;
+  &:after{
+    background-color: white;
+    content: "";
+    height: 2px;
+    position: absolute;
+    z-index: 1;
+    width: 20px ;
+    top: 30px;
+    left: 40px;
+    transform: scaleX(1);
+
+  }
+}
