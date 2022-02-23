@@ -1,0 +1,16 @@
+.header-profile-menu{
+  background: rgb(255, 255, 255) none repeat scroll 0% 0% !important;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 16px !important;
+  color: rgb(34, 34, 34) !important;
+  margin-top: 34px !important;
+  padding: 8px 0px !important;
+  position: absolute !important;
+  top: 50% !important;
+  right: 0px !important;
+  max-height: calc(-100px + 100vh) !important;
+  overflow-y: auto !important;
+  z-index: 2 !important;
+  min-width: 240px !important;
+  display: block !important;
+  border-radius: 12px !important;
+}
