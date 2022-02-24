@@ -1,0 +1,135 @@
+[
+	{
+		"id":0,
+		"hostId":0,
+		"placeType" : [0,0],
+		"housingType" : 0,
+		"title":"Studio de rêve aux Sables d'Olonne...",
+		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
+		"pricePerNight": 25,
+		"maxGuest":3,
+		"beds":3,
+		"bedrooms":1,
+		"bathrooms":1
+	},
+	{
+		"id":1,
+		"hostId":0,
+		"placeType" : [0,0],
+		"housingType" : 0,
+		"title":"Studio de rêve aux Sables d'Olonne...",
+		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
+		"pricePerNight": 25,
+		"maxGuest":3,
+		"beds":3,
+		"bedrooms":1,
+		"bathrooms":1
+	},
+	{
+		"id":2,
+		"hostId":0,
+		"placeType" : [0,0],
+		"housingType" : 0,
+		"title":"Studio de rêve aux Sables d'Olonne...",
+		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
+		"pricePerNight": 25,
+		"maxGuest":3,
+		"beds":3,
+		"bedrooms":1,
+		"bathrooms":1
+	},
+	{
+		"id":3,
+		"hostId":0,
+		"placeType" : [0,0],
+		"housingType" : 0,
+		"title":"Studio de rêve aux Sables d'Olonne...",
+		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
+		"pricePerNight": 25,
+		"maxGuest":3,
+		"beds":3,
+		"bedrooms":1,
+		"bathrooms":1
+	},
+	{
+		"id":4,
+		"hostId":0,
+		"placeType" : [0,0],
+		"housingType" : 0,
+		"title":"Studio de rêve aux Sables d'Olonne...",
+		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
+		"pricePerNight": 25,
+		"maxGuest":3,
+		"beds":3,
+		"bedrooms":1,
+		"bathrooms":1
+	},
+	{
+		"id":5,
+		"hostId":0,
+		"placeType" : [0,0],
+		"housingType" : 0,
+		"title":"Studio de rêve aux Sables d'Olonne...",
+		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
+		"pricePerNight": 25,
+		"maxGuest":3,
+		"beds":3,
+		"bedrooms":1,
+		"bathrooms":1
+	},
+	{
+		"id":6,
+		"hostId":0,
+		"placeType" : [0,0],
+		"housingType" : 0,
+		"title":"Studio de rêve aux Sables d'Olonne...",
+		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
+		"pricePerNight": 25,
+		"maxGuest":3,
+		"beds":3,
+		"bedrooms":1,
+		"bathrooms":1
+	},
+	
+	{
+		"id":7,
+		"hostId":0,
+		"placeType" : [0,0],
+		"housingType" : 0,
+		"title":"Studio de rêve aux Sables d'Olonne...",
+		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
+		"pricePerNight": 25,
+		"maxGuest":3,
+		"beds":3,
+		"bedrooms":1,
+		"bathrooms":1
+	},
+	
+	{
+		"id":8,
+		"hostId":0,
+		"placeType" : [0,0],
+		"housingType" : 0,
+		"title":"Studio de rêve aux Sables d'Olonne...",
+		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
+		"pricePerNight": 25,
+		"maxGuest":3,
+		"beds":3,
+		"bedrooms":1,
+		"bathrooms":1
+	},
+	
+	{
+		"id":9,
+		"hostId":0,
+		"placeType" : [0,0],
+		"housingType" : 0,
+		"title":"Studio de rêve aux Sables d'Olonne...",
+		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
+		"pricePerNight": 25,
+		"maxGuest":3,
+		"beds":3,
+		"bedrooms":1,
+		"bathrooms":1
+	}
+]
