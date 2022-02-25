@@ -21,3 +21,9 @@
       grid-template-columns: repeat(3, 1fr);
   }
 }
+
+@media screen and (max-width: 744px){
+    .containerLink ul{
+        grid-template-columns: 1fr;  
+    }
+}
