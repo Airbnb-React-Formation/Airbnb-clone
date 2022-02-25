@@ -2,7 +2,8 @@ import "./ResultListItem.css"
 import {isMany} from "../../helper/helper";
 import {RatingStar} from "../Icon/Icon";
 import ResultListCarousel from "./ResultListCarousel";
-const ResultListItem  = ({item,tripDuration}) => {
+
+const ResultListItem = ({item, tripDuration}) => {
 
     return (
         <div className="result-list-item">
@@ -18,7 +19,7 @@ const ResultListItem  = ({item,tripDuration}) => {
                     </div>
                     <div className="result-list-item__title">{item.title}</div>
                 </div>
-                <div className="result-list-item__separator"/>
+                <div className="result-list-item__details-separator"/>
                 <div className="result-list-item__room">
                     <span>{item.maxGuest + " voyageur" + isMany(item.maxGuest)}</span>
                     <span> · </span>
@@ -26,7 +27,7 @@ const ResultListItem  = ({item,tripDuration}) => {
                     <span> · </span>
                     <span>{item.beds + " lit" + isMany(item.beds)}</span>
                     <span> · </span>
-                    <span>{item.bathrooms + " salle" + isMany(item.bathrooms)+ " de bain"}</span>
+                    <span>{item.bathrooms + " salle" + isMany(item.bathrooms) + " de bain"}</span>
                 </div>
                 <div className="result-list-item__amenities">
                     <span>Parking gratuit · Wifi · Cuisine</span>
@@ -42,7 +43,8 @@ const ResultListItem  = ({item,tripDuration}) => {
                             {item.pricePerNight}€
                             <span className="result-list-item__price-night--regular"> / nuit</span>
                         </div>
-                        <div className="result-list-item__price-total">{tripDuration * item.pricePerNight}€ au total</div>
+                        <div className="result-list-item__price-total">{tripDuration * item.pricePerNight}€ au total
+                        </div>
                     </div>
                 </div>
             </div>

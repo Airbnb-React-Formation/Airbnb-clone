@@ -1,9 +1,10 @@
 import {useLocation} from "react-router-dom";
-import {Fragment, useMemo, useState} from "react";
+import {useMemo, useState} from "react";
 import accommodations from "../../data/accommodations.json"
 import ResultListItem from "./ResultListItem";
 import moment from "moment";
 import hydrateAccommodations from "../../data/hydrate";
+import "./ResultList.css"
 
 const ResultsList = () => {
     const useQuery = () => {
@@ -22,13 +23,16 @@ const ResultsList = () => {
     const [results,setResults] = useState(hydrateAccommodations(accommodations,query.destination))
 
     const tripDuration = moment(query.enddate).diff(moment(query.startdate),'day')
-    console.log(results)
     return (
-        <div>
+        <div className="result-list">
             {results.map((accommodation,i)=>(
-                <Fragment key={i}>
+                <div key={i}>
                     <ResultListItem item={accommodation} tripDuration={tripDuration}/>
-                </Fragment>
+                    {results.length -1 !== i
+                        &&
+                        <div className="result-list__divider"/>
+                            }
+                </div>
             ))}
         </div>
     )

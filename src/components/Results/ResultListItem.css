@@ -1,5 +1,5 @@
 .result-list-item {
-    margin-bottom: 10px;
+    margin: 8px;
     display: flex;
     color: rgb(34, 34, 34);
 }
@@ -11,6 +11,8 @@
     position: relative;
     border-radius: 15px;
     overflow: hidden;
+    border: 1px solid rgb(220,220,220);
+    box-sizing: border-box;
 }
 
 .result-list-item__details {
@@ -32,7 +34,7 @@
     margin-bottom: 4px;
 }
 
-.result-list-item__separator {
+.result-list-item__details-separator {
     margin-top: 11px;
     width: 32px;
     border-top: 1px solid rgb(221, 221, 221);
