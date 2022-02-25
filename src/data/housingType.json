@@ -1,0 +1,15 @@
+[
+	{
+		"id":0,
+		"name":"Logement entier"
+	},
+	{
+		"id":1,
+		"name":"Chambre privée"
+	},
+	{
+		"id":2,
+		"name":"Chambre partagée"
+	}
+	
+]
