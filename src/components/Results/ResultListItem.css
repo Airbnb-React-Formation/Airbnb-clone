@@ -1,0 +1,96 @@
+.result-list-item {
+    margin: 8px;
+    display: flex;
+    color: rgb(34, 34, 34);
+}
+
+.result-list-item__carousel {
+    height: 200px;
+    width: 300px;
+    background-color: grey;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgb(220,220,220);
+    box-sizing: border-box;
+}
+
+.result-list-item__details {
+    margin-left: 16px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.result-list-item__header {
+}
+
+.result-list-item__title {
+    font-size: 20px;
+}
+
+.result-list-item__subtitle {
+    color: rgb(113, 113, 113);
+    margin-bottom: 4px;
+}
+
+.result-list-item__details-separator {
+    margin-top: 11px;
+    width: 32px;
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+.result-list-item__room {
+    margin-top: 9px;
+    color: rgb(113, 113, 113);
+}
+
+.result-list-item__amenities {
+    margin-top: 4px;
+    color: rgb(113, 113, 113);
+}
+
+.result-list-item__footer {
+    flex-grow: 1;
+    align-items: flex-end;
+    display: flex;
+}
+
+.result-list-item__rating {
+    flex: 1 0 auto;
+    display: flex;
+}
+
+.result-list-item__rating-icon{
+    fill: rgb(255,56,92);
+    width: 14px;
+    height: 14px;
+    display: block;
+    margin-right: 4px;
+}
+
+.result-list-item__comments{
+    margin-left: 4px;
+    color: rgb(113,113,113);
+}
+
+.result-list-item__price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.result-list-item__price-night {
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.result-list-item__price-night--regular{
+    font-weight: 400;
+}
+
+.result-list-item__price-total {
+    color: rgb(113, 113, 113);
+    text-decoration-line: underline;
+    cursor: pointer;
+}
