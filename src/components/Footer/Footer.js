@@ -11,7 +11,7 @@ const Footer = () =>{
         <section className="resection">
         <LinkList  title = "Asistance" tableau={asistance}/>
         <LinkList  title = "Communauté" tableau={communauté}/>
-        <LinkList  title = "Accueil et voyaguer" tableau={acceuilEtVoyageur}/>
+        <LinkList  title = "Accueil et voyageur" tableau={acceuilEtVoyageur}/>
         <LinkList  title = "A Propos" tableau={aPropos}/>
         </section>
         <section>
