@@ -1,11 +1,12 @@
 import "./ResultListItem.css"
 import {isMany} from "../../helper/helper";
 import {RatingStar} from "../Icon/Icon";
+import ResultListCarousel from "./ResultListCarousel";
 const ResultListItem  = ({item,tripDuration}) => {
 
     return (
         <div className="result-list-item">
-            <div className="result-list-item__carousel">Carousel</div>
+            <div className="result-list-item__carousel"><ResultListCarousel pictureList={item.pictures}/></div>
             <div className="result-list-item__details">
                 <div className="result-list-item__header">
                     <div className="result-list-item__subtitle">

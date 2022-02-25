@@ -8,10 +8,9 @@
     height: 200px;
     width: 300px;
     background-color: grey;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden;
 }
 
 .result-list-item__details {
