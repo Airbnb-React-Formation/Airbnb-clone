@@ -1,4 +1,10 @@
 
+.thelittlefooter{
+    display: flex;
+    justify-content: space-between;
+}
+
+
 .thelittlefooter li{
     text-decoration: none;
     display: flex; /* propriété du <li> de LinkList.css */

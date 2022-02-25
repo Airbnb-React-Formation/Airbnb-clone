@@ -1,12 +1,13 @@
 import React from "react";
 import './SocialComponent.css'
+import { IconFacebook, IconTwitter, IconInstagram } from "../Icon/Icon";
 
 const SocialComponents = () =>{
 
-    return(<div>
-        <img src="" alt="où est tu?"></img>
-        <img src="" alt="où est tu?"></img>
-        <img src="" alt="où est tu?"></img>
+    return(<div className="socialComponent">
+        <IconFacebook/>
+        <IconInstagram/>
+        <IconTwitter/>
     </div>)
 } 
 
