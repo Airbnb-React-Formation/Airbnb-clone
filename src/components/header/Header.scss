@@ -20,24 +20,22 @@ $header-padding: 3%;
 }
 
 
-.tab-underline{
+.MenuHeader__tab{
  display: inline;
   margin-right: 3%;
   position: relative;
 }
-.underline-menu-element{
+.MenuHeader__tab__element{
   color: white;
   margin-right:2%;
+  background-color: inherit;
+  border: inherit;
+  font-family: inherit;
+  font-size: inherit;
   &:hover{
     color:darkgrey ;
   }
-
-}
-
-.underline-menu-element-selected{
-  color: white;
-  margin-right:2%;
-  &:after{
+  &.selected:after{
     background-color: white;
     content: "";
     height: 2px;
@@ -49,4 +47,6 @@ $header-padding: 3%;
     transform: scaleX(1);
 
   }
+
 }
+  
