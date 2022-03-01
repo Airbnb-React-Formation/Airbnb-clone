@@ -1,5 +1,9 @@
 .result-list{
-    max-width: 840px;
+    width: 840px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    max-height: 100vh;
+    overflow: scroll;
 }
 .result-list__divider{
     margin-top: 24px;

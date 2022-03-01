@@ -6,23 +6,11 @@ import moment from "moment";
 import hydrateAccommodations from "../../data/hydrate";
 import "./ResultList.css"
 
-const ResultsList = () => {
-    const useQuery = () => {
-        const { search } = useLocation();
-        return useMemo(() => new URLSearchParams(search), [search]);
-    }
-    const queryToObject = (entries) => {
-        const result = {}
-        for (const [key,value] of entries){
-            result[key] = value
-        }
-        return result
-    }
-    const query = queryToObject(useQuery().entries())
+const ResultsList = ({destination,tripDates}) => {
 
-    const [results,setResults] = useState(hydrateAccommodations(accommodations,query.destination))
+    const [results,setResults] = useState(hydrateAccommodations(accommodations,destination))
 
-    const tripDuration = moment(query.enddate).diff(moment(query.startdate),'day')
+    const tripDuration = moment(tripDates.endDate).diff(moment(tripDates.startDate),'day')
     return (
         <div className="result-list">
             {results.map((accommodation,i)=>(
