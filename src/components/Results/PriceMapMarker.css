@@ -1,0 +1,38 @@
+.price-map-marker{
+    height: 28px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+    border: 0.5px solid rgb(200,200,200);
+    border-radius: 28px;
+    background-color: white;
+    position: absolute;
+    padding: 0 8px;
+    font-weight: 800;
+    box-shadow: rgba(0, 0, 0, 0.04) 0 0 0 1px, rgba(0, 0, 0, 0.18) 0 2px 4px;
+    transition: transform 150ms ease 0s;
+    top: 50%;
+    right: 50%;
+    font-size:16px
+}
+
+.price-map-marker:hover{
+    transform: scale(1.1);
+    transition: transform 150ms ease 0s;
+}
+
+.custom-marker{
+
+    /*height: 28px;*/
+    /*display: flex;*/
+    /*cursor: pointer;*/
+    /*align-items: center;*/
+    /*border: 0.5px solid rgb(200,200,200);*/
+    /*border-radius: 28px;*/
+    /*background-color: white;*/
+    /*position: absolute;*/
+    /*padding: 0 8px;*/
+    /*font-weight: 800;*/
+    /*box-shadow: rgba(0, 0, 0, 0.04) 0 0 0 1px, rgba(0, 0, 0, 0.18) 0 2px 4px;*/
+    /*transition: transform 150ms ease 0s;*/
+}

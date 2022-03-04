@@ -2,7 +2,9 @@ import ResultsList from "./ResultsList";
 import ResultMap from "./ResultMap";
 import "./Results.css"
 import {useLocation, useNavigate} from "react-router-dom";
-import {useMemo} from "react";
+import {useEffect, useMemo, useState} from "react";
+import hydrateAccommodations from "../../data/hydrate";
+import accommodations from "../../data/accommodations.json";
 
 const Results = () => {
     const navigate = useNavigate()
@@ -17,15 +19,21 @@ const Results = () => {
         }
         return result
     }
-
     const query = queryToObject(useQuery().entries())
     const {coordinates,destination,startdate,enddate} = query
+    const [mapBounds, setMapBounds] = useState({})
+    const [results,setResults] = useState(hydrateAccommodations(accommodations,destination,mapBounds))
+
+    useEffect(()=>{
+        if(Object.keys(mapBounds).length !== 0)
+        setResults(hydrateAccommodations(accommodations,destination,mapBounds))
+    },[mapBounds])
     return (
         <div>
             <button onClick={() => navigate(-1)}>Retour</button>
             <div className="result-page">
-                <ResultsList destination={destination} tripDates={{startDate:startdate,endDate:enddate}}/>
-                <ResultMap coordinates={coordinates}/>
+                <ResultsList tripDates={{startDate:startdate,endDate:enddate}} resultsList={results}/>
+                <ResultMap coordinates={coordinates} handleBounds={setMapBounds} results={results}/>
             </div>
         </div>
     )
