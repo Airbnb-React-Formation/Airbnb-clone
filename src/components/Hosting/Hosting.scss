@@ -3,19 +3,30 @@
   grid-column: 2;
   height: 100vh;
 }
+
+.LeftPart{
+  grid-column: 1;
+  width: 50vw;
+  height: 100vh;
+  background: rgb(126,34,195);
+  background: linear-gradient(0deg, rgba(126,34,195,1) 0%, rgba(253,45,182,1) 100%);   background-repeat : no-repeat;
+
+}
+
 .left-part-with-image-background{
  grid-column: 1;
-  height: 100%;
-  img  {
-    width: 100%;
-    height: 100%;
-  }
+  width: 50vw;
+  height: 100vh;
+  background-image: url("https://a0.muscache.com/im/pictures/f47aefea-4345-4b4d-bfbc-c28acbe9d0ae.jpg?im_w=720");
+  background-repeat : no-repeat;
+  background-size: cover;
 }
 .r-part-with-image-background{
   background-color: black;
+  width: 50vw;
   grid-column: 2;
   color: white;
-  height: 100%;
+  height: 100vh;
   h1{
     margin-top :20vh;
     color: white;
@@ -25,12 +36,12 @@
   h3{
     text-align: center;
   }
-  a{
-    text-decoration: none;
-    color: white;
-    display: inline-block;
-    padding: 2px 16px 2px 16px;
-    background-color: gray;
-    text-align: right;
-  }
+}
+
+.RigthPart {
+  background-color: white;
+  width: 50vw;
+  grid-column: 2;
+  color: white;
+  height: 100vh;
 }
