@@ -1,7 +1,7 @@
 $header-padding: 3%;
 .header {
   display: grid;
-  grid-column: 3;
+  grid-column: 4;
   padding-left: $header-padding;
   padding-right: $header-padding;
   padding-top: 2em;
@@ -16,6 +16,13 @@ $header-padding: 3%;
   >.grid-one-three{
     grid-row: 1;
     grid-column: 3;
+  }
+  >.grid-one-four{
+    grid-row: 1;
+    grid-column: 4;
+    display: flex;
+    flex-direction: row;
+    height: 70%;
   }
 }
 
@@ -45,8 +52,8 @@ $header-padding: 3%;
     top: 30px;
     left: 40px;
     transform: scaleX(1);
-
   }
 
 }
+
   

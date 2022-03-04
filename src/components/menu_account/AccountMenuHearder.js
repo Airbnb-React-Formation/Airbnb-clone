@@ -52,7 +52,6 @@ function AccountMenuHeaderOnClick(){
  //   const [connected, setConnected ]= React.useState();
     const connected = true;
     const payload = (connected) ? payload_connect : payload_disconnect;
-    console.log(payload)
     const listMenu = payload.map(element =>{ return  <AccountMenuHeaderItem text={element.text} bold={element.bold} notification={element.notification}  />})
     return  <div className="header-profile-menu">
         {listMenu}

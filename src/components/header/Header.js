@@ -16,10 +16,10 @@ function  Header(){
             <div className="grid-one-two">
                 <MenuHeader/>
             </div>
-            <div>
-                <Button></Button>
+            <div  className="grid-one-three">
             </div>
-            <div className="grid-one-three">
+            <div className="grid-one-four">
+                <Button link={"/hosting"} text={"Host"}/>
                 <AccountMenuHearder/>
             </div>
 

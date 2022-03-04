@@ -3,6 +3,7 @@ import Detail from "./components/Detail/Detail";
 import Home from './components/Home/Home';
 import Hosting from './components/Hosting/Hosting'
 import Results from "./components/Results/Results";
+import BecomeHostIntro from "./components/Hosting/BecomeHostIntro";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home/>}/>
           <Route path="/hosting" element={<Hosting/>}/>
+          <Route path="/becomeHost" element={<BecomeHostIntro/>}/>
           <Route path="/search" element={<Results/>}/>
           <Route path="/detail" element={<Detail/>}/>
 
