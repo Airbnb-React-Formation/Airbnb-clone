@@ -14,6 +14,14 @@ export function MenuProfileIcon(){
     )
 }
 
+export function IconAirbnb(){
+    return (
+        <div>
+            <img src="https://img.icons8.com/color/96/000000/airbnb.png"/>
+        </div>
+    )
+}
+
 
 export function IconFacebook(){
     return(

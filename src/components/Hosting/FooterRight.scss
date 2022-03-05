@@ -2,13 +2,13 @@
   position: absolute;
   bottom: 0;
   width: 50vw;
-  height: 10vh;
-  border-top:solid 2px;
+  height: 9.5vh;
+  border-top:solid 0.5vh;
   border-color: #222222;
   background-color: inherit;
   display: flex;
   flex-direction: row;
-  justify-content: flex-end;
+  justify-content: space-between;
   .FooterRight__Button{
     background-image: radial-gradient(circle, rgb(255, 56, 92) 0%, rgb(230, 30, 77) 27.5%, rgb(227, 28, 95) 40%, rgb(215, 4, 102) 57.5%, rgb(189, 30, 89) 75%, rgb(189, 30, 89) 100%) !important;
     padding: 1em 1.5em;
