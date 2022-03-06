@@ -4,6 +4,8 @@
     flex-shrink: 0;
     max-height: 100vh;
     overflow: scroll;
+    padding: 10px;
+    box-sizing: border-box;
 }
 .result-list__divider{
     margin-top: 24px;
