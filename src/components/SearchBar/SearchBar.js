@@ -12,7 +12,7 @@ import 'moment/locale/fr'
 const SearchBar = () => {
     const [selectedField, setSelectedField] = useState('')
     const [search, setSearch] = useState('')
-    const [destination, setDestination] = useState('')
+    const [destination, setDestination] = useState({})
     const [adults, setAdults] = useState(0)
     const [children, setChildren] = useState(0)
     const [infants, setInfants] = useState(0)
@@ -63,7 +63,7 @@ const SearchBar = () => {
     }
 
     const handleResetDestination = () => {
-        setDestination('')
+        setDestination({})
         setSearch('')
     }
 
@@ -81,13 +81,14 @@ const SearchBar = () => {
     const handleSearch = () => {
         if(adults && destination && startDate && endDate){
         const params =
-            "destination=" + destination
+            "destination=" + destination.name
             + (adults ? "&adults=" + adults : "")
             + (children ? "&children=" + children : "")
             + (infants ? "&infants=" + infants : "")
             + (pets ? "&pets=" + pets : "")
             + "&startdate=" + startDate.format("YYYY-MM-DD")
             + "&enddate=" + endDate.format("YYYY-MM-DD")
+            + "&coordinates=" + destination.coordinates
         navigate(`/search/?${params}`)
 
         }

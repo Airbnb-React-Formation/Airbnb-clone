@@ -14,12 +14,11 @@ const DestinationPanel = ({search,onSelect}) => {
             setResult(filteredPlaces.slice(0, 5))
         })
     }, [search])
-
     return (
         result.length > 0 &&
             <div className="suggestions-list">
-                {result.map(({properties: {name, type, city, country, county}}) => (
-                    <div className="suggestion" onClick={()=>{onSelect(name)}}>
+                {result.map(({geometry,properties: {name, type, city, country, county}}) => (
+                    <div className="suggestion" onClick={()=>{onSelect({name:name,coordinates : geometry.coordinates})}}>
                         <div className="localisation-icon-container">
                             <svg viewBox="0 0 24 24" role="presentation" aria-hidden="true" focusable="false" style={{
                                 height: "22px",
