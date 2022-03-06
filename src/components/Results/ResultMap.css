@@ -1,0 +1,14 @@
+.result-map{
+    flex: 1 1 auto;
+}
+
+.leaflet-container{
+    height: 100%;
+    width: 100%;
+}
+
+.leaflet-popup-content-wrapper {
+    width: 500px;
+    border-radius: 0;
+    position: relative;
+}

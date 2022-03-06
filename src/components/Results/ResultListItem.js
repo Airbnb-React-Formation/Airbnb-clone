@@ -2,11 +2,13 @@ import "./ResultListItem.css"
 import {isMany} from "../../helper/helper";
 import {RatingStar} from "../Icon/Icon";
 import ResultListCarousel from "./ResultListCarousel";
+import {NavLink} from "react-router-dom";
 
 const ResultListItem = ({item, tripDuration}) => {
 
     return (
         <div className="result-list-item">
+            <NavLink className="result-list-item__link" to={"/rooms/"+item.id}/>
             <div className="result-list-item__carousel"><ResultListCarousel pictureList={item.pictures}/></div>
             <div className="result-list-item__details">
                 <div className="result-list-item__header">
@@ -40,8 +42,8 @@ const ResultListItem = ({item, tripDuration}) => {
                     </div>
                     <div className="result-list-item__price">
                         <div className="result-list-item__price-night">
-                            {item.pricePerNight}€
-                            <span className="result-list-item__price-night--regular"> / nuit</span>
+                            <span className="bold">{item.pricePerNight}€</span>
+                            <span> / nuit</span>
                         </div>
                         <div className="result-list-item__price-total">{tripDuration * item.pricePerNight}€ au total
                         </div>

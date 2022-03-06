@@ -1,204 +1,232 @@
 [
-	{
-		"id":0,
-		"hostId":0,
-		"placeType" : [0,0],
-		"housingType" : 0,
-		"title":"Studio de rêve aux Sables d'Olonne...",
-		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
-		"pricePerNight": 25,
-		"maxGuest":3,
-		"beds":3,
-		"bedrooms":1,
-		"bathrooms":1,
-		"pictures": [
-			"https://a0.muscache.com/im/pictures/79112ac3-476d-48cd-9475-4cf653653b11.jpg?im_w=1200",
-			"https://a0.muscache.com/im/pictures/5179dc9e-5639-4688-a9fc-65cc2275185a.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/8da10f29-56cf-4ef9-afbc-49bd98558eec.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/a1f738eb-75a4-445d-9feb-1d485c20acda.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/4705b3d1-2310-47ed-a3c8-5f10a2fb11d6.jpg?im_w=1440"
-		]
-	},
-	{
-		"id":1,
-		"hostId":0,
-		"placeType" : [0,0],
-		"housingType" : 0,
-		"title":"Studio de rêve aux Sables d'Olonne...",
-		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
-		"pricePerNight": 25,
-		"maxGuest":3,
-		"beds":3,
-		"bedrooms":1,
-		"bathrooms":1,
-		"pictures": [
-			"https://a0.muscache.com/im/pictures/79112ac3-476d-48cd-9475-4cf653653b11.jpg?im_w=1200",
-			"https://a0.muscache.com/im/pictures/5179dc9e-5639-4688-a9fc-65cc2275185a.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/8da10f29-56cf-4ef9-afbc-49bd98558eec.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/a1f738eb-75a4-445d-9feb-1d485c20acda.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/4705b3d1-2310-47ed-a3c8-5f10a2fb11d6.jpg?im_w=1440"
-		]
-	},
-	{
-		"id":2,
-		"hostId":0,
-		"placeType" : [0,0],
-		"housingType" : 0,
-		"title":"Studio de rêve aux Sables d'Olonne...",
-		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
-		"pricePerNight": 25,
-		"maxGuest":3,
-		"beds":3,
-		"bedrooms":1,
-		"bathrooms":1,
-		"pictures": [
-			"https://a0.muscache.com/im/pictures/79112ac3-476d-48cd-9475-4cf653653b11.jpg?im_w=1200",
-			"https://a0.muscache.com/im/pictures/5179dc9e-5639-4688-a9fc-65cc2275185a.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/8da10f29-56cf-4ef9-afbc-49bd98558eec.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/a1f738eb-75a4-445d-9feb-1d485c20acda.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/4705b3d1-2310-47ed-a3c8-5f10a2fb11d6.jpg?im_w=1440"
-		]
-	},
-	{
-		"id":3,
-		"hostId":0,
-		"placeType" : [0,0],
-		"housingType" : 0,
-		"title":"Studio de rêve aux Sables d'Olonne...",
-		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
-		"pricePerNight": 25,
-		"maxGuest":3,
-		"beds":3,
-		"bedrooms":1,
-		"bathrooms":1,
-		"pictures": [
-			"https://a0.muscache.com/im/pictures/79112ac3-476d-48cd-9475-4cf653653b11.jpg?im_w=1200",
-			"https://a0.muscache.com/im/pictures/5179dc9e-5639-4688-a9fc-65cc2275185a.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/8da10f29-56cf-4ef9-afbc-49bd98558eec.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/a1f738eb-75a4-445d-9feb-1d485c20acda.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/4705b3d1-2310-47ed-a3c8-5f10a2fb11d6.jpg?im_w=1440"
-		]
-	},
-	{
-		"id":4,
-		"hostId":0,
-		"placeType" : [0,0],
-		"housingType" : 0,
-		"title":"Studio de rêve aux Sables d'Olonne...",
-		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
-		"pricePerNight": 25,
-		"maxGuest":3,
-		"beds":3,
-		"bedrooms":1,
-		"bathrooms":1,
-		"pictures": [
-			"https://a0.muscache.com/im/pictures/79112ac3-476d-48cd-9475-4cf653653b11.jpg?im_w=1200",
-			"https://a0.muscache.com/im/pictures/5179dc9e-5639-4688-a9fc-65cc2275185a.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/8da10f29-56cf-4ef9-afbc-49bd98558eec.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/a1f738eb-75a4-445d-9feb-1d485c20acda.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/4705b3d1-2310-47ed-a3c8-5f10a2fb11d6.jpg?im_w=1440"
-		]
-	},
-	{
-		"id":5,
-		"hostId":0,
-		"placeType" : [0,0],
-		"housingType" : 0,
-		"title":"Studio de rêve aux Sables d'Olonne...",
-		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
-		"pricePerNight": 25,
-		"maxGuest":3,
-		"beds":3,
-		"bedrooms":1,
-		"bathrooms":1,"pictures": [
-		"https://a0.muscache.com/im/pictures/79112ac3-476d-48cd-9475-4cf653653b11.jpg?im_w=1200",
-		"https://a0.muscache.com/im/pictures/5179dc9e-5639-4688-a9fc-65cc2275185a.jpg?im_w=1440",
-		"https://a0.muscache.com/im/pictures/8da10f29-56cf-4ef9-afbc-49bd98558eec.jpg?im_w=1440",
-		"https://a0.muscache.com/im/pictures/a1f738eb-75a4-445d-9feb-1d485c20acda.jpg?im_w=1440",
-		"https://a0.muscache.com/im/pictures/4705b3d1-2310-47ed-a3c8-5f10a2fb11d6.jpg?im_w=1440"
-	]
-	},
-	{
-		"id":6,
-		"hostId":0,
-		"placeType" : [0,0],
-		"housingType" : 0,
-		"title":"Studio de rêve aux Sables d'Olonne...",
-		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
-		"pricePerNight": 25,
-		"maxGuest":3,
-		"beds":3,
-		"bedrooms":1,
-		"bathrooms":1,
-		"pictures": [
-			"https://a0.muscache.com/im/pictures/79112ac3-476d-48cd-9475-4cf653653b11.jpg?im_w=1200",
-			"https://a0.muscache.com/im/pictures/5179dc9e-5639-4688-a9fc-65cc2275185a.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/8da10f29-56cf-4ef9-afbc-49bd98558eec.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/a1f738eb-75a4-445d-9feb-1d485c20acda.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/4705b3d1-2310-47ed-a3c8-5f10a2fb11d6.jpg?im_w=1440"
-		]
-	},
-	
-	{
-		"id":7,
-		"hostId":0,
-		"placeType" : [0,0],
-		"housingType" : 0,
-		"title":"Studio de rêve aux Sables d'Olonne...",
-		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
-		"pricePerNight": 25,
-		"maxGuest":3,
-		"beds":3,
-		"bedrooms":1,
-		"bathrooms":1,
-		"pictures": [
-			"https://a0.muscache.com/im/pictures/79112ac3-476d-48cd-9475-4cf653653b11.jpg?im_w=1200",
-			"https://a0.muscache.com/im/pictures/5179dc9e-5639-4688-a9fc-65cc2275185a.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/8da10f29-56cf-4ef9-afbc-49bd98558eec.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/a1f738eb-75a4-445d-9feb-1d485c20acda.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/4705b3d1-2310-47ed-a3c8-5f10a2fb11d6.jpg?im_w=1440"
-		]
-	},
-	
-	{
-		"id":8,
-		"hostId":0,
-		"placeType" : [0,0],
-		"housingType" : 0,
-		"title":"Studio de rêve aux Sables d'Olonne...",
-		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
-		"pricePerNight": 25,
-		"maxGuest":3,
-		"beds":3,
-		"bedrooms":1,
-		"bathrooms":1,
-		"pictures": [
-			"https://a0.muscache.com/im/pictures/79112ac3-476d-48cd-9475-4cf653653b11.jpg?im_w=1200",
-			"https://a0.muscache.com/im/pictures/5179dc9e-5639-4688-a9fc-65cc2275185a.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/8da10f29-56cf-4ef9-afbc-49bd98558eec.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/a1f738eb-75a4-445d-9feb-1d485c20acda.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/4705b3d1-2310-47ed-a3c8-5f10a2fb11d6.jpg?im_w=1440"
-		]
-	},
-	
-	{
-		"id":9,
-		"hostId":0,
-		"placeType" : [0,0],
-		"housingType" : 0,
-		"title":"Studio de rêve aux Sables d'Olonne...",
-		"summary":"Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
-		"pricePerNight": 25,
-		"maxGuest":3,
-		"beds":3,
-		"bedrooms":1,
-		"bathrooms":1,
-		"pictures": [
-			"https://a0.muscache.com/im/pictures/79112ac3-476d-48cd-9475-4cf653653b11.jpg?im_w=1200",
-			"https://a0.muscache.com/im/pictures/5179dc9e-5639-4688-a9fc-65cc2275185a.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/8da10f29-56cf-4ef9-afbc-49bd98558eec.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/a1f738eb-75a4-445d-9feb-1d485c20acda.jpg?im_w=1440",
-			"https://a0.muscache.com/im/pictures/4705b3d1-2310-47ed-a3c8-5f10a2fb11d6.jpg?im_w=1440"
-		]
-	}
+  {
+    "id": 0,
+    "hostId": 0,
+    "placeType": [
+      0,
+      0
+    ],
+    "housingType": 0,
+    "title": "Studio de rêve aux Sables d'Olonne...",
+    "summary": "Emplacement idéal face à la mer et proche Arago, la plage en bas et une vue très rare au dessus des toits à 180° sur la baie. Rénové il y a 2 ans, cet appartement de 32 m2 est un vrai coup de coeur. Cuisine hyper équipée, le canapé convertible offre un couchage Bultex confort en largeur 160 vue sur mer et un lit pliant d'appoint pour un enfant. WIFI, TV grand écran plat.... Possibilité de garer vos vélos dans une cour privée dans l'immeuble. Tous les commerces et nombreux restaurants à pieds.",
+    "pricePerNight": 25,
+    "maxGuest": 3,
+    "beds": 3,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "pictures": [
+      "https://a0.muscache.com/im/pictures/79112ac3-476d-48cd-9475-4cf653653b11.jpg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/5179dc9e-5639-4688-a9fc-65cc2275185a.jpg?im_w=1440",
+      "https://a0.muscache.com/im/pictures/8da10f29-56cf-4ef9-afbc-49bd98558eec.jpg?im_w=1440",
+      "https://a0.muscache.com/im/pictures/a1f738eb-75a4-445d-9feb-1d485c20acda.jpg?im_w=1440",
+      "https://a0.muscache.com/im/pictures/4705b3d1-2310-47ed-a3c8-5f10a2fb11d6.jpg?im_w=1440"
+    ]
+  },
+  {
+    "id": 1,
+    "hostId": 0,
+    "placeType": [
+      1,
+      4
+    ],
+    "housingType": 0,
+    "title": "Duplex*** Les Embruns 5p Tout accessible à pieds",
+    "summary": "Ce logement familial est proche de tous les sites et commodités.",
+    "pricePerNight": 64,
+    "maxGuest": 5,
+    "beds": 2,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "pictures": [
+      "https://a0.muscache.com/im/pictures/miso/Hosting-54395868/original/e9707d63-4844-4bc6-b8fc-0603b25c0d84.png?im_w=1200",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-54395868/original/beb02c74-74ad-417f-909a-7f7de88b6a82.png?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-54395868/original/c88890f9-f700-4578-b787-1ec414c5a119.png?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-54395868/original/9d769910-a023-4622-8ffa-4ba1fc38abea.png?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-54395868/original/d008ad97-aca4-4f52-a5a6-54c8009930b3.png?im_w=1200"
+    ]
+  },
+  {
+    "id": 2,
+    "hostId": 0,
+    "placeType": [
+      0,
+      1
+    ],
+    "housingType": 0,
+    "title": "Le Castel C.L.S Deauville",
+    "summary": "Appartement de 40 m2 très lumineux à 200m de la plage, au 5ème étage avec ascenseur, résidence de standing avec place de parking en sous terrain. Séjour avec salle à manger et cuisine équipé, terrasse ensoleillée, Vue panoramique magnifique sur le port de Deauville, chambre lit 160cm, 2 SDB avec WC.",
+    "pricePerNight": 96,
+    "maxGuest": 4,
+    "beds": 2,
+    "bedrooms": 1,
+    "bathrooms": 2,
+    "pictures": [
+      "https://a0.muscache.com/im/pictures/d080cb2a-9db5-4ded-86d4-18f0888bf972.jpg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/921fb8b6-23c8-4e1c-a189-663a6b5dfbc9.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/98f86184-691b-4569-be5c-e1a35608b5fc.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/25029642-1945-490e-82aa-d5af9008c35e.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/5d6224da-646c-4852-8ae7-e5484d6a7508.jpg?im_w=720"
+    ]
+  },
+  {
+    "id": 3,
+    "hostId": 0,
+    "placeType": [
+      1,
+      0
+    ],
+    "housingType": 0,
+    "title": "Villa design avec jacuzzi, la plage à pied",
+    "summary": "Située entre Concarneau et Pont-Aven, sur la commune de Trégunc, Mini-villa neuve à l'architecture design, à 200m de la plage et des sentiers côtiers. Indépendante et sans vis à vis, elle dispose d'une grande terrasse privative avec jacuzzi extérieur chauffé.\nEntre amis, en famille, le temps d'un week-end ou en vacances, vous y trouverez repos et quiétude .\nEnvie de partir en vacances à plusieurs tout en voulant garder votre indépendance? 3 autres mini-villas peuvent vous accueillir!",
+    "pricePerNight": 120,
+    "maxGuest": 6,
+    "beds": 3,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "pictures": [
+      "https://a0.muscache.com/im/pictures/d4104785-195b-4708-9b15-3987c4c4b7da.jpg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/64da3110-5f52-42dd-b6d9-fa272f21bc5c.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/43d24166-96f5-45c5-8fe1-0e8c53344a3b.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/6fe11e30-d931-44af-bdf9-aab37f0e206c.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/77ddc3cd-d9c3-4efb-a887-d41d51031b91.jpg?im_w=720"
+    ]
+  },
+  {
+    "id": 4,
+    "hostId": 0,
+    "placeType": [
+      0,
+      0
+    ],
+    "housingType": 0,
+    "title": "Glaz-Zen 4* : 130m2, plage, vue mer panoramique",
+    "summary": "Meublé classé 4 étoiles. Logement spacieux et lumineux, donnant directement sur la magnifique plage de Caroual et les sentiers de randonnée. Vue mer panoramique depuis les pièces de vie et la terrasse de 80m2.",
+    "pricePerNight": 144,
+    "maxGuest": 6,
+    "beds": 4,
+    "bedrooms": 3,
+    "bathrooms": 2,
+    "pictures": [
+      "https://a0.muscache.com/im/pictures/19dfbae1-c246-4d10-913b-1d09d0286f31.jpg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/47aebb8a-5b3b-49d4-a5d7-7726dfd88288.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/0cbb2da5-a2bf-47cc-ab0f-b7f9b700152b.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/fdfb44ee-0409-487e-8ef9-52e1bb6664f5.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/b063f5e4-80a7-4894-a908-064559bc98ca.jpg?im_w=720"
+    ]
+  },
+  {
+    "id": 5,
+    "hostId": 0,
+    "placeType": [
+      1,
+      6
+    ],
+    "housingType": 0,
+    "title": "Chalet autour d'un lac.",
+    "summary": "Chalet dans un domaine classé 3*, situé autour d'un lac en bordure de forêt . Le domaine comprend une piscine chauffée d'Avril à fin septembre. et d'un sauna. une aire de jeu, un terrain de pétanque et d'une plage ( baignade interdite). Le logement comprend un séjour cuisine équipée. une salle de bains avec baignoire. une chambre avec lit couchage 140X180, une mezzanine avec un lit 160X200 et un lit de 80X180 .",
+    "pricePerNight": 50,
+    "maxGuest": 5,
+    "beds": 3,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "pictures": [
+      "https://a0.muscache.com/im/pictures/e074f5af-5343-44d8-ad4a-870cb1dce555.jpg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/ee6cd7fd-6524-4804-a664-a2a4487d2333.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-49962360/original/17b6253f-1f51-40b8-823e-0fbac7f06005.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/6ba890d2-53d5-43e6-a8c6-0faa250b1ed1.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-49962360/original/ac82bbdc-9e41-4a61-9ec6-51803afd6319.jpeg?im_w=720"
+    ]
+  },
+  {
+    "id": 6,
+    "hostId": 0,
+    "placeType": [
+      1,
+      0
+    ],
+    "housingType": 0,
+    "title": "Gîte fraîchement rénové",
+    "summary": "Découvrez le charme du bois et de la pierre de notre gîte fraîchement rénové au coeur des prairies et forêts du parc naturel.\nProche de toutes commodités, dans notre petit hameau périgourdin, notre ancien corps de ferme vous offrira un espace de fraîcheur très agréable l'été et chaleureux l'hiver.\nVous pourrez profiter du jardin et de l'ombre du tilleul séculaire pour vos repas estivaux.\nIl y en aura pour tous les goûts: nature, vieille pierre, art, artisanat, gastronomie, sport et ballade.",
+    "pricePerNight": 55,
+    "maxGuest": 6,
+    "beds": 4,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "pictures": [
+      "https://a0.muscache.com/im/pictures/e7d7ebfe-9452-4c6b-8f19-ef1e93a45fb1.jpg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/a9762694-1938-4055-a934-fcda313a14cf.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/dd0a149d-c77e-4467-894b-ac611833b13b.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/3e7012df-fd3b-4940-b64e-75c17dba4e1f.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/389a4330-354e-4fa0-ad38-62e574dbd7a4.jpg?im_w=720"
+    ]
+  },
+  {
+    "id": 7,
+    "hostId": 0,
+    "placeType": [
+      1,
+      3
+    ],
+    "housingType": 0,
+    "title": "Maison voltaire centre ville avec garage et jardin",
+    "summary": "Découvrez cette maison entièrement rénovée et meublée à neuf.La maison est équipée de la fibre ainsi que les chaînes SFR .Les literies sont neuves avec des matelas de marques .\nTrès bien situé au centre ville ,magasins à proximités et boulangerie à 50 mètres , à 10 minutes à pieds de l hypercentre .\nVous disposerez d'un garage individuel fermer et d un jardin avec brasero .\n",
+    "pricePerNight": 54,
+    "maxGuest": 4,
+    "beds": 2,
+    "bedrooms": 1,
+    "bathrooms": 1,
+    "pictures": [
+      "https://a0.muscache.com/im/pictures/e870f579-5667-4784-bcc8-e866bc38165e.jpg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/4527c070-17f6-43fc-832e-eb7fce4138ae.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/d754adba-9aa8-4ccd-9e41-f5e48cc19aa7.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/34a08cdb-3fd3-476e-8fc3-7acc2db0d2d9.jpg?im_w=720",
+      "https://a0.muscache.com/im/pictures/92f9fbef-5e24-4f5c-8a50-bb55b4017820.jpg?im_w=720"
+    ]
+  },
+  {
+    "id": 8,
+    "hostId": 0,
+    "placeType": [
+      1,
+      6
+    ],
+    "housingType": 0,
+    "title": "Chalet avec terrasse sur grand étang",
+    "summary": "Le Chalet du Moulin de Lapeyre vous accueille dans un véritable havre de paix à Saint-Estèphe en Dordogne, charmant village au coeur du Périgord & du Parc régional Périgord-Limousin.\nConstruit au bord d’un étang privé de 3 hectares et entouré d’une végétation luxuriante, ce gîte de pêche et de charme vous offrira une expérience unique en pleine nature où quiétude, repos et bien-être seront les maîtres mots.\nVous apprécierez tout particulièrement la terrasse de 45 m2 qui surplombe l’étang.",
+    "pricePerNight": 156,
+    "maxGuest": 7,
+    "beds": 4,
+    "bedrooms": 4,
+    "bathrooms": 3,
+    "pictures": [
+      "https://a0.muscache.com/im/pictures/miso/Hosting-43816882/original/24935cae-6766-45d2-829a-9e5910fef0f2.jpeg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-43816882/original/e9de96ea-30c4-4026-8b1d-9c9467335318.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-43816882/original/6e3e9a38-3980-4cc3-8e8c-ff470c6032a9.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-43816882/original/7fdc1ae8-8731-4679-89d3-a1adca85fed7.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/7f51f3d8-98ef-4c3c-9e96-ffd043a17b9a.jpg?im_w=720"
+    ]
+  },
+  {
+    "id": 9,
+    "hostId": 0,
+    "placeType": [
+      0,
+      2
+    ],
+    "housingType": 0,
+    "title": "Maison des Beaux Arts",
+    "summary": "Spacieux appartement dans les fortifications de la vieille ville de Nontron, dans le parc naturel Périgord-Limousin.",
+    "pricePerNight": 77,
+    "maxGuest": 2,
+    "beds": 2,
+    "bedrooms": 2,
+    "bathrooms": 1,
+    "pictures": [
+      "https://a0.muscache.com/im/pictures/miso/Hosting-3794926/original/ed0c736c-878a-4c1e-b474-e63a416512c8.jpeg?im_w=1200",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-3794926/original/598c3fe5-6daa-4b7f-bf98-b65e1b47216b.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-3794926/original/52933398-754d-475e-8e48-4ea35dcbda0b.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-3794926/original/ae40661d-1f69-4580-b865-fad590534783.jpeg?im_w=720",
+      "https://a0.muscache.com/im/pictures/miso/Hosting-3794926/original/b953611d-b0eb-42f8-ab26-e57f26d83760.jpeg?im_w=720"
+    ]
+  }
 ]

@@ -2,6 +2,15 @@
     margin: 8px;
     display: flex;
     color: rgb(34, 34, 34);
+    position: relative;
+}
+
+.result-list-item__link{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }
 
 .result-list-item__carousel {
@@ -81,7 +90,6 @@
 }
 
 .result-list-item__price-night {
-    font-weight: 800;
     font-size: 20px;
 }
 

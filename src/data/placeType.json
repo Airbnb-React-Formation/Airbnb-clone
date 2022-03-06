@@ -1,136 +1,140 @@
 [
-	{
-		"id":0,
-		"name":"Appartement",
-		"placeKind" : [
-			{
-			"id":0,
-			"name":"Appartement"
-			},
-			{
-			"id":1,
-			"name":"Appartement en résidence"
-			},
-			{
-			"id":2,
-			"name":"Loft"
-			},
-			{
-			"id":3,
-			"name":"Résidence de tourisme"
-			},
-			{
-			"id":4,
-			"name":"Logement de vacances"
-			}
-		]
-	},
-	{
-		"id":1,
-		"name":"Maison",
-		"placeKind" : [
-			{
-			"id":0,
-			"name":"Logement résidentiel"
-			},
-			{
-			"id":1,
-			"name":"Cabane"
-			},
-			{
-			"id":2,
-			"name":"Villa"
-			},
-			{
-			"id":3,
-			"name":"Maison de ville"
-			},
-			{
-			"id":4,
-			"name":"Cottage"
-			},
-			{
-			"id":5,
-			"name":"Bungalow"
-			}
-		]
-	},
-	{
-		"id":2,
-		"name":"Annexe",
-		"placeKind" : [
-			{
-			"id":0,
-			"name":"Guest house"
-			},
-			{
-			"id":1,
-			"name":"Suite"
-			},
-			{
-			"id":2,
-			"name":"Gîte à la ferme"
-			},
-			{
-			"id":4,
-			"name":"Logement de vacances"
-			}
-		]
-	},
-	{
-		"id":3,
-		"name":"Chambre d'hôtes",
-		"placeKind" : [
-			{
-			"id":0,
-			"name":"Chambre d'hôtes"
-			},
-			{
-			"id":1,
-			"name":"Gîte"
-			},
-			{
-			"id":2,
-			"name":"Gîte à la ferme"
-			}
-		]
-	},
-	{
-		"id":4,
-		"name":"Boutique-hôtel",
-		"placeKind" : [
-			{
-			"id":0,
-			"name":"Hôtel"
-			},
-			{
-			"id":1,
-			"name":"Auberge de jeunesse"
-			},
-			{
-			"id":2,
-			"name":"Complexe hôtelier"
-			},
-			{
-			"id":4,
-			"name":"Gîte"
-			},
-			{
-			"id":5,
-			"name":"Boutique-hôtel"
-			},
-			{
-			"id":6,
-			"name":"Appart'hôtel"
-			},
-			{
-			"id":7,
-			"name":"Résidence de tourisme"
-			},
-			{
-			"id":8,
-			"name":"Hôtel historique"
-			}
-		]
-	}
+  {
+    "id": 0,
+    "name": "Appartement",
+    "placeKind": [
+      {
+        "id": 0,
+        "name": "Appartement"
+      },
+      {
+        "id": 1,
+        "name": "Appartement en résidence"
+      },
+      {
+        "id": 2,
+        "name": "Loft"
+      },
+      {
+        "id": 3,
+        "name": "Résidence de tourisme"
+      },
+      {
+        "id": 4,
+        "name": "Logement de vacances"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "name": "Maison",
+    "placeKind": [
+      {
+        "id": 0,
+        "name": "Logement résidentiel"
+      },
+      {
+        "id": 1,
+        "name": "Cabane"
+      },
+      {
+        "id": 2,
+        "name": "Villa"
+      },
+      {
+        "id": 3,
+        "name": "Maison de ville"
+      },
+      {
+        "id": 4,
+        "name": "Cottage"
+      },
+      {
+        "id": 5,
+        "name": "Bungalow"
+      },
+      {
+        "id": 6,
+        "name": "Chalet"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Annexe",
+    "placeKind": [
+      {
+        "id": 0,
+        "name": "Guest house"
+      },
+      {
+        "id": 1,
+        "name": "Suite"
+      },
+      {
+        "id": 2,
+        "name": "Gîte à la ferme"
+      },
+      {
+        "id": 4,
+        "name": "Logement de vacances"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Chambre d'hôtes",
+    "placeKind": [
+      {
+        "id": 0,
+        "name": "Chambre d'hôtes"
+      },
+      {
+        "id": 1,
+        "name": "Gîte"
+      },
+      {
+        "id": 2,
+        "name": "Gîte à la ferme"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Boutique-hôtel",
+    "placeKind": [
+      {
+        "id": 0,
+        "name": "Hôtel"
+      },
+      {
+        "id": 1,
+        "name": "Auberge de jeunesse"
+      },
+      {
+        "id": 2,
+        "name": "Complexe hôtelier"
+      },
+      {
+        "id": 4,
+        "name": "Gîte"
+      },
+      {
+        "id": 5,
+        "name": "Boutique-hôtel"
+      },
+      {
+        "id": 6,
+        "name": "Appart'hôtel"
+      },
+      {
+        "id": 7,
+        "name": "Résidence de tourisme"
+      },
+      {
+        "id": 8,
+        "name": "Hôtel historique"
+      }
+    ]
+  }
 ]
