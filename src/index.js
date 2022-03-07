@@ -4,6 +4,10 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+const { worker } = require('./mocks/browser')
+worker.start({ onUnhandledRequest: "bypass",quiet: true })
+
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
