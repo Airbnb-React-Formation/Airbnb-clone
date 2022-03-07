@@ -5,7 +5,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const { worker } = require('./mocks/browser')
-worker.start()
+worker.start({ onUnhandledRequest: "bypass",quiet: true })
 
 
 ReactDOM.render(
