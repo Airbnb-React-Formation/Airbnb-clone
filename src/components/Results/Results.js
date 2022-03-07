@@ -1,25 +1,15 @@
 import ResultsList from "./ResultsList";
 import ResultMap from "./ResultMap";
 import "./Results.css"
-import {useLocation, useNavigate} from "react-router-dom";
-import {useEffect, useMemo, useState} from "react";
+import {useNavigate} from "react-router-dom";
+import {useEffect, useState} from "react";
 import hydrateAccommodations from "../../data/hydrate";
 import accommodations from "../../data/accommodations.json";
+import useSearchParamsToObject from "../../hook/useSearchParamsToObject";
 
 const Results = () => {
     const navigate = useNavigate()
-    const useQuery = () => {
-        const { search } = useLocation();
-        return useMemo(() => new URLSearchParams(search), [search]);
-    }
-    const queryToObject = (entries) => {
-        const result = {}
-        for (const [key,value] of entries){
-            result[key] = value
-        }
-        return result
-    }
-    const query = queryToObject(useQuery().entries())
+    const query = useSearchParamsToObject()
     const {coordinates,destination,startdate,enddate} = query
     const [mapBounds, setMapBounds] = useState({})
     const [results,setResults] = useState(hydrateAccommodations(accommodations,destination,mapBounds))
