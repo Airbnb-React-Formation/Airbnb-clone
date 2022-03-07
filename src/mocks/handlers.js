@@ -10,9 +10,10 @@ export const handlers = [
     }),
     rest.get('/api/accommodations/:id', (req,res,ctx)=>{
         const {id} = req.params
+        const index = accommodations.findIndex(accommodation => accommodation.id === id)
         return res(
             ctx.status(200),
-            ctx.json(accommodations[id])
+            ctx.json(accommodations[index])
         )
     })
 ];
