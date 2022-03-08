@@ -1,59 +1,119 @@
 $header-padding: 3%;
 .header {
+  height: 80px;
   display: grid;
-  grid-column: 4;
+  grid-column: 3;
   padding-left: $header-padding;
   padding-right: $header-padding;
-  padding-top: 2em;
-  >.grid-one-one{
+  margin-bottom: 80px;
+  //padding-top: 2em;
+  background-color: black;
+  position: relative;
+  z-index: 1;
+
+  > .grid-one-one {
     grid-row: 1;
     grid-column: 1;
+    display: flex;
+    align-items: center;
   }
-  >.grid-one-two{
+
+  > .grid-one-two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     grid-row: 1;
     grid-column: 2;
+    position: relative;
   }
-  >.grid-one-three{
+
+  > .grid-one-three {
     grid-row: 1;
     grid-column: 3;
   }
-  >.grid-one-four{
+
+  > .grid-one-four {
     grid-row: 1;
-    grid-column: 4;
+    grid-column: 3;
     display: flex;
-    flex-direction: row;
-    height: 70%;
+    justify-content: right;
+    gap: 10px;
+  }
+
+  &:after {
+    content: "";
+    background-color: black;
+    transform: scaleY(2) translateX(-50%);
+    transform-origin: 50% 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+    z-index: -1;
   }
 }
 
+.MenuHeader__container {
+  display: flex;
+  white-space: nowrap
+}
 
-.MenuHeader__tab{
- display: inline;
+.MenuHeader__tab {
+  display: inline;
   margin-right: 3%;
   position: relative;
 }
-.MenuHeader__tab__element{
+
+.MenuHeader__tab__element {
   color: white;
-  margin-right:2%;
+  margin-right: 2%;
   background-color: inherit;
   border: inherit;
   font-family: inherit;
   font-size: inherit;
-  &:hover{
-    color:darkgrey ;
+  cursor: pointer;
+
+  &:hover {
+    color: darkgrey;
   }
-  &.selected:after{
+
+  &:after {
     background-color: white;
+    transform: scaleX(0) translateX(-50%);
+    position: absolute;
     content: "";
     height: 2px;
-    position: absolute;
     z-index: 1;
-    width: 20px ;
+    width: 5px;
     top: 30px;
-    left: 40px;
+    left: 50%;
+    transition: transform 250ms ease-in-out;
+
+  }
+
+  &:hover:after {
     transform: scaleX(1);
+  }
+
+  &.selected:after {
+    transform: scaleX(5);
   }
 
 }
 
-  
+.search-bar-wrapper {
+  position: absolute;
+  width: 850px;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  //right: 50%;
+
+}
+
+.hosting-button-wrapper {
+  display: flex;
+  align-items: center;
+}

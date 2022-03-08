@@ -1,11 +1,13 @@
 .Button_link{
-  justify-self: center;
-  border-radius :100rem;
-  padding: 0.8rem 1.8rem;
+  border-radius :21px;
+  padding: 0 10px 0 10px;
   text-decoration: none;
-  display: inline-block;
+  height: 37px;
   color: white;
   background-color : grey;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   a {
     color: white;
     text-decoration: none;

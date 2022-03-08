@@ -1,12 +1,12 @@
 .header-profile-menu{
-  background: rgb(255, 255, 255) none repeat scroll 0% 0% !important;
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 16px !important;
+  background: rgb(255, 255, 255) none repeat scroll 0 0 !important;
+  box-shadow: rgba(0, 0, 0, 0.12) 0 2px 16px !important;
   color: rgb(34, 34, 34) !important;
   margin-top: 34px !important;
-  padding: 8px 0px !important;
+  padding: 8px 0 !important;
   position: absolute !important;
   top: 50% !important;
-  right: 0px !important;
+  right: 0 !important;
   max-height: calc(-100px + 100vh) !important;
   overflow-y: auto !important;
   z-index: 2 !important;
@@ -19,20 +19,20 @@
   svg{
     height: 20px;
     width: 20px;
-    margin-left: 12px;
   }
-  background-color: transparent;
-  padding: 10px 10px 10px 10px;
+  padding: 7px 12px 7px 12px;
   display: inline-flex;
+  justify-content: center;
   flex-direction: row;
   appearance: none;
   border: none;
   cursor: pointer;
+  background-color: white;
+  border-radius: 21px;
+  gap:10px
 }
 .header-profile-menu-parent-button {
-  background-color: white;
-  border-radius: 40%;
-  padding: 2px;
-  width:  80px;
+  display: flex;
+  align-items: center;
   position: relative;
 }

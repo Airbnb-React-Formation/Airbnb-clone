@@ -1,6 +1,6 @@
 import {useState} from "react";
 
-const menuElementName : String[] = ["Hébergement", "Expérience","Expérience en ligne"]
+const menuElementName = ["Hébergement", "Expérience","Expérience en ligne"]
 
 
 function MenuHeaderElement({text, selectElement ,i ,handleChangeSelect}){
@@ -8,7 +8,7 @@ function MenuHeaderElement({text, selectElement ,i ,handleChangeSelect}){
     return (
     <div className="MenuHeader__tab" >
         <button className={elementClassName} onClick={() => handleChangeSelect(i)}>
-            <span >{text}</span>
+            <span>{text}</span>
         </button>
     </div>
     )
@@ -22,7 +22,7 @@ function MenuHeader({listMenuElement = menuElementName}){
     }
         )
     return(
-        <div>
+        <div className="MenuHeader__container">
             {listMenuElementHtml}
         </div>
     )
