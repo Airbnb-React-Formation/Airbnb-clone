@@ -75,7 +75,7 @@ const SearchBar = () => {
     const handleSelectDestination = (destination) => {
         setDestination(destination)
         setSelectedField('startDate')
-        setSearch(destination)
+        setSearch(destination.name)
     }
 
     const handleSearch = () => {
