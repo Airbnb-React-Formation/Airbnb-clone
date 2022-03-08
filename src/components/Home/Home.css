@@ -7,6 +7,10 @@
   --home-padding-h: 1.6rem;
   padding: 0 var(--home-padding-h);
 }
+.h__main{
+  max-width: 1920px;
+  box-sizing: border-box;
+}
 .h__header {
   background-color: var(--home-color-black);
 }
