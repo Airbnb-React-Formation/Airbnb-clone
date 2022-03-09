@@ -29,9 +29,9 @@ const Results = () => {
 
             results.length > 0 ?
                 (
-                <div>
+                <div className="result-page">
                     <button onClick={() => navigate(-1)}>Retour</button>
-                    <div className="result-page">
+                    <div className="result-container">
                         <ResultsList tripDates={{startDate: startdate, endDate: enddate}} resultsList={results}/>
                         <ResultMap coordinates={coordinates} handleBounds={setMapBounds} results={results}/>
                     </div>

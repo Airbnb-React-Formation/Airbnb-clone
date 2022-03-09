@@ -1,3 +1,7 @@
 .result-page{
+    width: 100vw;
+}
+
+.result-container{
     display: flex;
 }
