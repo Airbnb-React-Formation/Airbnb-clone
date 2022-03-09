@@ -1,19 +1,17 @@
 $header-padding: 3%;
 .header {
   height: 80px;
-  display: grid;
-  grid-column: 3;
+  display: flex;
+  justify-content: space-between;
   padding-left: $header-padding;
   padding-right: $header-padding;
   margin-bottom: 80px;
-  //padding-top: 2em;
   background-color: black;
   position: relative;
   z-index: 1;
 
   > .grid-one-one {
-    grid-row: 1;
-    grid-column: 1;
+    flex: 1 1 0;
     display: flex;
     align-items: center;
   }
@@ -22,8 +20,6 @@ $header-padding: 3%;
     display: flex;
     align-items: center;
     justify-content: center;
-    grid-row: 1;
-    grid-column: 2;
     position: relative;
   }
 
@@ -33,8 +29,7 @@ $header-padding: 3%;
   }
 
   > .grid-one-four {
-    grid-row: 1;
-    grid-column: 3;
+    flex: 1 1 0;
     display: flex;
     justify-content: right;
     gap: 10px;
@@ -57,12 +52,11 @@ $header-padding: 3%;
 
 .MenuHeader__container {
   display: flex;
-  white-space: nowrap
+  white-space: nowrap;
+  gap: 20px;
 }
 
 .MenuHeader__tab {
-  display: inline;
-  margin-right: 3%;
   position: relative;
 }
 
@@ -95,10 +89,17 @@ $header-padding: 3%;
 
   &:hover:after {
     transform: scaleX(1);
+    background-color: darkgrey;
   }
 
   &.selected:after {
     transform: scaleX(5);
+  }
+  &.selected:hover {
+    color: white;
+  }
+  &.selected:hover:after {
+    background-color: white;
   }
 
 }
@@ -109,7 +110,6 @@ $header-padding: 3%;
   top: 100%;
   left: 50%;
   transform: translateX(-50%);
-  //right: 50%;
 
 }
 
