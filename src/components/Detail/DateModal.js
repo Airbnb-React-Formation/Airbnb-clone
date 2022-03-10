@@ -1,16 +1,26 @@
-import React from "react";
+import React from "react"
+import CalendarPanel from "../SearchBar/CalendarPanel.js";
+import { FieldPanel }  from "../SearchBar/SearchBarField.js";
 
 
-const  DateModal = () =>{
-    
 
+const DateModal = ({startDate, endDate, setEndDate, setStartDate, selectedField, setSelectedField}) =>{
+     
 
-    return(
-        <>
-        <span>Arrivée</span>
-        <span>Départ</span>
-        </>
-    )
+    return (
+    <div>
+        
+    <FieldPanel>
+    <CalendarPanel
+     startDate={startDate}
+     setStartDate={setStartDate}
+     endDate={endDate}
+     setEndDate={setEndDate}
+     focusedInput={selectedField}
+     setFocusedInput={setSelectedField}
+             />
+   </FieldPanel>
+</div> )
 }
 
 export default DateModal;

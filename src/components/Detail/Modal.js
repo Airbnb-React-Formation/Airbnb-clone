@@ -13,7 +13,7 @@ const Modal = ({item}) =>{
      <div className="modale__container">
           <Prix item={item}/>
           <Avis/>
-          <DateModal />
+          <DateModal/>
           <VoyageurModal/>
           <Button link={"/"} text="Reserver"/>
           <Facture item={item}/>
