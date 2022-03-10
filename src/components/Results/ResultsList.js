@@ -2,7 +2,7 @@ import ResultListItem from "./ResultListItem";
 import moment from "moment";
 import "./ResultList.css"
 
-const ResultsList = ({tripDates, resultsList}) => {
+const ResultsList = ({tripDates, resultsList,onHover}) => {
 
 
     const tripDuration = moment(tripDates.endDate).diff(moment(tripDates.startDate), 'day')
@@ -10,7 +10,7 @@ const ResultsList = ({tripDates, resultsList}) => {
         <div className="result-list">
             {resultsList.map((accommodation, i) => (
                 <div key={i}>
-                    <ResultListItem item={accommodation} tripDuration={tripDuration}/>
+                    <ResultListItem item={accommodation} tripDuration={tripDuration} onHover={onHover}/>
                     {
                         resultsList.length - 1 !== i
                         &&

@@ -4,10 +4,10 @@ import {RatingStar} from "../Icon/Icon";
 import ResultListCarousel from "./ResultListCarousel";
 import {NavLink} from "react-router-dom";
 
-const ResultListItem = ({item, tripDuration}) => {
+const ResultListItem = ({item, tripDuration,onHover}) => {
 
     return (
-        <div className="result-list-item">
+        <div className="result-list-item" onMouseOver={()=>onHover(item.id)} onMouseLeave={()=>onHover('')}>
             <NavLink className="result-list-item__link" to={"/rooms/"+item.id}/>
             <div className="result-list-item__carousel"><ResultListCarousel pictureList={item.pictures}/></div>
             <div className="result-list-item__details">

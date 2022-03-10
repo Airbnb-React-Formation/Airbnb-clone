@@ -9,6 +9,7 @@ import useSearchParamsToObject from "../../hook/useSearchParamsToObject";
 
 const Results = () => {
     const [results, setResults] = useState([])
+    const [resultHovered,setResultHovered] = useState('')
     const navigate = useNavigate()
     const query = useSearchParamsToObject()
     const {coordinates, destination, startdate, enddate} = query
@@ -18,12 +19,12 @@ const Results = () => {
             .then(res => res.json())
             .then(json => setResults(hydrateAccommodations(json,destination,mapBounds)))
     },[])
-
-
     useEffect(() => {
         if (Object.keys(mapBounds).length !== 0)
             setResults(hydrateAccommodations(accommodations, destination, mapBounds))
     }, [mapBounds])
+
+    const handleHover = (id) => setResultHovered(id)
     return (
 
 
@@ -32,8 +33,8 @@ const Results = () => {
                 <div className="result-page">
                     <button onClick={() => navigate(-1)}>Retour</button>
                     <div className="result-container">
-                        <ResultsList tripDates={{startDate: startdate, endDate: enddate}} resultsList={results}/>
-                        <ResultMap coordinates={coordinates} handleBounds={setMapBounds} results={results}/>
+                        <ResultsList tripDates={{startDate: startdate, endDate: enddate}} resultsList={results} onHover={handleHover}/>
+                        <ResultMap coordinates={coordinates} handleBounds={setMapBounds} results={results} resultHovered={resultHovered}/>
                     </div>
                 </div>
                 )

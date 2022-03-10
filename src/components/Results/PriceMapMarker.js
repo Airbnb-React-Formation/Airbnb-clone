@@ -5,11 +5,11 @@ import * as ReactDOMServer from "react-dom/server";
 import ResultListCarousel from "./ResultListCarousel";
 import {RatingStar} from "../Icon/Icon";
 
-const PriceIcon = ({accommodation, selected}) => {
+const PriceIcon = ({accommodation, selected,hovered}) => {
     return (
         <div className="price-map__wrapper">
             <div className="price-map">
-                <div className={selected ? "price-map__marker selected" : "price-map__marker"}>
+                <div className={(selected || hovered)  ? "price-map__marker selected" : "price-map__marker"}>
                     <span className="bold">{accommodation.pricePerNight}€</span>
                 </div>
             </div>
@@ -17,11 +17,12 @@ const PriceIcon = ({accommodation, selected}) => {
     )
 }
 
-const PriceMapMarker = ({accommodation, onSelect, selectedMarker, onClick}) => {
+const PriceMapMarker = ({accommodation, onSelect, selectedMarker, onClick,resultHovered}) => {
     const getPriceIcon = (accommodation) => (
         L.divIcon({
             html: ReactDOMServer.renderToString(<PriceIcon accommodation={accommodation}
                                                            selected={selectedMarker === accommodation.id}
+                                                           hovered={resultHovered === accommodation.id}
                                                            onClick={onClick}/>),
             className: "custom-marker",
         })

@@ -31,7 +31,7 @@ const MapEvents = ({handleBounds}) => {
 }
 
 
-const ResultMap = ({coordinates, handleBounds, results}) => {
+const ResultMap = ({coordinates, handleBounds, results,resultHovered}) => {
     coordinates = coordinates.split(',').reverse()
     const [selectedMarker, setSelectedMarker] = useState('')
 
@@ -57,6 +57,7 @@ const ResultMap = ({coordinates, handleBounds, results}) => {
                                 accommodation={accommodation}
                                 selectedMarker={selectedMarker}
                                 onSelect={handleSelect}
+                                resultHovered={resultHovered}
                             />
                         ))
                     )
