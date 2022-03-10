@@ -1,14 +1,14 @@
  .notification-badge{
      padding: 3px;
      display: inline-block !important;
-     height: 6px !important;
+     height: 1px !important;
      left: 1px !important;
      margin-right: -6px !important;
      position: relative !important;
      right: 6px !important;
      top: -2px !important;
      vertical-align: top !important;
-     width: 6px !important;
+     width: 1px !important;
     border-radius: 50%;
     background-color: #FF385C;
 }
@@ -16,7 +16,7 @@ p{
 
 }
 .section-bar {
-    background: rgb(221, 221, 221) none repeat scroll 0% 0% !important;
-    margin: 8px 0px !important;
+    background: rgb(221, 221, 221) none repeat scroll 0 0 !important;
+    margin: 8px 0 !important;
     height: 1px !important;
 }
