@@ -12,7 +12,7 @@
   z-index: 2 !important;
   min-width: 240px !important;
   display: block !important;
-  border-radius: 12px !important;
+  border-radius: 10px !important;
 }
 
 .header-profile-menu-button {
@@ -35,4 +35,20 @@
   display: flex;
   align-items: center;
   position: relative;
+}
+
+.header-profile-menu__item{
+  padding: 10px 0 10px 0;
+  cursor: pointer;
+  position: relative;
+  &:hover:after{
+    position: absolute;
+    top:0;
+    right:-12px;
+    bottom: 0;
+    left: -12px;
+    content: "";
+    background-color: rgb(235,235,235);
+    z-index: -1;
+  }
 }

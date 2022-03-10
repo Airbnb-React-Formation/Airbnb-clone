@@ -1,24 +1,24 @@
 import "./AccountMenuHeaderItem.css";
 
-function AccountMenuHeaderNotification(){
-    return(
+function AccountMenuHeaderNotification() {
+    return (
         <span className="notification-badge"/>
     )
 }
 
-function AccountMenuHeaderItem({text , bold, notification}) {
-    if(text == null){
+function AccountMenuHeaderItem({text, bold, notification}) {
+    if (text == null) {
         return <div className="section-bar"/>
     }
-    const className = (bold)? "bold" : ""
+    const className = (bold) ? "bold" : ""
     return (
-        <div>
-            <p className={className}>{text}
-                {notification ? <AccountMenuHeaderNotification/> : <span/> }
-            </p>
-            </div>
+        <div className="header-profile-menu__item">
+            <span className={className}>{text}
+                {notification ? <AccountMenuHeaderNotification/> : <span/>}
+            </span>
+        </div>
     )
 }
 
-export default  AccountMenuHeaderItem
+export default AccountMenuHeaderItem
 
