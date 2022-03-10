@@ -2,8 +2,6 @@
     width: 840px;
     flex-grow: 0;
     flex-shrink: 0;
-    max-height: 100vh;
-    overflow: scroll;
     padding: 10px;
     box-sizing: border-box;
 }

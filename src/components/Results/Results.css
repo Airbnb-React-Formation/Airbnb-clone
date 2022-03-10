@@ -4,4 +4,5 @@
 
 .result-container{
     display: flex;
+    position: relative;
 }
