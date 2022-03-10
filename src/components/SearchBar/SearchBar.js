@@ -7,6 +7,7 @@ import SearchButton from "./SearchButton";
 import {useNavigate} from "react-router-dom"
 import CalendarPanel from "./CalendarPanel";
 import 'moment/locale/fr'
+import useClickOutside from "../../hook/useClickOutside";
 
 
 const SearchBar = () => {
@@ -32,22 +33,7 @@ const SearchBar = () => {
 
     const searchBarRef = useRef()
 
-    useSearchBarClickOut(searchBarRef)
-
-    function useSearchBarClickOut(ref) {
-        useEffect(() => {
-            function handleClickOutside(event) {
-                if (ref.current && !ref.current.contains(event.target)) {
-                    setSelectedField(null);
-                }
-            }
-
-            document.addEventListener("mousedown", handleClickOutside);
-            return () => {
-                document.removeEventListener("mousedown", handleClickOutside);
-            };
-        }, [ref]);
-    }
+    useClickOutside(searchBarRef,()=>setSelectedField(''))
 
     const handleResetGuests = () => {
         setAdults(0)
