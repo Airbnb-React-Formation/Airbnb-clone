@@ -10,7 +10,7 @@ function AccountMenuHeaderItem({text , bold, notification}) {
     if(text == null){
         return <div className="section-bar"/>
     }
-    const className = (bold)? "bold-menu" : ""
+    const className = (bold)? "bold" : ""
     return (
         <div>
             <p className={className}>{text}
