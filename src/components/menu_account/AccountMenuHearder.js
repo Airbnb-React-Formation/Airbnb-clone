@@ -1,7 +1,8 @@
 import "./AccountMenuHeader.scss";
-import React from "react";
+import React, {useRef} from "react";
 import AccountMenuHeaderItem from "./AccountMenuHeaderItem";
 import {MenuBarIcon, MenuProfileIcon} from "../Icon/Icon";
+import useClickOutside from "../../hook/useClickOutside";
 
 const payload_disconnect = [
     {text: "Inscription", bold : true},
@@ -29,11 +30,13 @@ const payload_connect = [
 
 function AccountMenuHeader(){
     const [displayMenuHeader , setDisplayMenuHeader ] = React.useState(false)
-    const handleClick = event =>{
+    const handleClick = () =>{
         setDisplayMenuHeader(!displayMenuHeader);
     }
+    const accountMenuRef = useRef()
+    useClickOutside(accountMenuRef,()=>setDisplayMenuHeader(false))
     return (
-        <div className="header-profile-menu-parent-button">
+        <div ref={accountMenuRef} className="header-profile-menu-parent-button">
             <button onClick={handleClick} className="header-profile-menu-button">
                 <div>
                     <MenuBarIcon/>
@@ -42,7 +45,7 @@ function AccountMenuHeader(){
                     <MenuProfileIcon size={"16px"}/>
                 </div>
             </button>
-            {displayMenuHeader ? <AccountMenuHeaderOnClick/> : <span/>}
+            {displayMenuHeader ? <AccountMenuHeaderOnClick /> : <span/>}
         </div>
     )
 
@@ -50,6 +53,7 @@ function AccountMenuHeader(){
 
 function AccountMenuHeaderOnClick(){
  //   const [connected, setConnected ]= React.useState();
+
     const connected = true;
     const payload = (connected) ? payload_connect : payload_disconnect;
     const listMenu = payload.map(element =>{ return  <AccountMenuHeaderItem text={element.text} bold={element.bold} notification={element.notification}  />})
