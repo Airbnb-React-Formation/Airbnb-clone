@@ -7,8 +7,10 @@ $header-padding: 3%;
   padding-right: $header-padding;
   margin-bottom: 80px;
   background-color: black;
-  position: relative;
-  z-index: 1;
+
+  z-index: 10;
+  position: sticky;
+  top: 0;
 
   > .grid-one-one {
     flex: 1 1 0;
