@@ -6,24 +6,9 @@ import { Link } from "react-router-dom";
 const LinkList = ({title, tableau}) =>{
 const data = tableau // changer
 
-<<<<<<< HEAD
-=======
-useEffect(()=>{
-    fetch(tableau) //changer
-    .then(response =>{
-        console.log(response)
-       return response.json()
-    })
-    .then(json =>{
-       data(json[0])
-    })
-    .catch(error =>{
-        console.log(error)
-    })
-}, [data, tableau] )
+
 
 console.log(`les datas sont ${data}`)
->>>>>>> modal
     return(
     <section className="containerLink">
         <span className="bold">{title}</span> {/*pensez a renomer*/}
