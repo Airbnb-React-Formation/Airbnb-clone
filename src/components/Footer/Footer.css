@@ -1,9 +1,9 @@
 .thefooter {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 80px;
     font-size: 14px;
     position: relative;
+    max-width: 1600px;
 }
 
 .thefooter:after{
