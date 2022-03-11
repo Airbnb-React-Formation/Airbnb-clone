@@ -3,7 +3,6 @@ import HomeHeaderCard from './HomeHeaderCard';
 import HomeHosting from './HomeHosting';
 import HomeExperiences from './HomeExperiences';
 import HomeGift from './HomeGift';
-import Footer from '../Footer/Footer';
 
 const Home = () => {
   return (
@@ -19,9 +18,6 @@ const Home = () => {
           textAlign: 'center'
         }}>composant temporaire inspiration</div>
       </main>
-      <footer className='h__footer'>
-        <Footer/>
-      </footer>
     </>
   );
 }

@@ -6,6 +6,7 @@ import Results from "./components/Results/Results";
 import BecomeHostIntro from "./components/Hosting/BecomeHostIntro";
 import Header from "./components/header/Header";
 import "./App.css"
+import Footer from "./components/Footer/Footer";
 
 function App() {
     return (
@@ -19,6 +20,7 @@ function App() {
                     <Route path="/search" element={<Results/>}/>
                     <Route path="/detail" element={<Detail/>}/>
                 </Routes>
+                <Footer/>
             </BrowserRouter>
         </div>
     );
