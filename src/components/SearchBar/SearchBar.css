@@ -7,6 +7,9 @@
     justify-content: center;
     align-items: center;
     position: relative;
+    color: var(--airbnb-text-black);
+    border: 1px solid var(--airbnb-separator-grey);
+    box-sizing: border-box;
 }
 .search-bar-darker{
     background-color: rgb(245,245,245);
@@ -41,5 +44,6 @@
 }
 
 .btn-search-container{
-
+    margin-right: 9px;
+    z-index: 5;
 }
