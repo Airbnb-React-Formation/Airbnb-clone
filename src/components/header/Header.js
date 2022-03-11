@@ -4,34 +4,61 @@ import AccountMenuHearder from "../menu_account/AccountMenuHearder";
 import MenuHeader from "./MenuHeader";
 import Button from "../asset/Button";
 import SearchBar from "../SearchBar/SearchBar";
+import {useEffect, useState} from "react";
+import SearchBarMinimized from "../SearchBar/SearchBarMinimized";
 
-function  Header(){
+function Header() {
+    const [backgroundColor, setBackgroundColor] = useState('black')
+    const [isCollapsed, setIsCollapsed] = useState(false)
+    const [logoColor, setLogoColor] = useState('white')
+    const handleScroll = (e) => {
+        if (e.srcElement.documentElement.scrollTop >= 1 && backgroundColor !== 'white') {
+            setBackgroundColor('white')
+            setIsCollapsed(true)
+            setLogoColor('red')
+        } else if (e.srcElement.documentElement.scrollTop === 0) {
+            setBackgroundColor('black')
+            setLogoColor('white')
+            setIsCollapsed(false)
+        }
+    }
+    useEffect(() => {
+        // window.addEventListener('scroll',handleScroll)
+        window.onscroll = handleScroll
+        // return window.removeEventListener('scroll',handleScroll)
+    }, [])
 
     return (
-        <div className="header">
-            <div className="grid-one-one">
-                <a href="/">
-                    <Logo color={'white'}/>
-                </a>
-            </div>
-            <div className="grid-one-two">
-                <MenuHeader/>
-                <div className="search-bar-wrapper">
-                    <SearchBar/>
+            <div
+                className={"header " + (backgroundColor === 'black' ? "header__color--black" : "header__color--white")}>
+                <div className="grid-one-one">
+                    <a href="/">
+                        <Logo color={logoColor}/>
+                    </a>
                 </div>
-
-            </div>
-            {/*<div  className="grid-one-three">*/}
-            {/*</div>*/}
-            <div className="grid-one-four">
-                <div className="hosting-button-wrapper">
-                    <Button link={"/hosting"} text={"Host"}/>
+                <div className="grid-one-two">
+                    {
+                        !isCollapsed
+                        ?
+                        <>
+                        <MenuHeader/>
+                        <div className="search-bar-wrapper">
+                        <SearchBar/>
+                        </div>
+                        </>
+                            :
+                            <SearchBarMinimized/>
+                    }
                 </div>
+                <div className="grid-one-four">
+                    <div className="hosting-button-wrapper">
+                        <Button link={"/hosting"} text={"Host"}/>
+                    </div>
 
-                <AccountMenuHearder/>
+                    <AccountMenuHearder/>
+                </div>
             </div>
-
-         </div>
     )
 }
+
 export default Header;

@@ -3,14 +3,17 @@ $header-padding: 3%;
   height: 80px;
   display: flex;
   justify-content: space-between;
-  padding-left: $header-padding;
-  padding-right: $header-padding;
+  padding-left: 80px;
+  padding-right: 80px;
   margin-bottom: 80px;
-  background-color: black;
-
+  max-width: 1600px;
+  margin-right: auto;
+  margin-left: auto;
   z-index: 10;
   position: sticky;
   top: 0;
+
+  --menu-header-color: white;
 
   > .grid-one-one {
     flex: 1 1 0;
@@ -39,7 +42,7 @@ $header-padding: 3%;
 
   &:after {
     content: "";
-    background-color: black;
+    background-color: inherit;
     transform: scaleY(2) translateX(-50%);
     transform-origin: 50% 0;
     position: absolute;
@@ -49,7 +52,27 @@ $header-padding: 3%;
     left: 50%;
     width: 100vw;
     z-index: -1;
+    transition: transform 250ms ease-in-out;
   }
+}
+
+
+.header__color--white{
+  background-color: white;
+  color: var(--airbnb-text-black);
+  --menu-header-color: var(--airbnb-text-black);
+  transition-property: background-color;
+  transition-duration: 250ms;
+  &:after{
+    transform: scaleY(1) translateX(-50%);
+    transition: transform 250ms ease-in-out;
+  }
+}
+.header__color--black{
+  background-color: black;
+  color: white;
+  transition-property: background-color;
+  transition-duration: 250ms;
 }
 
 .MenuHeader__container {
@@ -63,7 +86,7 @@ $header-padding: 3%;
 }
 
 .MenuHeader__tab__element {
-  color: white;
+  color: inherit;
   margin-right: 2%;
   background-color: inherit;
   border: inherit;
@@ -72,11 +95,11 @@ $header-padding: 3%;
   cursor: pointer;
 
   &:hover {
-    color: darkgrey;
+    opacity: 0.8;
   }
 
   &:after {
-    background-color: white;
+    background-color: var(--menu-header-color);
     transform: scaleX(0) translateX(-50%);
     position: absolute;
     content: "";
@@ -91,17 +114,17 @@ $header-padding: 3%;
 
   &:hover:after {
     transform: scaleX(1);
-    background-color: darkgrey;
+    opacity: 0.8;
   }
 
   &.selected:after {
     transform: scaleX(5);
   }
   &.selected:hover {
-    color: white;
+    opacity: 1;
   }
   &.selected:hover:after {
-    background-color: white;
+    opacity: 1;
   }
 
 }

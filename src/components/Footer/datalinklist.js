@@ -1,5 +1,5 @@
 
-export const asistance = [
+export const assistance = [
     {"id" : "lien1", "to" : "https://www.airbnb.fr/help/home?from=footer", "label" : "Centre d'aide"},
     {"id" : "lien2", "to" : "https://www.airbnb.fr/trust", "label" : "Information de sécurité"},
     {"id" : "lien3", "to" : "https://www.airbnb.fr/help/article/2701/politique-relative-aux-cas-de-force-majeure-et-coronavirus-covid19", label:"Option d'annulation"},
@@ -8,14 +8,14 @@ export const asistance = [
     {"id" : "lien6", "to" : "https://www.airbnb.fr/neighbors", "label" : "Signaler un problème de voisinage"}
 ]
 
-export const communauté = [
+export const communaute = [
     {id : "lien7",to : "https://fr.airbnb.org/?_ga=2.201301358.1310875223.1644778250-1564302037.1644778250&_set_bev_on_new_domain=1644789241_NTFhNjZlM2IwZjIz", label:"Airbnb.org : réponse au catastrophes"},
     {id : "lien8",to : "https://fr.airbnb.org/refugees?_ga=2.29340028.1310875223.1644778250-1564302037.1644778250&_set_bev_on_new_domain=1644789241_NTFhNjZlM2IwZjIz", label:"Soutenir les réfugiers afghans"},
     {id : "lien9",to : "https://www.airbnb.fr/diversity", label:"La diversité et l'intégration"},
     {id : "lien10",to : "https://www.airbnb.fr/against-discrimination", label:"Lutte contre la discrimination"}
 ]
 
-export const acceuilEtVoyageur = [
+export const accueilEtVoyageur = [
     {id : "lien11",to : "https://www.airbnb.fr/host/homes?from_footer=1", label:"Devenir hôte"},
     {id : "lien12",to : "https://www.airbnb.fr/aircover", label:"AirCover: protection hôtes"},
     {id : "lien13",to : "https://www.airbnb.fr/resources/hosting-homes", label:"Ressource pour les hôtes"},
@@ -33,6 +33,5 @@ export const aPropos = [
 ]
 
 export function fetchApiFalse (){
-    return {asistance, communauté, acceuilEtVoyageur, aPropos}
-    
+    return {assistance, communaute, accueilEtVoyageur, aPropos}
 }

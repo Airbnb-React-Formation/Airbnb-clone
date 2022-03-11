@@ -1,15 +1,25 @@
-.cguUl{
- display:flex;
- /* float:left; */
-
+.cguUl {
+    display: flex;
+    padding-inline-start: unset;
+    padding: 0;
+    margin: 0;
 }
 
-.cguLi{
-    margin-right: 3px;
-    border-right: 2px solid gray;
+.cguLi:after {
+    content: "·";
+    padding: 0 6px 0 6px;
 }
 
-.cguLi a{
+.cguLi:last-child:after {
+    all: unset;
+}
+
+.cguLi a {
     text-decoration: none;
+    color: black;
+}
+
+.cguLi a:hover {
+    text-decoration: underline;
     color: black;
 }

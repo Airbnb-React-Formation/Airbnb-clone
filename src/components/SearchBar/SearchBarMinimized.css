@@ -1,0 +1,24 @@
+.search-bar-minimized{
+    padding: 0;
+    width: 300px;
+    height: 48px;
+    border-radius: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid var(--airbnb-separator-grey);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 4px 12px rgba(0, 0, 0, 0.05) ;
+    background-color: white;
+    overflow: hidden;
+    color: var(--airbnb-text-black);
+    cursor: pointer;
+}
+.search-bar-minimized:hover{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+.search-bar-minimized__text{
+    padding-left: 20px;
+}
+.search-button__wrapper{
+    transform: scale(0.7);
+}

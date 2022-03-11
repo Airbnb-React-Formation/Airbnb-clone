@@ -1,3 +1,9 @@
 .socialComponent {
     display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.social-component__icon{
+    height: 20px;
+    position: relative;
 }

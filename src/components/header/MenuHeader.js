@@ -18,7 +18,7 @@ function MenuHeader({listMenuElement = menuElementName}){
     const [selectElement, setSelectElement] = useState(0)
     const handleChangeSelect = (i) => {setSelectElement(i)}
     const listMenuElementHtml =  listMenuElement.map((element, i) => {
-        return <MenuHeaderElement text={element} selectElement={selectElement} i={i} handleChangeSelect={handleChangeSelect}/>
+        return <MenuHeaderElement key={i} text={element} selectElement={selectElement} i={i} handleChangeSelect={handleChangeSelect}/>
     }
         )
     return(

@@ -1,0 +1,13 @@
+.brand-logo__color--red{
+    fill: var(--airbnb-red);
+    transition-property: fill;
+    transition-duration: 250ms;
+}
+.brand-logo__color--black{
+    fill: black;
+}
+.brand-logo__color--white{
+    fill: white;
+    transition-property: fill;
+    transition-duration: 250ms;
+}
