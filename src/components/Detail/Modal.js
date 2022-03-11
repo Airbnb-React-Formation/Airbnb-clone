@@ -8,12 +8,13 @@ import Prix from "./Prix.js";
 import VoyageurModal from "./Voyageur.js";
 
 
-const Modal = ({item}) =>{
+const Modal = ({item, calendarProps}) =>{
     return(
      <div className="modale__container">
           <Prix item={item}/>
           <Avis/>
-          <DateModal/>
+          <DateModal 
+          calendarProps={calendarProps}/>
           <VoyageurModal/>
           <Button link={"/"} text="Reserver"/>
           <Facture item={item}/>
