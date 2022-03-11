@@ -3,6 +3,20 @@
     padding: 0;
     box-sizing: border-box;
     font-size: 14px;
+    position: relative;
+}
+
+.thefooter:after{
+    position: absolute;
+    content: "";
+    z-index: -1;
+    background-color: rgb(247,247,247);
+    transform: translateX(-50%);
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 100vw;
+
 }
 
 .resection{
