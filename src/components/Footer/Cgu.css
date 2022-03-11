@@ -1,6 +1,8 @@
 .cguUl {
     display: flex;
     padding-inline-start: unset;
+    padding: 0;
+    margin: 0;
 }
 
 .cguLi:after {
