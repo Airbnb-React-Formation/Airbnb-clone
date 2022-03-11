@@ -5,6 +5,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   justify-content: center;
+
+  --airbnb-red: #FF385C;
+  --airbnb-text-black: rgb(34,34,34);
+  --airbnb-background-light-grey: rgb(247,247,247);
+  --airbnb-separator-grey:rgb(221,221,221);
 }
 
 .bold{
