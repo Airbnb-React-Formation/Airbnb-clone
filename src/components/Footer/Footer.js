@@ -15,9 +15,7 @@ const Footer = () => {
                 <LinkList title="Accueil et voyageur" tableau={accueilEtVoyageur}/>
                 <LinkList title="A Propos" tableau={aPropos}/>
             </section>
-            <section>
                 <LittleFooter/>
-            </section>
         </footer>
     )
 }
