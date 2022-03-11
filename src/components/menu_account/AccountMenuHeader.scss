@@ -25,11 +25,11 @@
   justify-content: center;
   flex-direction: row;
   appearance: none;
-  border: none;
   cursor: pointer;
   background-color: white;
   border-radius: 21px;
-  gap:10px
+  gap:10px;
+  border: 1px solid var(--airbnb-separator-grey);
 }
 .header-profile-menu-parent-button {
   display: flex;
