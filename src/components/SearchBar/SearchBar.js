@@ -33,7 +33,7 @@ const SearchBar = () => {
 
     const searchBarRef = useRef()
 
-    useClickOutside(searchBarRef,()=>setSelectedField(''))
+    useClickOutside(searchBarRef, () => setSelectedField(''))
 
     const handleResetGuests = () => {
         setAdults(0)
@@ -53,7 +53,6 @@ const SearchBar = () => {
         setSearch('')
     }
 
-
     const handleSelectField = (fieldName) => {
         setSelectedField(fieldName)
     }
@@ -65,18 +64,18 @@ const SearchBar = () => {
     }
 
     const handleSearch = () => {
-        if(adults && destination && startDate && endDate){
-        const params =
-            "destination=" + destination.name
-            + (adults ? "&adults=" + adults : "")
-            + (children ? "&children=" + children : "")
-            + (infants ? "&infants=" + infants : "")
-            + (pets ? "&pets=" + pets : "")
-            + "&startdate=" + startDate.format("YYYY-MM-DD")
-            + "&enddate=" + endDate.format("YYYY-MM-DD")
-            + "&coordinates=" + destination.coordinates
-        navigate(`/search/?${params}`)
-
+        if (adults && destination && startDate && endDate) {
+            const params =
+                "destination=" + destination.name
+                + (adults ? "&adults=" + adults : "")
+                + (children ? "&children=" + children : "")
+                + (infants ? "&infants=" + infants : "")
+                + (pets ? "&pets=" + pets : "")
+                + "&startdate=" + startDate.format("YYYY-MM-DD")
+                + "&enddate=" + endDate.format("YYYY-MM-DD")
+                + "&coordinates=" + destination.coordinates
+            setSelectedField('')
+            navigate(`/search/?${params}`)
         }
     }
 
@@ -89,7 +88,6 @@ const SearchBar = () => {
             + (pets ? (", " + pets + (pets > 1 ? " Animaux" : " Animal") + " de compagnie") : "")
         return (text)
     }
-
 
     return (
         <div className={selectedField ? "search-bar search-bar-darker" : "search-bar"} ref={searchBarRef}>
