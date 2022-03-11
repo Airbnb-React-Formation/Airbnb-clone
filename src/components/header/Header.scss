@@ -3,11 +3,11 @@ $header-padding: 3%;
   height: 80px;
   display: flex;
   justify-content: space-between;
-  padding-left: $header-padding;
-  padding-right: $header-padding;
+  padding-left: 80px;
+  padding-right: 80px;
   margin-bottom: 80px;
   background-color: black;
-
+  max-width: 1600px;
   z-index: 10;
   position: sticky;
   top: 0;
