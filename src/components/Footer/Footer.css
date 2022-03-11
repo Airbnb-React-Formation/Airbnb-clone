@@ -7,7 +7,7 @@
 
 .resection{
     display: flex;
-    justify-content: space-around;
+    /*justify-content: space-around;*/
     box-sizing: border-box;
     padding: 48px 0;
 }
