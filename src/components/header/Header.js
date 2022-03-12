@@ -20,7 +20,12 @@ function Header() {
             setBackgroundColor('black')
             setLogoColor('white')
             setIsCollapsed(false)
+        } else if (!isCollapsed) {
+            setIsCollapsed(true)
         }
+    }
+    const handleMinimizedSearchBarClick = () => {
+        setIsCollapsed(false)
     }
     useEffect(() => {
         // window.addEventListener('scroll',handleScroll)
@@ -29,35 +34,39 @@ function Header() {
     }, [])
 
     return (
-            <div
-                className={"header " + (backgroundColor === 'black' ? "header__color--black" : "header__color--white")}>
-                <div className="grid-one-one">
-                    <a href="/">
-                        <Logo color={logoColor}/>
-                    </a>
-                </div>
-                <div className="grid-one-two">
-                    {
-                        !isCollapsed
+        <div
+            className={
+                "header" +
+                (backgroundColor === 'black' ? " header__color--black " : " header__color--white") +
+                (isCollapsed ? " header__collapsed" : "")
+            }>
+            <div className="grid-one-one">
+                <a href="/">
+                    <Logo color={logoColor}/>
+                </a>
+            </div>
+            <div className="grid-one-two">
+                {
+                    !isCollapsed
                         ?
                         <>
-                        <MenuHeader/>
-                        <div className="search-bar-wrapper">
-                        <SearchBar/>
-                        </div>
+                            <MenuHeader/>
+                            <div className="search-bar-wrapper">
+                                <SearchBar/>
+                            </div>
                         </>
-                            :
-                            <SearchBarMinimized/>
-                    }
-                </div>
-                <div className="grid-one-four">
-                    <div className="hosting-button-wrapper">
-                        <Button link={"/hosting"} text={"Host"}/>
-                    </div>
-
-                    <AccountMenuHearder/>
-                </div>
+                        :
+                        <SearchBarMinimized onCLick={handleMinimizedSearchBarClick}/>
+                }
             </div>
+            <div className="grid-one-four">
+                <div className="hosting-button-wrapper">
+                    <Button link={"/hosting"} text={"Host"}/>
+                </div>
+
+                <AccountMenuHearder/>
+            </div>
+        </div>
     )
 }
 

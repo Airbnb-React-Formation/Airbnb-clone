@@ -1,9 +1,9 @@
 import "./SearchBarMinimized.css"
 import SearchButton from "./SearchButton";
 
-const SearchBarMinimized = () => {
+const SearchBarMinimized = ({onCLick}) => {
     return (
-        <button className="search-bar-minimized">
+        <button className="search-bar-minimized" onClick={onCLick}>
             <div className="search-bar-minimized__text">
                 <span className="bold">
                     Commencer votre recherche

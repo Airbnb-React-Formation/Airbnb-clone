@@ -64,10 +64,14 @@ $header-padding: 3%;
   --menu-header-color: var(--airbnb-text-black);
   transition-property: background-color;
   transition-duration: 250ms;
-  &:after{
-    transform: scaleY(1) translateX(-50%);
-    transition: transform 250ms ease-in-out;
-  }
+  //&:after{
+  //  transform: scaleY(1) translateX(-50%);
+  //  transition: transform 250ms ease-in-out;
+  //}
+}
+.header__collapsed:after{
+  transform: scaleY(1) translateX(-50%);
+  transition: transform 250ms ease-in-out;
 }
 .header__color--black{
   background-color: black;
