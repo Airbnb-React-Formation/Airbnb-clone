@@ -1,4 +1,4 @@
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import {BrowserRouter, Navigate, Route, Routes} from "react-router-dom";
 import Detail from "./components/Detail/Detail";
 import Home from './components/Home/Home';
 import Hosting from './components/Hosting/Hosting'
@@ -19,6 +19,7 @@ function App() {
                     <Route path="/becomeHost" element={<BecomeHostIntro/>}/>
                     <Route path="/search" element={<Results/>}/>
                     <Route path="/detail" element={<Detail/>}/>
+                    <Route path="*" element={<Navigate to="/"/>}/>
                 </Routes>
                 <Footer/>
             </BrowserRouter>
