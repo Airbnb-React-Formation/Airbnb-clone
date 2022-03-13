@@ -15,13 +15,13 @@ const Detail = () => {
    const calendarProps = {startDate, endDate, setEndDate, setStartDate, selectedField, setSelectedField}
   
     return(
-        <>
+        <div>
           <Galerie item={item}/>
           <ListDetail item={item}
           calendarProps={calendarProps}
           />
           <Commentaires/>
-        </>
+        </div> 
     )
 }
 
