@@ -8,6 +8,7 @@ import Prix from "./Prix.js";
 import VoyageurModal from "./Voyageur.js";
 
 
+
 const Modal = ({item, calendarProps}) =>{
     return(
      <div className="modale__container">
