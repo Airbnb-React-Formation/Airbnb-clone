@@ -7,7 +7,7 @@ const ListDetail = ({item, calendarProps}) =>{
 
     return(
         <div className="container__listDetail">
-            <Hebergement/>
+            <Hebergement item={item}/>
             <Modal item={item} 
             calendarProps={calendarProps}/>
         </div>

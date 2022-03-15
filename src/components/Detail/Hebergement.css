@@ -1,3 +1,12 @@
 .container__herbergement{
     width: 70%;
+    display:flex;
+    flex-direction: column;
 }
+
+.icon__stule{
+    display: block;
+    height: 24px; 
+    width: 24px;  
+}
+
