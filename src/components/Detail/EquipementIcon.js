@@ -1,4 +1,5 @@
 import React from "react"
+import Button from '../asset/Button'
 import './EquipementIcon.css'
 
 const EquipementIcon = () =>{
@@ -19,12 +20,17 @@ const iconEquipement = [
 return(
     <div className="container__equipementIcon">
         <h2>Ce que propose ce logement</h2>
+
         <ul>
         {iconEquipement.map((iconEquipement)=>
-        <li style={{height : iconEquipement.height, width : iconEquipement.widht}} key={iconEquipement.id}>{iconEquipement.url} {iconEquipement.label} </li>
-        )    
-        }
+        <li  style={{height : iconEquipement.height, width : iconEquipement.widht }} key={iconEquipement.id}> 
+           {iconEquipement.url} {iconEquipement.label} </li>
+        )} 
+
         </ul>
+
+        <Button link="/" text="Plus d'équipement"/>
+
     </div>
 )
 }
