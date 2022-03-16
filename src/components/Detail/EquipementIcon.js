@@ -24,7 +24,8 @@ return(
         <ul>
         {iconEquipement.map((iconEquipement)=>
         <li  style={{height : iconEquipement.height, width : iconEquipement.widht }} key={iconEquipement.id}> 
-           {iconEquipement.url} {iconEquipement.label} </li>
+           {iconEquipement.url} 
+           {iconEquipement.label} </li>
         )} 
 
         </ul>

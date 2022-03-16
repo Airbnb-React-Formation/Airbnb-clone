@@ -7,8 +7,6 @@
 }
 
 .container__equipementIcon li{
-   
     margin-top: 16px;
-    display:inline-block;
-    
+    display:inline;  
 }
