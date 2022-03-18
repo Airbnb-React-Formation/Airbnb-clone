@@ -1,0 +1,12 @@
+
+.container__equipementIcon ul{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 0;
+    margin: 0;
+}
+
+.container__equipementIcon li{
+    margin-top: 16px;
+    display:inline;  
+}

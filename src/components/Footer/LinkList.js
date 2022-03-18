@@ -6,6 +6,9 @@ import { Link } from "react-router-dom";
 const LinkList = ({title, tableau}) =>{
 const data = tableau // changer
 
+
+
+console.log(`les datas sont ${data}`)
     return(
     <section className="containerLink">
         <span className="bold">{title}</span> {/*pensez a renomer*/}

@@ -1,0 +1,15 @@
+.container__herbergement{
+    width: 70%;
+    height: 525px;
+    display:flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    
+}
+
+.icon__stule{
+    display: block;
+    height: 24px; 
+    width: 24px;  
+}
+
