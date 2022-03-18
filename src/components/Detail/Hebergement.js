@@ -11,19 +11,25 @@ const Hebergement = ({item}) => {
         <div className="container__herbergement">
         {item.title}
         <Avis/>
+        <div className="container__icon">
         <div>
-        <Icon className="icon__stule">
-          <IconMedail/> 
-        </Icon>
-        <p>Superhote</p>
-        <Icon className="icon__stule">
-          <IconLocaliz/>
-        </Icon>
-        <p>Cadre parfait</p>
-        <Icon className="icon__stule">
-          <IconCalendrier/> 
-        </Icon>
-        <p>Annulation gratuite possible jusqu'au 31 mai.</p>
+          <Icon className="icon__stule">
+            <IconMedail/> 
+          </Icon>
+          <p>Superhote</p>
+        </div>
+        <div>
+          <Icon className="icon__stule">
+            <IconLocaliz/>
+          </Icon>
+          <p>Cadre idéal</p>
+        </div>
+        <div>
+          <Icon className="icon__stule">
+            <IconCalendrier/> 
+          </Icon>
+          <p>Annulation gratuite possible jusqu'au 31 mai.</p>
+        </div>
         </div>
         <div>
         {item.summary}
