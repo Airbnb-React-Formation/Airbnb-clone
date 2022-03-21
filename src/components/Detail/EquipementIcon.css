@@ -1,12 +1,11 @@
 
-.container__equipementIcon ul{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    padding-left: 0;
-    margin: 0;
+.container__equipementIcon {
+    display: flex;
+    flex-direction: column;
+}
+.container__equipementIcon svg{
+    height: 24px;
+    width: 24px;
 }
 
-.container__equipementIcon li{
-    margin-top: 16px;
-    display:inline;  
-}
+
