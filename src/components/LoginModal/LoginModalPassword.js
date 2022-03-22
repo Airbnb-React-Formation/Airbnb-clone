@@ -1,11 +1,11 @@
 import {Box, Button, Typography} from "@mui/material";
-import PassworldField from "./PassworldField";
+import PasswordField from "./PasswordField";
 
 const LoginModalPassword = ({formValue, handleChange, handleSubmit, isSubmit}) => {
 
     return (
         <Box p="24px" width="520px">
-            <PassworldField
+            <PasswordField
                 id="modal-password"
                 name="password"
                 label="Mot de passe"
