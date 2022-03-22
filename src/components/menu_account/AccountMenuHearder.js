@@ -5,11 +5,12 @@ import {MenuBarIcon, MenuProfileIcon} from "../Icon/Icon";
 import useClickOutside from "../../hook/useClickOutside";
 import LoginModal from "../LoginModal/LoginModal";
 import {DialogContent, Modal} from "@mui/material";
-
+import {useAuth} from "../context/AuthContext";
 
 function AccountMenuHeader() {
     const [displayMenuHeader, setDisplayMenuHeader] = React.useState(false)
     const [isSignInLogInModal, setIsSignInLogInModal] = useState(false)
+    const {logout} = useAuth()
     const handleOpen = () => {
         setDisplayMenuHeader(false)
         setIsSignInLogInModal(true)
@@ -17,6 +18,10 @@ function AccountMenuHeader() {
     const handleClose = () => setIsSignInLogInModal(false)
     const handleClick = () => {
         setDisplayMenuHeader(!displayMenuHeader);
+    }
+    const handleDisconnect = () => {
+        setDisplayMenuHeader(false)
+        logout()
     }
     const accountMenuRef = useRef()
     useClickOutside(accountMenuRef, () => setDisplayMenuHeader(false))
@@ -31,7 +36,8 @@ function AccountMenuHeader() {
                         <MenuProfileIcon size={"16px"}/>
                     </div>
                 </button>
-                {displayMenuHeader ? <AccountMenuHeaderOnClick onClickActions={{signInLogInModal: handleOpen}}/> :
+                {displayMenuHeader ?
+                    <AccountMenuHeaderOnClick onClickActions={{signInLogInModal: handleOpen, handleDisconnect}}/> :
                     <span/>}
             </div>
             <Modal open={isSignInLogInModal} onClose={handleClose}>
@@ -41,11 +47,9 @@ function AccountMenuHeader() {
             </Modal>
         </>
     )
-
 }
 
 function AccountMenuHeaderOnClick({onClickActions}) {
-
     const payload_disconnect = [
         {text: "Inscription", bold: true, onClick: onClickActions.signInLogInModal},
         {text: "Connexion", bold: false, onClick: onClickActions.signInLogInModal},
@@ -66,11 +70,12 @@ function AccountMenuHeaderOnClick({onClickActions}) {
         {text: "Parrainer un hôte ", bold: false},
         {text: "Compte", bold: false},
         {},
-        {text: "Aide", bold: false}
+        {text: "Aide", bold: false},
+        {text: "Déconnexion", bold: false, onClick: onClickActions.handleDisconnect}
     ]
     //   const [connected, setConnected ]= React.useState();
-
-    const connected = false;
+    const {authUser} = useAuth()
+    const connected = !!authUser;
     const payload = (connected) ? payload_connect : payload_disconnect;
     const listMenu = payload.map((element, i) => {
         return (
