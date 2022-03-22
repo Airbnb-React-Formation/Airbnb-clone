@@ -7,15 +7,6 @@ import LoginModalSignIn from "./LoginModalSignIn";
 import {ArrowBackIosNew, Close} from "@mui/icons-material";
 import {useAuth} from "../context/AuthContext";
 
-const style = {
-    position: 'absolute',
-    top: '50%',
-    left: '50%',
-    transform: 'translate(-50%, -50%)',
-    bgcolor: 'background.paper',
-    boxShadow: 24,
-    borderRadius: "12px",
-};
 
 const LoginModal = forwardRef(({onClose}, ref) => {
     const [page, setPage] = useState('email')
@@ -50,7 +41,7 @@ const LoginModal = forwardRef(({onClose}, ref) => {
             regex: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
             errorMessage: 'Entrez une adresse e-mail valide.'
         },
-        NewPassword: {
+        newPassword: {
             regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{4,8}$/,
             errorMessage: ''
         }
@@ -70,7 +61,7 @@ const LoginModal = forwardRef(({onClose}, ref) => {
         }
     }
     const [state, dispatch] = useReducer(formReducer, initialFormState)
-    const {isUserExists,login,authUser} = useAuth()
+    const {isUserExists,login,authUser,register} = useAuth()
     const titleList = {
         email: "Connexion ou inscription",
         password: "Connexion",
@@ -104,6 +95,9 @@ const LoginModal = forwardRef(({onClose}, ref) => {
                     }
                     return null
                 case 'signIn':
+                    if(state.email.value && !state.email.error && state.newPassword.value && !state.newPassword.error){
+                        register({username:state.email.value,password:state.newPassword.value})
+                    }
                     return null
                 default :
                     return null

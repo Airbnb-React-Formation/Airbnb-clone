@@ -3,7 +3,7 @@ import PasswordField from "./PasswordField";
 import moment from "moment";
 
 
-const LoginModalSignIn = ({formValue, handleChange}) => {
+const LoginModalSignIn = ({formValue, handleChange, handleSubmit, isSubmit}) => {
     return (
         <Box p="24px" width="520px" style={{maxHeight: "calc(100vh - 200px)", overflow: "scroll"}}>
             <TextField id="modal-first-name" label="Prénom" name="firstName" value={formValue.firstName.value}
@@ -32,8 +32,11 @@ const LoginModalSignIn = ({formValue, handleChange}) => {
                 </Typography>
             </Box>
             <Box mt="24px" mb="24px">
-                <TextField type="email" id="modal-email" label="Adresse e-mail" name="email" value={formValue.email.value}
+                <TextField type="email" id="modal-email" label="Adresse e-mail" name="email"
+                           value={formValue.email.value}
                            onChange={handleChange} fullWidth={true} placeholder="Adresse e-mail"
+                           error={formValue.email.error}
+                           helperText={isSubmit && formValue.email.error ? 'Entrez une adresse e-mail valide.':''}
                 />
                 <Typography className="sign-in-modal__help-text">
                     Nous vous enverrons les confirmations et les reçus de voyage par e-mail.
@@ -47,7 +50,9 @@ const LoginModalSignIn = ({formValue, handleChange}) => {
                                onChange={handleChange}
                                fullWidth={true}
                                placeholder="Mot de passe"
-                               autocomplete = {false}
+                               autocomplete="false"
+                               error={formValue.newPassword.error}
+                               helperText={isSubmit && formValue.password.error ? 'Le mot de passe doit contenir au moins une minuscule, une majuscule, un chiffre et doit avoir une taille comprise entre 6 et 13 caractères.' : ''}
                 />
             </Box>
             <Typography className="sign-in-modal__general-condition-text">
@@ -58,7 +63,7 @@ const LoginModalSignIn = ({formValue, handleChange}) => {
                 la <a href="#">Politique de confidentialité</a> d'Airbnb.
             </Typography>
             <Box mt="24px" mb="24px">
-                <Button size="large" variant="contained-red" fullWidth={true}>
+                <Button size="large" variant="contained-red" fullWidth={true} onClick={handleSubmit}>
                     Accepter et continuer
                 </Button>
             </Box>
