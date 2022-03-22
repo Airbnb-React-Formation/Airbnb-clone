@@ -1,10 +1,11 @@
 import {Box, Divider, IconButton, Typography} from "@mui/material";
-import {forwardRef, useReducer, useState} from "react";
+import {forwardRef, useEffect, useReducer, useState} from "react";
 import "./LoginModal.css"
 import LoginModalEmail from "./LoginModalEmail";
 import LoginModalPassword from "./LoginModalPassword";
 import LoginModalSignIn from "./LoginModalSignIn";
 import {ArrowBackIosNew, Close} from "@mui/icons-material";
+import {useAuth} from "../context/AuthContext";
 
 const style = {
     position: 'absolute',
@@ -39,13 +40,17 @@ const LoginModal = forwardRef(({onClose}, ref) => {
             value: "",
             error: false
         },
+        newPassword: {
+            value: "",
+            error: false
+        },
     }
     const validateFormState = {
         email: {
             regex: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
             errorMessage: 'Entrez une adresse e-mail valide.'
         },
-        password: {
+        NewPassword: {
             regex: /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{4,8}$/,
             errorMessage: ''
         }
@@ -65,21 +70,38 @@ const LoginModal = forwardRef(({onClose}, ref) => {
         }
     }
     const [state, dispatch] = useReducer(formReducer, initialFormState)
+    const {isUserExists,login,authUser} = useAuth()
     const titleList = {
         email: "Connexion ou inscription",
         password: "Connexion",
         signIn: 'Terminer mon inscription',
     }
     const [isSubmit, setIsSubmit] = useState(false)
+    useEffect(()=>{
+        if(authUser){
+            onClose()
+        }else{
+            state.password.error = true
+        }
+    },[authUser,isSubmit])
     const handleSubmit = () => {
         setIsSubmit(true)
         const error = Object.keys(state).some(e => state[e].error === true)
-        if (!error) {
+        // if (!error) {
             switch (page) {
                 case 'email' :
-                    if (state.email.value) return setPage('password')
+                    if (state.email.value && !state.email.error){
+                        setIsSubmit(false)
+                        return isUserExists(state.email.value)
+                            .then(()=>setPage('password'))
+                            .catch(()=>setPage('signIn'))
+                    }
                     return
                 case 'password':
+                    if(state.password.value){
+                        state.password.error = false
+                        login({username:state.email.value,password:state.password.value})
+                    }
                     return null
                 case 'signIn':
                     return null
@@ -87,7 +109,7 @@ const LoginModal = forwardRef(({onClose}, ref) => {
                     return null
             }
         }
-    }
+    // }
     const handleChange = (e) => {
         const fieldName = e.target.name
         const fieldValue = e.target.value
