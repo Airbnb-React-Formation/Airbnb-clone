@@ -42,6 +42,7 @@ const SearchBarField = ({
                                    placeholder={placeholder}
                                    value={inputValue}
                                    onChange={(e) => onInputValue(e.target.value)}
+                                   autoComplete="off"
                             />
                     }
                 </div>
