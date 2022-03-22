@@ -1,4 +1,5 @@
-import crypto from "crypto-browserify";
+import CryptoJS from "crypto-js";
+const Buffer = require('buffer/').Buffer
 
 const localStorageKey = 'db-back-airbnb-clone-users'
 
@@ -42,12 +43,16 @@ const validateUser = ({username, password}) => {
     }
 }
 
+const isUserExists = (email) => {
+    return loadUsers().some(user => user.username === email)
+}
+
 const hashcode = (data) => {
-    return crypto.createHash('md5').update(data).digest('hex')
-    // return crypto.sha256(data)
+    return CryptoJS.SHA256(data).toString(CryptoJS.enc.base64)
 }
 
 const authenticate = async ({username, password}) => {
+    console.log(hashcode(username))
     validateUser({username, password})
     const id = hashcode(username)
     const user = (await loadUserById(id) || {})
@@ -59,4 +64,4 @@ const authenticate = async ({username, password}) => {
     throw error
 }
 
-export {authenticate,loadUserById}
+export {authenticate,loadUserById,loadUsers,isUserExists}
