@@ -3,11 +3,11 @@ import DestinationPanel from "./DestinationPanel";
 import {useEffect, useRef, useState} from "react";
 import GuestsPanel from "./GuestsPanel";
 import {FieldPanel, SearchBarField} from "./SearchBarField";
-import SearchButton from "./SearchButton";
 import {useNavigate} from "react-router-dom"
 import CalendarPanel from "./CalendarPanel";
 import 'moment/locale/fr'
 import useClickOutside from "../../hook/useClickOutside";
+import SearchButtonExtended from "./SearchButtonExtended";
 
 
 const SearchBar = () => {
@@ -141,7 +141,6 @@ const SearchBar = () => {
                     disabledInput={true}
                     inputValue={endDate?.format("DD MMM")}
                     onReset={handleResetDate}
-                    // onInputValue={setSearch}
                 >
                     <FieldPanel>
                         <CalendarPanel
@@ -165,11 +164,8 @@ const SearchBar = () => {
                     disabledInput={true}
                     inputValue={getGuestsText()}
                     onReset={handleResetGuests}
-                    // onInputValue={setSearch}
                 >
-                    <div className="btn-search-container">
-                        <SearchButton isExtended={selectedField} onCLick={handleSearch}/>
-                    </div>
+                    <SearchButtonExtended selectedField={selectedField} handleSearch={handleSearch}/>
                     <FieldPanel align="right">
                         <GuestsPanel
                             guestValues={{adults, children, infants, pets}}
