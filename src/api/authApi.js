@@ -24,8 +24,12 @@ const storeToken = ({user}) => {
 
 const login = ({username, password}) => clientAuthApi('login',{username,password}).then(storeToken)
 
+const register =({username, password}) =>{
+    return clientAuthApi('register', {username, password}).then(storeToken)
+}
+
 const logout = async () => {
     window.localStorage.removeItem(localStorageTokenKey)
 }
 
-export {login,logout,getToken,clientAuthApi}
+export {login,register,logout,getToken,clientAuthApi}

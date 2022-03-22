@@ -39,7 +39,22 @@ export const handlers = [
             return res(ctx.status(200))
         }
         return res(ctx.status(404))
-    })
+    }),
+    rest.post(`/auth/register`, async (req, res, ctx) => {
+        const {username, password} = req.body
+        const userFields = {username, password}
+        await db.createUser(userFields)
+        let user
+        try {
+            user = await db.authenticate(userFields)
+        } catch (error) {
+            return res(
+                ctx.status(400),
+                ctx.json({status: 400, message: error.message}),
+            )
+        }
+        return res(ctx.json({user}))
+    }),
 ];
 
 

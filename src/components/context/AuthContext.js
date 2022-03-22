@@ -17,7 +17,7 @@ const getUserByToken = async () => {
     let user = null
     const token = await authApi.getToken()
     if (token) {
-       await clientAuth('me', {token}).then(res => res.json()).then(data => user = data.user)
+        await clientAuth('me', {token}).then(res => res.json()).then(data => user = data.user)
     }
     return user
 }
@@ -34,6 +34,14 @@ const AuthProvider = props => {
             .then(user => setData(user))
             .catch(err => setAuthError(err))
     }
+    const register = (data) => {
+        authApi
+            .register(data)
+            .then(user => setData(user))
+            .catch(err => setAuthError(err))
+    }
+
+
     const logout = () => {
         authApi.logout()
         setData(null)
@@ -50,8 +58,8 @@ const AuthProvider = props => {
         // .catch(()=>false)
     }
     const value = useMemo(
-        () => ({authUser, login, logout, authError, isUserExists}),
-        [authError, authUser, login, logout, isUserExists],
+        () => ({authUser, login,register, logout, authError, isUserExists}),
+        [authError, authUser, login,register, logout, isUserExists],
     )
     if (status === 'fetching' || status === 'idle') {
         return <div>Loading...</div>

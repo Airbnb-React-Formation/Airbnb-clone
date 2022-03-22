@@ -23,7 +23,24 @@ const saveUsers = (users) => {
     window.localStorage.setItem(localStorageKey, JSON.stringify(users))
 }
 
-function clean(user) {
+const createUser = async ({username, password}) => {
+    validateUser({username, password})
+    const id = hashcode(username)
+    const passwordHash = hashcode(password)
+    const uid = await loadUserById(id)
+    if (uid) {
+        const error = new Error(
+            `Impossible de créer un utilisateur car  "${username}" existe déjà `,
+        )
+        error.status = 400
+        throw error
+    }
+    const user = {id, username, passwordHash}
+    saveUser(user)
+    return await loadUserById(id)
+}
+
+const clean =(user) => {
     if (user.passwordHash) {
         const {passwordHash, ...rest} = user
         return rest
@@ -52,7 +69,6 @@ const hashcode = (data) => {
 }
 
 const authenticate = async ({username, password}) => {
-    console.log(hashcode(username))
     validateUser({username, password})
     const id = hashcode(username)
     const user = (await loadUserById(id) || {})
@@ -64,4 +80,4 @@ const authenticate = async ({username, password}) => {
     throw error
 }
 
-export {authenticate,loadUserById,loadUsers,isUserExists}
+export {authenticate,loadUserById,loadUsers,isUserExists,createUser}
