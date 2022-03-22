@@ -10,7 +10,8 @@ import {useAuth} from "../context/AuthContext";
 function AccountMenuHeader() {
     const [displayMenuHeader, setDisplayMenuHeader] = React.useState(false)
     const [isSignInLogInModal, setIsSignInLogInModal] = useState(false)
-    const {logout} = useAuth()
+    const {logout,authUser} = useAuth()
+    const isConnected = !!authUser;
     const handleOpen = () => {
         setDisplayMenuHeader(false)
         setIsSignInLogInModal(true)
@@ -32,8 +33,8 @@ function AccountMenuHeader() {
                     <div>
                         <MenuBarIcon/>
                     </div>
-                    <div>
-                        <MenuProfileIcon size={"16px"}/>
+                    <div className={isConnected ? "header-profile-menu__profile-icon--green":""}>
+                      <MenuProfileIcon/>
                     </div>
                 </button>
                 {displayMenuHeader ?
@@ -75,8 +76,8 @@ function AccountMenuHeaderOnClick({onClickActions}) {
     ]
     //   const [connected, setConnected ]= React.useState();
     const {authUser} = useAuth()
-    const connected = !!authUser;
-    const payload = (connected) ? payload_connect : payload_disconnect;
+    const isConnected = !!authUser;
+    const payload = (isConnected) ? payload_connect : payload_disconnect;
     const listMenu = payload.map((element, i) => {
         return (
             <AccountMenuHeaderItem
