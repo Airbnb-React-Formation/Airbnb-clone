@@ -1,14 +1,16 @@
-import { rest } from 'msw'
+import {rest} from 'msw'
 import accommodations from '../data/accommodations.json'
+import * as db from "./db"
+const Buffer = require('buffer/').Buffer
 
 export const handlers = [
-    rest.get('/api/accommodations', (req,res,ctx)=>{
+    rest.get('/api/accommodations', (req, res, ctx) => {
         return res(
             ctx.status(200),
             ctx.json(accommodations)
         )
     }),
-    rest.get('/api/accommodations/:id', (req,res,ctx)=>{
+    rest.get('/api/accommodations/:id', (req, res, ctx) => {
         const {id} = req.params
         const index = accommodations.findIndex(accommodation => accommodation.id === +id)
         if (index < 0) {
@@ -20,7 +22,51 @@ export const handlers = [
             ctx.status(200),
             ctx.json(accommodations[index])
         )
+    }),
+    rest.post('/auth/login', async (req, res, ctx) => {
+        const {username, password} = req.body
+        const user = await db.authenticate({username, password})
+        return res(ctx.json({user}))
+    }),
+    rest.get(`/auth/me`, async (req, res, ctx) => {
+        const user = await getUser(req)
+        const token = getToken(req)
+        return res(ctx.json({user: {...user, token}}))
+    }),
+    rest.post('/auth/user', async (req, res, ctx) => {
+        const {user} = req.body
+        if(db.isUserExists(user)){
+            return res(ctx.status(200))
+        }
+        return res(ctx.status(404))
     })
 ];
+
+
+const getToken = req => req.headers.get('Authorization')?.replace('Bearer ', '')
+
+const getUser = async (req) => {
+    const token = getToken(req)
+    if (!token) {
+        const error = new Error('Le Token est obligatoire')
+        error.status = 401
+        throw error
+    }
+    let userId
+    try {
+        userId = Buffer.from(token, 'base64').toString()
+    } catch (e) {
+        const error = new Error('token Invalid. Merci de se reconnecter.')
+        error.status = 401
+        throw error
+    }
+    const user = await db.loadUserById(userId, true)
+    if (!user) {
+        const error = new Error('Utilisateur non trouvé avec ce Token')
+        error.status = 401
+        throw error
+    }
+    return user
+}
 
 export default handlers

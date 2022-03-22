@@ -9,6 +9,7 @@ import "./App.css"
 import Footer from "./components/Footer/Footer";
 import { ThemeProvider} from "@mui/material";
 import MuiTheme from "./theme/MuiTheme";
+import {AuthProvider} from "./components/context/AuthContext";
 
 
 
@@ -16,6 +17,7 @@ function App() {
     return (
         <div className="app">
             <ThemeProvider theme={MuiTheme}>
+                <AuthProvider>
                 <BrowserRouter>
                     <Header/>
                     <Routes>
@@ -28,6 +30,7 @@ function App() {
                     </Routes>
                     <Footer/>
                 </BrowserRouter>
+                </AuthProvider>
             </ThemeProvider>
         </div>
     );
