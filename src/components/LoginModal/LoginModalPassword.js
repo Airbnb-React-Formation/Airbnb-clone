@@ -1,10 +1,17 @@
-import {Box, Button, Typography} from "@mui/material";
+import {Box, Button, TextField, Typography} from "@mui/material";
 import PasswordField from "./PasswordField";
 
 const LoginModalPassword = ({formValue, handleChange, handleSubmit, isSubmit}) => {
 
     return (
         <Box p="24px" width="520px">
+            <Box sx={{display: "none"}}>
+                <TextField
+                    type="email"
+                    id="modal-email"
+                    name="email" value={formValue.email.value}
+                />
+            </Box>
             <PasswordField
                 id="modal-password"
                 name="password"
