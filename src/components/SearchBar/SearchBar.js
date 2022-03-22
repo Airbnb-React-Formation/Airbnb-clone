@@ -64,6 +64,9 @@ const SearchBar = () => {
     }
 
     const handleSearch = () => {
+        if(!Object.keys(destination).length){
+            setSelectedField('destination')
+        }
         if (adults && destination && startDate && endDate) {
             const params =
                 "destination=" + destination.name

@@ -1,6 +1,6 @@
 import "./SearchBarField.css"
 import ResetFieldButton from "./ResetFieldButton";
-import {Children, cloneElement, useRef} from "react";
+import {Children, cloneElement, useEffect, useRef} from "react";
 
 const SearchBarField = ({
                             title,
@@ -16,6 +16,11 @@ const SearchBarField = ({
                         }) => {
     const isSelected = selectedField === fieldName
     const inputRef = useRef()
+    useEffect(() => {
+        if (isSelected) {
+            inputRef.current?.focus()
+        }
+    }, [isSelected])
     return (
         <>
             <div
@@ -24,7 +29,7 @@ const SearchBarField = ({
                     inputRef.current?.focus()
                     onSelect(fieldName)
                 }}
-                style={{overflow: "hidden",width:"100%"}}
+                style={{overflow: "hidden", width: "100%"}}
             >
                 <div>
                     <div>{title}</div>
@@ -51,12 +56,12 @@ const SearchBarField = ({
                 </div>
             }
 
-            {Children.map(children, child => cloneElement(child, {isSelected: isSelected,fieldName:fieldName}))}
+            {Children.map(children, child => cloneElement(child, {isSelected: isSelected, fieldName: fieldName}))}
         </>
     )
 }
 
-const FieldPanel = ({children, align, isSelected,fieldName}) => {
+const FieldPanel = ({children, align, isSelected, fieldName}) => {
     if (!isSelected) return null
     return (
         <>
