@@ -1,6 +1,5 @@
-import {Box, Button, Divider, FormControl, TextField, Typography} from "@mui/material";
+import {Box, Button, Divider, TextField, Typography} from "@mui/material";
 import {AppleIcon, FacebookIcon, GoogleIcon, Icon, PhoneIcon} from "../Icon/Icon";
-import {useState} from "react";
 
 const LoginModalEmail = ({formValue, handleChange, handleSubmit,isSubmit}) => {
     return (
@@ -19,6 +18,7 @@ const LoginModalEmail = ({formValue, handleChange, handleSubmit,isSubmit}) => {
                         onChange={handleChange}
                         fullWidth={true}
                         placeholder="Adresse e-mail"
+                        autoComplete="username"
                     />
                     <Box mt="16px" mb="24px">
                         <Button

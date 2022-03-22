@@ -10,6 +10,7 @@ const LoginModalPassword = ({formValue, handleChange, handleSubmit, isSubmit}) =
                     type="email"
                     id="modal-email"
                     name="email" value={formValue.email.value}
+                    autoComplete="username"
                 />
             </Box>
             <PasswordField
