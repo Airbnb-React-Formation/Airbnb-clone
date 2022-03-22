@@ -6,11 +6,11 @@ import moment from "moment";
 const LoginModalSignIn = ({formValue, handleChange}) => {
     return (
         <Box p="24px" width="520px" style={{maxHeight: "calc(100vh - 200px)", overflow: "scroll"}}>
-            <TextField id="modal-first-name" label="Prénom" name="firstName" value={formValue.firstName}
+            <TextField id="modal-first-name" label="Prénom" name="firstName" value={formValue.firstName.value}
                        onChange={handleChange} fullWidth={true} placeholder="Prénom"
             />
             <Box mt="12px">
-                <TextField id="modal-last-name" label="Nom" name="lastName" value={formValue.lastName}
+                <TextField id="modal-last-name" label="Nom" name="lastName" value={formValue.lastName.value}
                            onChange={handleChange} fullWidth={true} placeholder="Nom"
                 />
             </Box>
@@ -19,7 +19,7 @@ const LoginModalSignIn = ({formValue, handleChange}) => {
             </Typography>
             <Box mt="24px" mb="24px">
                 <TextField type='date' id="modal-birth-date" label="Date de naissance" name="birthDate"
-                           value={formValue.birthDate}
+                           value={formValue.birthDate.value}
                            onChange={handleChange}
                            fullWidth={true}
                            placeholder="Date de naissance"
@@ -32,7 +32,7 @@ const LoginModalSignIn = ({formValue, handleChange}) => {
                 </Typography>
             </Box>
             <Box mt="24px" mb="24px">
-                <TextField type="email" id="modal-email" label="Adresse e-mail" name="email" value={formValue.email}
+                <TextField type="email" id="modal-email" label="Adresse e-mail" name="email" value={formValue.email.value}
                            onChange={handleChange} fullWidth={true} placeholder="Adresse e-mail"
                 />
                 <Typography className="sign-in-modal__help-text">
@@ -40,9 +40,14 @@ const LoginModalSignIn = ({formValue, handleChange}) => {
                 </Typography>
             </Box>
             <Box mt="24px" mb="24px">
-                <PasswordField id="modal-password" label="Mot de passe" name="password"
-                               value={formValue.password} onChange={handleChange} fullWidth={true}
+                <PasswordField id="modal-password"
+                               label="Mot de passe"
+                               name="newPassword"
+                               value={formValue.newPassword.value}
+                               onChange={handleChange}
+                               fullWidth={true}
                                placeholder="Mot de passe"
+                               autocomplete = {false}
                 />
             </Box>
             <Typography className="sign-in-modal__general-condition-text">
