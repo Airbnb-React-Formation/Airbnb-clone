@@ -1,5 +1,4 @@
-import {Box, Button, InputAdornment, TextField, Typography} from "@mui/material";
-import {useState} from "react";
+import {Box, Button, Typography} from "@mui/material";
 import PassworldField from "./PassworldField";
 
 const LoginModalPassword = ({formValue, handleChange, handleSubmit, isSubmit}) => {
@@ -15,8 +14,9 @@ const LoginModalPassword = ({formValue, handleChange, handleSubmit, isSubmit}) =
                 value={formValue.password.value}
                 onChange={handleChange}
                 error={formValue.password.error}
-                helperText={isSubmit && formValue.password.error ? 'Le mot de passe doit contenir au moins une minuscule, une majuscule, un chiffre et doit avoir une taille comprise entre 6 et 13 caractères.':''}
+                helperText={isSubmit && formValue.password.error ? 'Le mot de passe que vous avez saisi est incorrect.':''}
             />
+            {/*Le mot de passe doit contenir au moins une minuscule, une majuscule, un chiffre et doit avoir une taille comprise entre 6 et 13 caractères.*/}
             <Box mt="16px" mb="24px">
                 <Button size="large" variant="contained-red" fullWidth={true} onClick={handleSubmit}>Se connecter</Button>
             </Box>
