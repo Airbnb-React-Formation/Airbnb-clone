@@ -1,10 +1,9 @@
 import { useState } from "react";
-
 import Galerie from "./Galerie";
 import accommodations from '../../data/accommodations.json';
 import ListDetail from "./ListDetail";
 import Commentaires from "./Commentaire";
-import Titre from "./Titre";
+import Avis from "./Avis";
 
 
 const Detail = () => {
@@ -17,7 +16,10 @@ const Detail = () => {
   
     return(
         <div>
-          <Titre item = {item}/>
+          <div>
+          {item.title}
+          <Avis/>
+          </div>
           <Galerie item={item}/>
           <ListDetail item={item}
           calendarProps={calendarProps}
