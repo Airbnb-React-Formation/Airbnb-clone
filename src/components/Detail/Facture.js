@@ -4,7 +4,7 @@ import React from "react";
 const Facture = ({item}) =>{
     
     return(
-        <table>
+        <table >
             <tr>
                 <th>prix par nuit</th>
                 <th> {item.pricePerNight}</th>
