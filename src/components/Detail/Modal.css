@@ -1,4 +1,6 @@
 .modale__container{
+    display: flex;
+    flex-direction: column;
     box-sizing: border-box;
     width: 300px;
     height: 525px;
@@ -6,3 +8,6 @@
     
 }
 
+.modale__container__facture{
+    align-items: flex-end;
+}

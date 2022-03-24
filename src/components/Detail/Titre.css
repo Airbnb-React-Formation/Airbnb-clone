@@ -1,0 +1,15 @@
+.container__titre ul{
+    display: flex;
+    padding-inline-start: unset;
+    padding: 0;
+    margin: 0;
+}
+
+.container__titre li::after{
+    content: "·";
+    padding: 0 6px 0 6px;
+}
+
+.container__titre li:last-child::after{
+    all: unset;
+}

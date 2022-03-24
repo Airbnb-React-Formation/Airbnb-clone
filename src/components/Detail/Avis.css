@@ -1,4 +1,19 @@
+.container__avis{
+    display: flex;
+    justify-items: center;
+
+}
+
+.container__avis p{
+    margin: 5px;
+    padding: 5px;
+
+}
+
 .icon__etoile{
     height: 12px;
     width: 12px;
+    padding: 10px;
 }
+    
+

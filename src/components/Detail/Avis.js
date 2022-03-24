@@ -5,12 +5,16 @@ import { Icon, IconEtoile } from "../Icon/Icon";
 const Avis = () =>{
 
     return (
-        <div>
+        <div className="container__avis">
             <Icon className="icon__etoile">
             <IconEtoile />
             </Icon>
-            <span>Avis</span>
-            <span>commentaire</span>
+            <div>
+            <p>Avis</p>
+            </div>
+            <div>
+            <p>Commentaires</p>
+            </div>
         </div>
     )
 }

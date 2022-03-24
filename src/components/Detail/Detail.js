@@ -4,22 +4,21 @@ import accommodations from '../../data/accommodations.json';
 import ListDetail from "./ListDetail";
 import Commentaires from "./Commentaire";
 import Avis from "./Avis";
-
+import Titre from "./Titre";
+//import { useParams } from "react-router-dom";
 
 const Detail = () => {
    const item = accommodations[0]
-   //const {roomId} = useParms()
+   //const {roomId} = useParms();
+   
    const [startDate, setStartDate] = useState();
    const [endDate, setEndDate] = useState();
    const [selectedField, setSelectedField] = useState('');
    const calendarProps = {startDate, endDate, setEndDate, setStartDate, selectedField, setSelectedField}
   
     return(
-        <div>
-          <div>
-          {item.title}
-          <Avis/>
-          </div>
+        <div className="container__detail">
+          <Titre item={item}/>
           <Galerie item={item}/>
           <ListDetail item={item}
           calendarProps={calendarProps}

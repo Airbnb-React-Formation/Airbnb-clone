@@ -1,16 +1,15 @@
 
 import React from "react";
-import Avis from "./Avis";
 import './Hebergement.css'
 import { IconMedail,Icon, IconLocaliz, IconCalendrier} from '../Icon/Icon'
 import EquipementIcon from "./EquipementIcon";
+import Titre from "./Titre";
 
 const Hebergement = ({item}) => {
 
     return(
         <div className="container__herbergement">
-        {item.title}
-        <Avis/>
+        <Titre item={item}/>
         <div className="container__icon">
         <div>
           <Icon className="icon__stule">
