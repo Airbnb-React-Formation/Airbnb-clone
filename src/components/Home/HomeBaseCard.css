@@ -138,7 +138,7 @@
 /* Media queries */
 @media (min-width: 744px) {
   .hbc__wrapper--header {
-    padding-top: 2rem;
+    padding-top: 144px;
     position: relative;
     padding-bottom: 2rem;
   }
