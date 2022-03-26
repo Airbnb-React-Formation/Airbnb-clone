@@ -6,39 +6,56 @@ import Button from "../asset/Button";
 import SearchBar from "../SearchBar/SearchBar";
 import {useEffect, useState} from "react";
 import SearchBarMinimized from "../SearchBar/SearchBarMinimized";
+import {useStyle} from "../context/StyleContext";
 
 function Header() {
+    const {headerConfig} = useStyle()
+    const {isStartExpanded} = headerConfig
     const [backgroundColor, setBackgroundColor] = useState('black')
-    const [isCollapsed, setIsCollapsed] = useState(false)
-    const [logoColor, setLogoColor] = useState('white')
+    const [isExpanded, setIsExpanded] = useState(isStartExpanded)
+    const [logoColor, setLogoColor] = useState(isStartExpanded ? "white" : "red")
+    const [hasTransition,setHasTransition] = useState(false)
     const handleScroll = (e) => {
+        if(!hasTransition) setHasTransition(true)
         if (e.srcElement.documentElement.scrollTop >= 1 && backgroundColor !== 'white') {
             setBackgroundColor('white')
-            setIsCollapsed(true)
+            setIsExpanded(false)
             setLogoColor('red')
-        } else if (e.srcElement.documentElement.scrollTop === 0) {
+        } else if (e.srcElement.documentElement.scrollTop === 0 && isStartExpanded) {
             setBackgroundColor('black')
             setLogoColor('white')
-            setIsCollapsed(false)
-        } else if (!isCollapsed) {
-            setIsCollapsed(true)
+            setIsExpanded(true)
+        } else if (isExpanded) {
+            setIsExpanded(false)
         }
     }
     const handleMinimizedSearchBarClick = () => {
-        setIsCollapsed(false)
+        if(!hasTransition) setHasTransition(true)
+        setIsExpanded(true)
     }
     useEffect(() => {
-        // window.addEventListener('scroll',handleScroll)
+        setIsExpanded(isStartExpanded)
+        setLogoColor(isStartExpanded ? "white" : "red")
+        setBackgroundColor(isStartExpanded ? "black" : "white")
         window.onscroll = handleScroll
-        // return window.removeEventListener('scroll',handleScroll)
-    }, [])
+    }, [headerConfig])
 
     return (
         <div
             className={
                 "header" +
-                (backgroundColor === 'black' ? " header__color--black " : " header__color--white") +
-                (isCollapsed ? " header__collapsed" : "")
+                (
+                    isExpanded ?
+                        ` header__color--${backgroundColor}`
+                        :
+                        " header__collapsed header__color--white"
+                ) +
+                (
+                    hasTransition ?
+                        ""
+                        :
+                        " no-transition"
+                )
             }>
             <div className="grid-one-one">
                 <a href="/">
@@ -47,7 +64,7 @@ function Header() {
             </div>
             <div className="grid-one-two">
                 {
-                    !isCollapsed
+                    isExpanded
                         ?
                         <>
                             <MenuHeader/>
