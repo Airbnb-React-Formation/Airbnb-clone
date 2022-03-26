@@ -59,7 +59,7 @@ function Header() {
             }>
             <div className="grid-one-one">
                 <a href="/">
-                    <Logo color={logoColor}/>
+                    <Logo hasTransition={hasTransition} color={logoColor}/>
                 </a>
             </div>
             <div className="grid-one-two">
