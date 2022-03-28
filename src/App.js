@@ -26,8 +26,7 @@ function App() {
                                 <Route path="/hosting" element={<Hosting/>}/>
                                 <Route path="/becomeHost" element={<BecomeHostIntro/>}/>
                                 <Route path="/search" element={<Results/>}/>
-                                <Route path="/search/:roomId" element={<Results/>}/>
-                                <Route path="/detail" element={<Detail/>}/>
+                                <Route path="/search/:roomId" element={<Detail/>}/>
                                 <Route path="*" element={<Navigate to="/"/>}/>
                             </Routes>
                             <Footer/>
