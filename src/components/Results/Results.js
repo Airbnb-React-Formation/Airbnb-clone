@@ -5,6 +5,7 @@ import {useEffect, useState} from "react";
 import hydrateAccommodations from "../../data/hydrate";
 import accommodations from "../../data/accommodations.json";
 import useSearchParamsToObject from "../../hook/useSearchParamsToObject";
+import {useStyle} from "../context/StyleContext";
 
 const Results = () => {
     const [results, setResults] = useState([])
@@ -12,7 +13,13 @@ const Results = () => {
     const query = useSearchParamsToObject()
     const {coordinates, destination, startdate, enddate} = query
     const [mapBounds, setMapBounds] = useState({})
+    const {setConfig} = useStyle()
+    const headerConfig = {
+        isStartExpanded: false,
+        searchCollapsedType: "collapsed",
+    }
     useEffect(() => {
+        setConfig({headerConfig})
         fetch("/api/accommodations")
             .then(res => res.json())
             .then(json => setResults(hydrateAccommodations(json,destination,mapBounds)))

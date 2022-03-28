@@ -1,8 +1,8 @@
 .result-map{
     flex: 1 1 auto;
     position: sticky;
-    top: 160px;
-    height: calc(100vh - 160px);
+    top: 80px;
+    height: calc(100vh - 80px);
 }
 
 .leaflet-container{

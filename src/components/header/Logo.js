@@ -1,8 +1,8 @@
 import "./Logo.css"
 
-export function Logo({color = "white"}) {
+export function Logo({color = "white", hasTransition}) {
     return (
-        <div className={"brand-logo__color--" + color}>
+        <div className={("brand-logo__color--" + color) + (hasTransition ? "" : " no-transition")}>
 
             <svg width="102px" height="32px">
                 <path
