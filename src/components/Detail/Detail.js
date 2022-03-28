@@ -3,13 +3,14 @@ import Galerie from "./Galerie";
 import accommodations from '../../data/accommodations.json';
 import ListDetail from "./ListDetail";
 import Commentaires from "./Commentaire";
-import Avis from "./Avis";
 import Titre from "./Titre";
-//import { useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 const Detail = () => {
-   const item = accommodations[0]
-   //const {roomId} = useParms();
+   
+   const {roomId} = useParams();
+   
+   const item = accommodations[roomId]
    
    const [startDate, setStartDate] = useState();
    const [endDate, setEndDate] = useState();
