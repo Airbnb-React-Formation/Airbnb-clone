@@ -9,7 +9,6 @@ import { useParams } from "react-router-dom";
 const Detail = () => {
    
    const {roomId} = useParams();
-   
    const item = accommodations[roomId]
    
    const [startDate, setStartDate] = useState();
