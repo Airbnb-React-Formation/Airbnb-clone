@@ -6,6 +6,7 @@ import Commentaires from "./Commentaire";
 import Titre from "./Titre";
 import { useParams } from "react-router-dom";
 
+
 const Detail = () => {
    
    const {roomId} = useParams();
@@ -22,6 +23,7 @@ const Detail = () => {
           <Galerie item={item}/>
           <ListDetail item={item}
           calendarProps={calendarProps}
+          
           />
           <Commentaires/>
         </div> 

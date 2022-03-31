@@ -11,3 +11,9 @@
 .modale__container__facture{
     align-items: flex-end;
 }
+
+.container__modal__button{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}

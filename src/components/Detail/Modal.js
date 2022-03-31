@@ -17,7 +17,9 @@ const Modal = ({item, calendarProps}) =>{
           <DateModal 
           calendarProps={calendarProps}/>
           <VoyageurModal/>
+          <div className="container__modal__button">
           <Button link={"/"} text="Reserver"/>
+          </div>
           <div className="modale__container__facture">
           <Facture item={item}/>
           </div>
