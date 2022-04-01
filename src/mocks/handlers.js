@@ -25,8 +25,20 @@ export const handlers = [
     }),
     rest.post('/auth/login', async (req, res, ctx) => {
         const {username, password} = req.body
-        const user = await db.authenticate({username, password})
-        return res(ctx.json({user}))
+        let user
+        try{
+            user = await db.authenticate({username, password})
+        } catch (error){
+            return res(
+                ctx.delay(),
+                ctx.status(401),
+                ctx.json({status:401,message:'test'})
+            )
+        }
+        return res(
+            ctx.delay(),
+            ctx.json({user})
+        )
     }),
     rest.get(`/auth/me`, async (req, res, ctx) => {
         const user = await getUser(req)
@@ -36,9 +48,15 @@ export const handlers = [
     rest.post('/auth/user', async (req, res, ctx) => {
         const {user} = req.body
         if(db.isUserExists(user)){
-            return res(ctx.status(200))
+            return res(
+                ctx.delay(),
+                ctx.status(200)
+            )
         }
-        return res(ctx.status(404))
+        return res(
+            ctx.delay(),
+            ctx.status(404)
+        )
     }),
     rest.post(`/auth/register`, async (req, res, ctx) => {
         const {username, password} = req.body
@@ -49,11 +67,15 @@ export const handlers = [
             user = await db.authenticate(userFields)
         } catch (error) {
             return res(
+                ctx.delay(),
                 ctx.status(400),
                 ctx.json({status: 400, message: error.message}),
             )
         }
-        return res(ctx.json({user}))
+        return res(
+            ctx.delay(),
+            ctx.json({user})
+        )
     }),
 ];
 
