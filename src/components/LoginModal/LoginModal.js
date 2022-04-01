@@ -3,7 +3,7 @@ import {forwardRef, useEffect, useReducer, useState} from "react";
 import "./LoginModal.css"
 import LoginModalEmail from "./LoginModalEmail";
 import LoginModalPassword from "./LoginModalPassword";
-import LoginModalSignIn from "./LoginModalSignIn";
+import LoginModalRegister from "./LoginModalRegister";
 import {ArrowBackIosNew, Close} from "@mui/icons-material";
 import {useAuth} from "../context/AuthContext";
 import useForm from "../../hook/useForm";
@@ -21,7 +21,7 @@ const initialFormValues = {
 const titleList = {
     email: "Connexion ou inscription",
     password: "Connexion",
-    signIn: 'Terminer mon inscription',
+    register: 'Terminer mon inscription',
 }
 
 
@@ -48,7 +48,7 @@ const LoginModal = forwardRef(({onClose}, ref) => {
         useEffect(() => {
             if (page === "password")
                 setLoginFailed(false)
-            if (page === "signIn")
+            if (page === "register")
                 setUserExist(false)
         }, [values])
         useEffect(() => {
@@ -64,7 +64,7 @@ const LoginModal = forwardRef(({onClose}, ref) => {
                                     setIsLoading(false)
                                 })
                                 .catch(() => {
-                                    setPage('signIn')
+                                    setPage('register')
                                     setIsLoading(false)
                                 })
                         }
@@ -79,7 +79,7 @@ const LoginModal = forwardRef(({onClose}, ref) => {
                                 })
                         }
                         break
-                    case 'signIn':
+                    case 'register':
                         const {password, ...registerFieldsErrors} = errors
                         if (!errors.email) {
                             isUserExists(values.email)
@@ -106,7 +106,7 @@ const LoginModal = forwardRef(({onClose}, ref) => {
                 case 'password':
                     validateForm({password})
                     break
-                case 'signIn':
+                case 'register':
                     validateForm({email, ...fields})
                     break
                 default :
@@ -123,10 +123,10 @@ const LoginModal = forwardRef(({onClose}, ref) => {
                     return <LoginModalPassword values={values} errors={errors} handleChange={handleChange}
                                                handleSubmit={handleSubmit}
                                                showErrors={showErrors} isLoading={isLoading} loginFailed={loginFailed}/>
-                case 'signIn' :
-                    return <LoginModalSignIn values={values} errors={errors} handleChange={handleChange}
-                                             handleSubmit={handleSubmit} isLoading={isLoading} showErrors={showErrors}
-                                             userExist={userExist}/>
+                case 'register' :
+                    return <LoginModalRegister values={values} errors={errors} handleChange={handleChange}
+                                               handleSubmit={handleSubmit} isLoading={isLoading} showErrors={showErrors}
+                                               userExist={userExist}/>
             }
         }
         return (

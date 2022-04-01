@@ -3,7 +3,7 @@ import PasswordField from "./PasswordField";
 import moment from "moment";
 
 
-const LoginModalSignIn = ({values, errors, handleChange, handleSubmit, showErrors,userExist,isLoading}) => {
+const LoginModalRegister = ({values, errors, handleChange, handleSubmit, showErrors,userExist,isLoading}) => {
     return (
         <Box p="24px" width="520px" style={{maxHeight: "calc(100vh - 200px)", overflow: "scroll"}}>
             <TextField
@@ -121,4 +121,4 @@ const LoginModalSignIn = ({values, errors, handleChange, handleSubmit, showError
     )
 }
 
-export default LoginModalSignIn
+export default LoginModalRegister
