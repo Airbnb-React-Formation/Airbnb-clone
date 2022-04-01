@@ -1,7 +1,7 @@
 import {InputAdornment, TextField} from "@mui/material";
 import {useState} from "react";
 
-const PasswordField = ({id,name,label,fullWidth,placeholder,value,onChange,error,helperText,autocomplete}) => {
+const PasswordField = ({id,name,label,fullWidth,placeholder,value,onChange,error,helperText,autoComplete}) => {
     const [showPassword,setShowPassword] = useState(false)
     return (
         <TextField type={showPassword ? "text":"password"}
@@ -14,7 +14,7 @@ const PasswordField = ({id,name,label,fullWidth,placeholder,value,onChange,error
                    onChange={onChange}
                    error={error}
                    helperText={helperText}
-                   autoComplete={autocomplete}
+                   autoComplete={autoComplete}
                    InputProps={{
                        endAdornment:(
                            <InputAdornment
