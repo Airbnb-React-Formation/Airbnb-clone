@@ -1,7 +1,7 @@
 import {Box, Button, Divider, TextField, Typography} from "@mui/material";
 import {AppleIcon, FacebookIcon, GoogleIcon, Icon, PhoneIcon} from "../Icon/Icon";
 
-const LoginModalEmail = ({formValue, handleChange, handleSubmit,isSubmit}) => {
+const LoginModalEmail = ({values,errors, handleChange, handleSubmit,showErrors,isLoading}) => {
     return (
         <Box p="24px" width="520px">
 
@@ -12,9 +12,10 @@ const LoginModalEmail = ({formValue, handleChange, handleSubmit,isSubmit}) => {
                         type="email"
                         id="modal-email"
                         label="Adresse e-mail"
-                        error={formValue.email.error}
-                        helperText={isSubmit && formValue.email.error ? 'Entrez une adresse e-mail valide.':''}
-                        name="email" value={formValue.email.value}
+                        error={!!errors.email}
+                        helperText={showErrors && errors.email ? errors.email:''}
+                        name="email"
+                        value={values.email}
                         onChange={handleChange}
                         fullWidth={true}
                         placeholder="Adresse e-mail"
@@ -28,7 +29,11 @@ const LoginModalEmail = ({formValue, handleChange, handleSubmit,isSubmit}) => {
                             fullWidth={true}
                             onClick={handleSubmit}
                         >
-                            Continuer
+                            {isLoading ?
+                                <div className="loading"><span/><span/><span/></div>
+                                :
+                                "Continuer"
+                            }
                         </Button>
                     </Box>
             <Box mt="16px" mb="16px">
