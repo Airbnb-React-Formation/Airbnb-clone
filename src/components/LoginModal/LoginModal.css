@@ -1,44 +1,111 @@
-.sign-in-modal__button{
-    text-transform:none;
+.sign-in-modal__button {
+    text-transform: none;
     background: linear-gradient(to right, rgb(230, 30, 77) 0%, rgb(227, 28, 95) 50%, rgb(215, 4, 102) 100%) !important;
 }
-.sign-in-modal__container{
+
+.sign-in-modal__container {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
-    border-radius:12px;
-    max-height:calc(100vh - 80px)
+    border-radius: 12px;
+    max-height: calc(100vh - 80px)
 }
-.sign-in-modal__button-icon{
+
+.sign-in-modal__button-icon {
     height: 20px;
     width: 20px;
     display: block;
-    position:relative
+    position: relative
 }
 
-.sign-in-modal__button-icon svg{
-    position:absolute;
-    top:0;
-    left:0
+.sign-in-modal__button-icon svg {
+    position: absolute;
+    top: 0;
+    left: 0
 }
-.sign-in-modal__forgot-password{
+
+.sign-in-modal__forgot-password {
     cursor: pointer;
     text-decoration: underline;
 }
 
-.sign-in-modal__close-back-btn{
-    position: absolute!important;
-    top:50%;
+.sign-in-modal__close-back-btn {
+    position: absolute !important;
+    top: 50%;
     transform: translateY(-50%);
-    left:10px
+    left: 10px
 }
-.sign-in-modal__help-text{
-    color:rgb(113,113,113);
-    font-size: 12px!important;
-    margin: 8px 0!important;
+
+.sign-in-modal__help-text {
+    color: rgb(113, 113, 113);
+    font-size: 12px !important;
+    margin: 8px 0 !important;
 }
-.sign-in-modal__general-condition-text{
-    font-size: 12px!important;
+
+.sign-in-modal__general-condition-text {
+    font-size: 12px !important;
 }
+
+.password-error__container {
+    display: flex;
+    border-radius: 8px;
+    border: 1px solid var(--airbnb-separator-grey);
+    padding: 16px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.password-error__icon {
+    flex-shrink: 0;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: #c13515;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-right:12px;
+
+}
+
+.password-error__helper-text {
+    color: rgb(113, 113, 113);
+    font-size: 14px !important;
+}
+
+.password-error__title {
+    font-size: 16px !important;
+}
+
+
+.loading span {
+    width: 10px;
+    height: 10px;
+    margin: 0 5px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: white;
+    animation: dots 2s infinite ease-in-out;
+}
+
+.loading span:nth-child(2) {
+    animation-delay: 0.5s;
+}
+
+.loading span:nth-child(3) {
+    animation-delay: 1s;
+}
+
+@keyframes dots {
+    50% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+
+}
+
+
