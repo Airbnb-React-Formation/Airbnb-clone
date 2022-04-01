@@ -28,14 +28,19 @@ const AuthProvider = props => {
     useEffect(() => {
         execute(getUserByToken())
     }, [execute])
-    const login = (data) => {
-        authApi
+    const login = async(data) => {
+        await authApi
             .login(data)
-            .then(user => setData(user))
-            .catch(err => setAuthError(err))
+            .then(user => {
+                setData(user)
+                setAuthError(null)
+            })
+            .catch(err => {
+                setAuthError(err)
+            })
     }
-    const register = (data) => {
-        authApi
+    const register = async(data) => {
+        await authApi
             .register(data)
             .then(user => setData(user))
             .catch(err => setAuthError(err))
