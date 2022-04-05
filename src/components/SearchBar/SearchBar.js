@@ -67,10 +67,10 @@ const SearchBar = () => {
         if(!Object.keys(destination).length){
             setSelectedField('destination')
         }
-        if (adults && destination && startDate && endDate) {
+        if (destination && startDate && endDate) {
             const params =
                 "destination=" + destination.name
-                + (adults ? "&adults=" + adults : "")
+                + "&adults=" + (adults > 0 ? adults : 1 )
                 + (children ? "&children=" + children : "")
                 + (infants ? "&infants=" + infants : "")
                 + (pets ? "&pets=" + pets : "")
