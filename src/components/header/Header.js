@@ -4,9 +4,10 @@ import AccountMenuHearder from "../menu_account/AccountMenuHearder";
 import MenuHeader from "./MenuHeader";
 import Button from "../asset/Button";
 import SearchBar from "../SearchBar/SearchBar";
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import SearchBarMinimized from "../SearchBar/SearchBarMinimized";
 import {useStyle} from "../context/StyleContext";
+import useClickOutside from "../../hook/useClickOutside";
 
 function Header() {
     const {headerConfig} = useStyle()
@@ -15,6 +16,10 @@ function Header() {
     const [isExpanded, setIsExpanded] = useState(isStartExpanded)
     const [logoColor, setLogoColor] = useState(isStartExpanded ? "white" : "red")
     const [hasTransition,setHasTransition] = useState(false)
+    const headerRef = useRef()
+    useClickOutside(headerRef,()=>(
+        isExpanded ? setIsExpanded(false) : null
+    ))
     const handleScroll = (e) => {
         if(!hasTransition) setHasTransition(true)
         if (e.srcElement.documentElement.scrollTop >= 1 && backgroundColor !== 'white') {
@@ -42,6 +47,7 @@ function Header() {
 
     return (
         <div
+            ref={headerRef}
             className={
                 "header" +
                 (
