@@ -1,5 +1,5 @@
 import "./StepperRow.css"
-const StepperRow = ({children,maxValue,value,handleChange}) => {
+const StepperRow = ({children,maxValue,value,handleChange,minValue = 0}) => {
     const handleIncrease = () => handleChange(value + 1)
     const handleDecrease = () => handleChange(value -1)
 
@@ -9,7 +9,7 @@ const StepperRow = ({children,maxValue,value,handleChange}) => {
                 {children.map(child => child)}
             </div>
             <div className="stepper">
-                <button className="stepper-button" disabled={value === 0} onClick={handleDecrease}>-</button>
+                <button className="stepper-button" disabled={value === minValue } onClick={handleDecrease}>-</button>
                 <div className="value">{value}</div>
                 <button className="stepper-button" disabled={value === maxValue} onClick={handleIncrease}>+</button>
             </div>

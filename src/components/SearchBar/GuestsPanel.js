@@ -8,7 +8,7 @@ const GuestsPanel = ({maxGuest = 16, guestValues,guestHandlers}) => {
 
     return (
         <div className="guests-panel">
-            <StepperRow maxValue={maxGuest - children} value={adults} handleChange={setAdults}>
+            <StepperRow maxValue={maxGuest - children} value={adults} handleChange={setAdults} minValue={(children || infants || pets) > 0 ? 1 : 0 }>
                 <StepperTitle>Adultes</StepperTitle>
                 <StepperSubTitle>13 ans et plus</StepperSubTitle>
             </StepperRow>
