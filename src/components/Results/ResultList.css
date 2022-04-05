@@ -1,5 +1,5 @@
 .result-list{
-    width: 840px;
+    width: 100%;
     flex-grow: 0;
     flex-shrink: 0;
     padding: 10px;
@@ -10,4 +10,16 @@
     margin-bottom: 24px;
     border-bottom: 1px solid rgb(221, 221, 221);
     display: block;
+}
+
+@media (min-width: 1128px){
+    .result-list{
+        width: 58vw;
+    }
+}
+
+@media (min-width: 1440px){
+    .result-list{
+        width: 840px;
+    }
 }

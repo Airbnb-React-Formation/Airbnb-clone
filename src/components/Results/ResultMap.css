@@ -10,3 +10,9 @@
     width: 100%;
     z-index: 0;
 }
+
+@media (min-width: 1128px) {
+    .result-map{
+        display: block;
+    }
+}

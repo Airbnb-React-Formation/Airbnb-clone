@@ -1,9 +1,10 @@
-import {useEffect, useState} from "react";
+import {useEffect, useRef, useState} from "react";
 import {MapContainer, TileLayer, useMapEvent, Pane} from 'react-leaflet'
 import PriceMapMarker from "./PriceMapMarker";
 import "leaflet/dist/leaflet.css"
 import "./ResultMap.css"
 import "./PriceMapMarker.css"
+
 
 
 const MapEvents = ({handleBounds}) => {
@@ -31,18 +32,24 @@ const MapEvents = ({handleBounds}) => {
 }
 
 
-const ResultMap = ({coordinates, handleBounds, results,resultHovered}) => {
+const ResultMap = ({coordinates, handleBounds, results, resultHovered, isHidden}) => {
+    const mapRef = useRef()
     coordinates = coordinates.split(',').reverse()
     const [selectedMarker, setSelectedMarker] = useState('')
-
+    useEffect(()=>{
+        const map = mapRef.current;
+        setTimeout(() => {
+            map?.invalidateSize();
+        }, 250);
+    },[isHidden])
     const handleSelect = (id) => {
         setSelectedMarker(id)
     }
 
     return (
 
-        <div className="result-map">
-            <MapContainer center={coordinates} zoom={16}>
+        <div  className={"result-map" + (isHidden ? " result-page__hidden":"")}>
+            <MapContainer  whenCreated={ mapInstance => { mapRef.current = mapInstance } } center={coordinates} zoom={16}>
                 <TileLayer
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
@@ -63,7 +70,7 @@ const ResultMap = ({coordinates, handleBounds, results,resultHovered}) => {
                     )
                 }
                 <Pane name="custom-page" style={{zIndex: 700}}/>
-                <MapEvents handleBounds={handleBounds}/>
+                <MapEvents handleBounds={handleBounds} isHidden={isHidden}/>
             </MapContainer>
         </div>
     )
