@@ -6,10 +6,12 @@ import hydrateAccommodations from "../../data/hydrate";
 import accommodations from "../../data/accommodations.json";
 import useSearchParamsToObject from "../../hook/useSearchParamsToObject";
 import {useStyle} from "../context/StyleContext";
+import ShowMapOrListButton from "./ShowMapOrListButton";
 
 const Results = () => {
     const [results, setResults] = useState([])
     const [resultHovered,setResultHovered] = useState('')
+    const [showOnlyMap,setShowOnlyMap] = useState(false)
     const query = useSearchParamsToObject()
     const {coordinates, destination, startdate, enddate} = query
     const [mapBounds, setMapBounds] = useState({})
@@ -30,6 +32,9 @@ const Results = () => {
     }, [mapBounds])
 
     const handleHover = (id) => setResultHovered(id)
+    const handleShowButtonClick = () => {
+        setShowOnlyMap(!showOnlyMap)
+    }
     return (
 
 
@@ -37,8 +42,11 @@ const Results = () => {
                 (
                 <div className="result-page">
                     <div className="result-container">
-                        <ResultsList tripDates={{startDate: startdate, endDate: enddate}} resultsList={results} onHover={handleHover}/>
-                        <ResultMap coordinates={coordinates} handleBounds={setMapBounds} results={results} resultHovered={resultHovered}/>
+                        <div className="result-page__show-button-container">
+                            <ShowMapOrListButton onClick={handleShowButtonClick} showOnlyMap={showOnlyMap}/>
+                        </div>
+                        <ResultsList tripDates={{startDate: startdate, endDate: enddate}} resultsList={results} onHover={handleHover} isHidden={showOnlyMap}/>
+                        <ResultMap coordinates={coordinates} handleBounds={setMapBounds} results={results} resultHovered={resultHovered} isHidden={!showOnlyMap}/>
                     </div>
                 </div>
                 )
