@@ -45,10 +45,13 @@ const getSearchHistory = async () => {
                     url: search,
                     destination: query.destination,
                     startDate: query.startdate,
-                    endDate: query.enddate
+                    endDate: query.enddate,
+                    adults:+query.adults,
+                    children:query.children ? +query.children : 0,
+                    infants:query.infants ? +query.infants : 0,
+                    pets:query.pets ? query.pets : 0
                 }
-            })
-
+            }).reverse()
         })
         .catch(err => console.log(err))
 
