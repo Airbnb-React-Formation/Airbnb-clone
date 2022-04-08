@@ -77,6 +77,47 @@ export const handlers = [
             ctx.json({user})
         )
     }),
+    rest.post('/auth/search-history',async (req, res,ctx) =>{
+        const {search} = req.body
+        const user = await getUser(req)
+        const id = user.id
+        try {
+            db.saveSearchHistory(id,search)
+        }
+        catch (err){
+            return res(
+                ctx.delay(),
+                ctx.status(400),
+                ctx.json({status:400,message:err.message})
+            )
+        }
+        return res(
+            ctx.delay(),
+            ctx.status(201),
+            ctx.json({status:201,message:'Recherche sauvegardée'})
+        )
+    } ),
+    rest.get('/auth/search-history',async (req, res, ctx) =>{
+        const user = await getUser(req)
+        const id = user.id
+        let userSearchHistory = {}
+
+        try {
+            userSearchHistory =  await db.loadSearchHistoryById(id)
+            return res(
+                ctx.delay(),
+                ctx.status(200),
+                ctx.json(userSearchHistory)
+            )
+        }catch (err){
+            return res(
+                ctx.delay(),
+                ctx.status(400),
+                ctx.json({error:400,message:err.message})
+            )
+        }
+
+    } )
 ];
 
 
