@@ -8,6 +8,7 @@ import {useEffect, useRef, useState} from "react";
 import SearchBarMinimized from "../SearchBar/SearchBarMinimized";
 import {useStyle} from "../context/StyleContext";
 import useClickOutside from "../../hook/useClickOutside";
+import {Link} from "react-router-dom";
 
 function Header() {
     const {headerConfig} = useStyle()
@@ -15,13 +16,18 @@ function Header() {
     const [backgroundColor, setBackgroundColor] = useState('black')
     const [isExpanded, setIsExpanded] = useState(isStartExpanded)
     const [logoColor, setLogoColor] = useState(isStartExpanded ? "white" : "red")
-    const [hasTransition,setHasTransition] = useState(false)
+    const [hasTransition, setHasTransition] = useState(false)
+    const [isHeaderConfigLoaded, setIsHeaderConfigLoaded] = useState(false)
     const headerRef = useRef()
-    useClickOutside(headerRef,()=>(
+    console.log(backgroundColor)
+    console.log(isStartExpanded)
+    useClickOutside(headerRef, () => (
         isExpanded ? setIsExpanded(false) : null
     ))
+
     const handleScroll = (e) => {
-        if(!hasTransition) setHasTransition(true)
+        if (!hasTransition) setHasTransition(true)
+        console.log('scroll')
         if (e.srcElement.documentElement.scrollTop >= 1 && backgroundColor !== 'white') {
             setBackgroundColor('white')
             setIsExpanded(false)
@@ -35,15 +41,23 @@ function Header() {
         }
     }
     const handleMinimizedSearchBarClick = () => {
-        if(!hasTransition) setHasTransition(true)
+        if (!hasTransition) setHasTransition(true)
         setIsExpanded(true)
     }
     useEffect(() => {
         setIsExpanded(isStartExpanded)
         setLogoColor(isStartExpanded ? "white" : "red")
         setBackgroundColor(isStartExpanded ? "black" : "white")
-        window.onscroll = handleScroll
+        setIsHeaderConfigLoaded(true)
+
     }, [headerConfig])
+
+    useEffect(() => {
+        window.onscroll = handleScroll
+        if (isHeaderConfigLoaded) {
+            setIsHeaderConfigLoaded(false)
+        }
+    }, [isHeaderConfigLoaded,isExpanded])
 
     return (
         <div
@@ -64,9 +78,9 @@ function Header() {
                 )
             }>
             <div className="grid-one-one">
-                <a href="/">
+                <Link to="/">
                     <Logo hasTransition={hasTransition} color={logoColor}/>
-                </a>
+                </Link>
             </div>
             <div className="grid-one-two">
                 {
