@@ -19,15 +19,12 @@ function Header() {
     const [hasTransition, setHasTransition] = useState(false)
     const [isHeaderConfigLoaded, setIsHeaderConfigLoaded] = useState(false)
     const headerRef = useRef()
-    console.log(backgroundColor)
-    console.log(isStartExpanded)
     useClickOutside(headerRef, () => (
         isExpanded ? setIsExpanded(false) : null
     ))
 
     const handleScroll = (e) => {
         if (!hasTransition) setHasTransition(true)
-        console.log('scroll')
         if (e.srcElement.documentElement.scrollTop >= 1 && backgroundColor !== 'white') {
             setBackgroundColor('white')
             setIsExpanded(false)
