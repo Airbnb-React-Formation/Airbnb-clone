@@ -4,15 +4,17 @@ import "./Results.css"
 import {useEffect, useState} from "react";
 import hydrateAccommodations from "../../data/hydrate";
 import accommodations from "../../data/accommodations.json";
-import useSearchParamsToObject from "../../hook/useSearchParamsToObject";
+import searchParamsToObject from "../../helper/searchParamsToObject";
 import {useStyle} from "../context/StyleContext";
 import ShowMapOrListButton from "./ShowMapOrListButton";
+import {useLocation} from "react-router-dom";
 
 const Results = () => {
     const [results, setResults] = useState([])
     const [resultHovered,setResultHovered] = useState('')
     const [showOnlyMap,setShowOnlyMap] = useState(false)
-    const query = useSearchParamsToObject()
+    const { search } = useLocation()
+    const query = searchParamsToObject(search)
     const {coordinates, destination, startdate, enddate} = query
     const [mapBounds, setMapBounds] = useState({})
     const {setConfig} = useStyle()
