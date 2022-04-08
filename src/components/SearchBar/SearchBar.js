@@ -8,6 +8,8 @@ import CalendarPanel from "./CalendarPanel";
 import 'moment/locale/fr'
 import useClickOutside from "../../hook/useClickOutside";
 import SearchButtonExtended from "./SearchButtonExtended";
+import {useAuth} from "../context/AuthContext";
+import {saveSearchHistory} from "../../api/clientApi";
 
 
 const SearchBar = () => {
@@ -21,6 +23,7 @@ const SearchBar = () => {
     const [startDate, setStartDate] = useState()
     const [endDate, setEndDate] = useState()
     const navigate = useNavigate()
+    const {authUser} = useAuth()
 
     const setMinAdult = () => {
         if (!adults && (children || infants || pets))
@@ -67,7 +70,7 @@ const SearchBar = () => {
         if(!Object.keys(destination).length){
             setSelectedField('destination')
         }
-        if (destination && startDate && endDate) {
+        if (Object.keys(destination).length && startDate && endDate) {
             const params =
                 "destination=" + destination.name
                 + "&adults=" + (adults > 0 ? adults : 1 )
@@ -78,6 +81,9 @@ const SearchBar = () => {
                 + "&enddate=" + endDate.format("YYYY-MM-DD")
                 + "&coordinates=" + destination.coordinates
             setSelectedField('')
+            if(authUser){
+                saveSearchHistory(`?${params}`)
+            }
             navigate(`/search/?${params}`)
         }
     }
