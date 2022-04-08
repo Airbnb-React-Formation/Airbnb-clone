@@ -22,13 +22,6 @@ const Home = () => {
                 <HomeExperiences/>
                 <HomeGift/>
                 <HomeHosting/>
-                {/*<div style={{*/}
-                {/*    width: '100%',*/}
-                {/*    minHeight: '5rem',*/}
-                {/*    textAlign: 'center'*/}
-                {/*}}>*/}
-                {/*    composant temporaire inspiration*/}
-                {/*</div>*/}
             </main>
         </>
     );
