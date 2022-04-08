@@ -1,15 +1,24 @@
 .suggestions-list{
     padding: 10px 0 10px 0;
-    width: 500px;
 }
 .suggestion{
     padding: 8px 16px 8px 32px;
     display: flex;
     align-items: center;
     cursor: pointer;
+    width: 500px;
 }
 .suggestion:hover{
     background-color: rgb(247,247,247);
+}
+
+.suggestion__title{
+    padding: 8px 32px 8px 32px;
+}
+
+.suggestion__subtext{
+    font-size: 12px;
+    color: rgb(113,113,113);
 }
 .localisation-icon-container{
     display: flex;
