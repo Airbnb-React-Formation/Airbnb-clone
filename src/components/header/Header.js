@@ -18,11 +18,18 @@ function Header() {
     const [logoColor, setLogoColor] = useState(isStartExpanded ? "white" : "red")
     const [hasTransition, setHasTransition] = useState(false)
     const [isHeaderConfigLoaded, setIsHeaderConfigLoaded] = useState(false)
+    const [isClickOutside,setIsClickOutside] = useState(false)
     const headerRef = useRef()
     useClickOutside(headerRef, () => (
-        isExpanded ? setIsExpanded(false) : null
+        setIsClickOutside(true)
     ))
-
+    useEffect(()=>{
+        if(isClickOutside){
+        if(isExpanded && backgroundColor !== 'black')
+            setIsExpanded(false)
+            setIsClickOutside(false)
+        }
+    },[isClickOutside])
     const handleScroll = (e) => {
         if (!hasTransition) setHasTransition(true)
         if (e.srcElement.documentElement.scrollTop >= 1 && backgroundColor !== 'white') {
@@ -54,7 +61,7 @@ function Header() {
         if (isHeaderConfigLoaded) {
             setIsHeaderConfigLoaded(false)
         }
-    }, [isHeaderConfigLoaded,isExpanded])
+    }, [isHeaderConfigLoaded, isExpanded])
 
     return (
         <div
