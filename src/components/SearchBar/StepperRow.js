@@ -6,7 +6,7 @@ const StepperRow = ({children,maxValue,value,handleChange,minValue = 0}) => {
     return (
     <div className="stepper-row">
             <div>
-                {children.map(child => child)}
+                {children}
             </div>
             <div className="stepper">
                 <button className="stepper-button" disabled={value === minValue } onClick={handleDecrease}>-</button>

@@ -10,40 +10,21 @@ import useClickOutside from "../../hook/useClickOutside";
 import SearchButtonExtended from "./SearchButtonExtended";
 import {useAuth} from "../context/AuthContext";
 import {saveSearchHistory} from "../../api/clientApi";
+import useGuestField from "../../hook/useGuestField";
 
 
 const SearchBar = () => {
     const [selectedField, setSelectedField] = useState('')
     const [search, setSearch] = useState('')
     const [destination, setDestination] = useState({})
-    const [adults, setAdults] = useState(0)
-    const [children, setChildren] = useState(0)
-    const [infants, setInfants] = useState(0)
-    const [pets, setPets] = useState(0)
     const [startDate, setStartDate] = useState()
     const [endDate, setEndDate] = useState()
     const navigate = useNavigate()
     const {authUser} = useAuth()
-
-    const setMinAdult = () => {
-        if (!adults && (children || infants || pets))
-            setAdults(1)
-    }
-
-    useEffect(() => {
-        setMinAdult()
-    }, [children, infants, pets])
-
+    const {guest,setGuest,resetGuest} = useGuestField()
+    const {adults,children,infants,pets} = guest
     const searchBarRef = useRef()
-
     useClickOutside(searchBarRef, () => setSelectedField(''))
-
-    const handleResetGuests = () => {
-        setAdults(0)
-        setChildren(0)
-        setInfants(0)
-        setPets(0)
-    }
 
     const handleResetDate = () => {
         setStartDate(null)
@@ -172,13 +153,13 @@ const SearchBar = () => {
                     onSelect={handleSelectField}
                     disabledInput={true}
                     inputValue={getGuestsText()}
-                    onReset={handleResetGuests}
+                    onReset={resetGuest}
                 >
                     <SearchButtonExtended selectedField={selectedField} handleSearch={handleSearch}/>
                     <FieldPanel align="right">
                         <GuestsPanel
-                            guestValues={{adults, children, infants, pets}}
-                            guestHandlers={{setAdults, setChildren, setInfants, setPets}}
+                            guest={guest}
+                            setGuest={setGuest}
                         />
                     </FieldPanel>
                 </SearchBarField>
