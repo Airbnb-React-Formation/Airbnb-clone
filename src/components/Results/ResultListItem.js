@@ -2,13 +2,23 @@ import "./ResultListItem.css"
 import {isMany} from "../../helper/helper";
 import {RatingStar} from "../Icon/Icon";
 import ResultListCarousel from "./ResultListCarousel";
-import {NavLink} from "react-router-dom";
+import {NavLink, useLocation} from "react-router-dom";
+import searchParamsToObject from "../../helper/searchParamsToObject";
+import {useEffect, useState} from "react";
 
 const ResultListItem = ({item, tripDuration, onHover}) => {
+    const {search} = useLocation()
+    const [searchParams,setSearchParams] = useState("")
+    useEffect(() => {
+        if (item.coordinates) {
+            const searchParamsObject = searchParamsToObject(search)
+            setSearchParams (new URLSearchParams({...searchParamsObject, coordinates: item.coordinates.join(',')}).toString())
+        }
+    },[item])
 
     return (
         <div className="result-list-item" onMouseOver={() => onHover(item.id)} onMouseLeave={() => onHover('')}>
-            <NavLink className="result-list-item__link" target="_blank" to={"/search/" + item.id}/>
+            <NavLink className="result-list-item__link" target="_blank" to={`/rooms/${item.id}?${searchParams}`}/>
             <div className="result-list-item__carousel"><ResultListCarousel pictureList={item.pictures}/></div>
             <div className="result-list-item__details">
                 <div className="result-list-item__header">

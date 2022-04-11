@@ -11,6 +11,7 @@ import {ThemeProvider} from "@mui/material";
 import MuiTheme from "./theme/MuiTheme";
 import {AuthProvider} from "./components/context/AuthContext";
 import {StyleProvider} from "./components/context/StyleContext";
+import Room from "./components/Room/Room";
 
 
 function App() {
@@ -26,6 +27,7 @@ function App() {
                                 <Route path="/hosting" element={<Hosting/>}/>
                                 <Route path="/becomeHost" element={<BecomeHostIntro/>}/>
                                 <Route path="/search" element={<Results/>}/>
+                                <Route path="/rooms/:id" element={<Room/>}/>
                                 <Route path="/search/:roomId" element={<Detail/>}/>
                                 <Route path="*" element={<Navigate to="/"/>}/>
                             </Routes>
