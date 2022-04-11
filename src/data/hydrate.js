@@ -21,18 +21,21 @@ const getRandomCoordinates = (mapBounds) => {
     return ([lat, lng])
 }
 
+const hydrateAccommodation = (accommodation,place,coordinate) => {
+    return {
+        ...accommodation,
+        placeType: getPlaceType(accommodation.placeType),
+        housingType: getHousingType(accommodation.housingType),
+        place: place,
+        coordinates: coordinate
+    }
+}
 
 const hydrateAccommodations = (list, place, mapBounds) => {
     return list.map((accommodation) => {
         const randomCoordinates = Object.keys(mapBounds).length !== 0 && getRandomCoordinates(mapBounds)
-        return {
-            ...accommodation,
-            placeType: getPlaceType(accommodation.placeType),
-            housingType: getHousingType(accommodation.housingType),
-            place: place,
-            coordinates: randomCoordinates
-        }
+        return hydrateAccommodation(accommodation,place,randomCoordinates)
     })
 }
 
-export default hydrateAccommodations
+export {hydrateAccommodations,hydrateAccommodation}
