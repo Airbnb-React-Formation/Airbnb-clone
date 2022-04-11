@@ -10,8 +10,9 @@ body {
   --airbnb-text-black: rgb(34,34,34);
   --airbnb-background-light-grey: rgb(247,247,247);
   --airbnb-separator-grey:rgb(221,221,221);
+  --airbnb-text-grey : rgb(113,113,113)
 }
 
 .bold{
-  font-weight: 800;
+  font-weight:600;
 }
