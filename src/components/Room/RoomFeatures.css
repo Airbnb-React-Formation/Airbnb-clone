@@ -1,0 +1,31 @@
+.RoomFeatures{
+
+}
+
+.RoomFeatures__feature{
+    display: flex;
+}
+.RoomFeatures__feature:first-child{
+    margin-bottom: 24px;
+}
+.RoomFeatures__icon{
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+    min-width: 24px;
+}
+
+.RoomFeatures__container{
+    margin-left: 16px;
+}
+
+
+
+.RoomFeatures__text{
+    margin-bottom: 4px;
+}
+
+.RoomFeatures__subtext{
+    font-size: 14px;
+    color: var(--airbnb-text-grey);
+}

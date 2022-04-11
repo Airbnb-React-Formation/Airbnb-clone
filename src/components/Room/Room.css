@@ -1,0 +1,37 @@
+.RoomPage{
+    width: 100%;
+    padding: 0 80px;
+    box-sizing: border-box;
+}
+
+.RoomPage__details{
+
+}
+
+.RoomPage__block{
+    padding-top: 24px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--airbnb-separator-grey);
+}
+
+.RoomPage__block:first-child{
+    padding-top: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--airbnb-separator-grey);
+}
+
+
+.RoomPage__block:last-child{
+    border-bottom: none
+}
+
+@media (min-width: 1280px) {
+    .RoomPage{
+        width: 1120px;
+        padding: 0 80px;
+        box-sizing: unset;
+    }
+}
+
+
+
