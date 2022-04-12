@@ -1,12 +1,12 @@
-.room-page__header{
+.RoomHeader{
     padding-top: 24px;
 }
 
-.room-page__header-title{
+.RoomHeader__title{
     font-size: 26px;
 }
 
-.room-page__header-subtitle-container{
+.RoomHeader__subtitle-container{
     margin-top: 8px;
     display: flex;
     font-size: 14px;
@@ -14,31 +14,31 @@
     align-items: center;
 }
 
-.room-page__header-subtitle-left{
+.RoomHeader__subtitle-left{
     display: flex;
 }
 
-.room-page__header-subtitle-rating{
+.RoomHeader__rating{
     margin-left: 8px;
     margin-right: 8px;
     color: var(--airbnb-text-grey);
 }
 
-.room-page__header-subtitle-separator{
+.RoomHeader__separator{
     margin-left: 8px;
     margin-right: 8px;
     color: var(--airbnb-text-grey);
 }
 
-.room-page__header-subtitle-location{
+.RoomHeader__location{
     color: var(--airbnb-text-grey);
 }
 
-.room-page__header-subtitle-right{
+.RoomHeader__subtitle-right{
     display: flex;
 }
 
-.room-page__header-subtitle-button{
+.RoomHeader__button{
     all:unset;
     display: flex;
     cursor: pointer;
@@ -48,19 +48,19 @@
     gap: 6px;
 }
 
-.room-page__header-subtitle-button:hover{
+.RoomHeader__button:hover{
     border-radius: 8px;
     background-color: var(--airbnb-background-light-grey);
 }
 
-.room-page__header-subtitle-button:active{
+.RoomHeader__button:active{
     border-radius: 8px;
     background-color: var(--airbnb-background-light-grey);
     transform: scale(0.96);
 
 }
 
-.room-page__header-subtitle-button-icon{
+.RoomHeader__icon{
     width: 14px;
     height: 14px;
     stroke: black;
