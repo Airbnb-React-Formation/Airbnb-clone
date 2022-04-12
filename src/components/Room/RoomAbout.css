@@ -1,0 +1,34 @@
+.RoomAbout{
+
+}
+
+.RoomAbout__text{
+    display: block;
+    display: -webkit-box;
+    -webkit-line-clamp: 6 ;
+    -webkit-box-orient:vertical;
+    max-height: 144px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.RoomAbout__show-more{
+    margin-top: 16px;
+}
+
+.RoomAbout__button{
+    border : none;
+    background : none;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    text-decoration: underline;
+    font-size: 16px;
+}
+
+.RoomAbout__icon{
+    width: 12px;
+    height: 12px;
+    margin-left: 4px;
+}

@@ -9,6 +9,7 @@ import {hydrateAccommodation} from "../../data/hydrate";
 import RoomGallery from "./RoomGallery";
 import RoomTitle from "./RoomTitle";
 import RoomFeatures from "./RoomFeatures";
+import RoomAbout from "./RoomAbout";
 
 const Room = () => {
     const [room, setRoom] = useState({})
@@ -34,8 +35,8 @@ const Room = () => {
                 <div>
                     <RoomTitle room={room}/>
                     <RoomFeatures/>
+                    <RoomAbout summary={room.summary}/>
                     {/*Todo*/}
-                    {/*<RoomAbout/>*/}
                     {/*<RoomSleep/>*/}
                     {/*<RoomAmenities/>*/}
                     {/*<RoomCalendar/>*/}
