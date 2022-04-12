@@ -70,6 +70,7 @@
 .result-list-item__rating {
     flex: 1 0 auto;
     display: flex;
+    align-items: center;
 }
 
 .result-list-item__rating-icon{
