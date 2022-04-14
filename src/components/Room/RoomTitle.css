@@ -5,8 +5,7 @@
     flex: 0 1 100%;
 }
 .RoomTitle__title{
-    font-size: 22px;
-    margin-bottom: 8px;
+    margin-bottom: 8px!important;
 }
 .RoomTitle__subtitle{
     margin: 0;
