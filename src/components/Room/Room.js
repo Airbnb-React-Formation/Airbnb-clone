@@ -10,6 +10,8 @@ import RoomGallery from "./RoomGallery";
 import RoomTitle from "./RoomTitle";
 import RoomFeatures from "./RoomFeatures";
 import RoomAbout from "./RoomAbout";
+import RoomSleep from "./RoomSleep";
+import RoomAmenities from "./RoomAmenities";
 
 const Room = () => {
     const [room, setRoom] = useState({})
@@ -36,9 +38,9 @@ const Room = () => {
                     <RoomTitle room={room}/>
                     <RoomFeatures/>
                     <RoomAbout summary={room.summary}/>
+                    <RoomSleep/>
+                    <RoomAmenities/>
                     {/*Todo*/}
-                    {/*<RoomSleep/>*/}
-                    {/*<RoomAmenities/>*/}
                     {/*<RoomCalendar/>*/}
                 </div>
                 <div>
