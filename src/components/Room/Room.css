@@ -1,32 +1,44 @@
-.RoomPage{
+.RoomPage {
     width: 100%;
     padding: 0 80px;
     box-sizing: border-box;
 }
 
-.RoomPage__details{
-
-}
-
-.RoomPage__block{
+.RoomPage__block {
     padding-top: 24px;
     padding-bottom: 24px;
     border-bottom: 1px solid var(--airbnb-separator-grey);
 }
 
-.RoomPage__block:first-child{
+.RoomPage__block:first-child {
     padding-top: 48px;
     padding-bottom: 24px;
     border-bottom: 1px solid var(--airbnb-separator-grey);
 }
 
 
-.RoomPage__block:last-child{
+.RoomPage__block:last-child {
     border-bottom: none
 }
 
+.RoomPage h1 {
+    font-size: 26px;
+}
+
+.RoomPage h2 {
+    font-size: 22px;
+}
+
+.RoomPage h3 {
+    font-size: 16px;
+}
+
+.RoomPage h1,.RoomPage h2, .RoomPage h3{
+    margin: 0;
+}
+
 @media (min-width: 1280px) {
-    .RoomPage{
+    .RoomPage {
         width: 1120px;
         padding: 0 80px;
         box-sizing: unset;
