@@ -1,0 +1,33 @@
+.RoomSleep__title{
+    padding-bottom: 24px;
+}
+
+.RoomSleep__sleep-rooms{
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.RoomSleep__sleep-room{
+    margin-left: 8px;
+    margin-right: 8px;
+    display: inline-block;
+    border: 1px solid var(--airbnb-separator-grey);
+    border-radius: 12px;
+    padding: 24px;
+    width: calc(33.333% - 16px);
+    box-sizing: border-box;
+}
+
+.RoomSleep__icon{
+    width: 24px;
+    height: 24px;
+    padding-bottom: 16px;
+}
+
+.RoomSleep__text{
+    padding-bottom: 8px;
+}
+
+.RoomSleep__subtext{
+    font-size: 14px;
+}
