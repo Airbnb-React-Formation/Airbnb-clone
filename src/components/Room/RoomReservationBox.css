@@ -39,6 +39,7 @@
     border: 1px solid rgb(176, 176, 176);
     width: 100%;
     background: none;
+    z-index: 5;
 }
 
 .RoomReservationBox__dates {
@@ -60,6 +61,8 @@
 
 .RoomReservationBox__guests {
     border-radius: 0 0 8px 8px;
+    position: relative;
+
 }
 
 .RoomReservationBox__button {
@@ -112,4 +115,12 @@
     outline: 2px solid black;
     border-radius: 8px;
     box-sizing: border-box;
+}
+
+.RoomReservationBox__guests-panel{
+    padding: 16px;
+    border-radius: 8px;
+    width: 323px;
+    margin-top: 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0 2px 6px, rgba(0, 0, 0, 0.07) 0 0 0 1px !important;
 }

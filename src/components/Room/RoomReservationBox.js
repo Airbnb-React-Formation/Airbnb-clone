@@ -1,6 +1,11 @@
 import "./RoomReservationBox.css"
 import {Icon, RatingStar} from "../Icon/Icon";
 import {Button} from "@mui/material";
+import useGuestField from "../../hook/useGuestField";
+import {FieldPanel} from "../SearchBar/SearchBarField";
+import GuestsPanel from "../SearchBar/GuestsPanel";
+import {useRef, useState} from "react";
+import useClickOutside from "../../hook/useClickOutside";
 
 const RoomReservationBoxField = ({label, placeHolder, value, disabled}) => {
     return (
@@ -26,7 +31,18 @@ const RoomReservationBoxField = ({label, placeHolder, value, disabled}) => {
     )
 }
 
-const RoomReservationBox = ({price}) => {
+const RoomReservationBox = ({price, query, maxGuest}) => {
+    const [fieldSelected,setFieldSelected] = useState("")
+    const fieldsRef = useRef()
+    useClickOutside(fieldsRef,()=>setFieldSelected(""))
+    const initGuestState = {
+        ...((query.adults && !isNaN(+query.adults)) && {adults: +query.adults}),
+        ...((query.children && !isNaN(+query.children)) && {children: +query.children}),
+        ...((query.infants && !isNaN(+query.infants)) && {infants: +query.infants}),
+        ...((query.pets && !isNaN(+query.pets)) && {pets: +query.pets}),
+        maxGuest: maxGuest
+    }
+    const {guest, setGuest,displayGuestText} = useGuestField(initGuestState)
     return (<div className="RoomReservationBox">
         <div className="RoomReservationBox__header">
             {price ? <div>
@@ -41,7 +57,7 @@ const RoomReservationBox = ({price}) => {
                 </div>
             </div>
         </div>
-        <div className="RoomReservationBox__fields">
+        <div className="RoomReservationBox__fields" ref={fieldsRef}>
             <div className="RoomReservationBox__dates">
                 <button className="RoomReservationBox__field-button">
                     <div className="RoomReservationBox__dates-container">
@@ -52,9 +68,12 @@ const RoomReservationBox = ({price}) => {
                 </button>
             </div>
             <div className="RoomReservationBox__guests">
-                <button className="RoomReservationBox__field-button">
-                    <RoomReservationBoxField label="Voyageurs" placeHolder="1 voyageur" disabled={true}/>
+                <button className="RoomReservationBox__field-button" onClick={()=>setFieldSelected('guests')}>
+                    <RoomReservationBoxField value={displayGuestText} label="Voyageurs" placeHolder="1 voyageur" disabled={true}/>
                 </button>
+                    <FieldPanel className="RoomReservationBox__guests-panel" fieldName="guests" isSelected={fieldSelected} align="right">
+                        <GuestsPanel guest={guest} setGuest={setGuest}/>
+                    </FieldPanel>
             </div>
         </div>
         <div className="RoomReservationBox__button">

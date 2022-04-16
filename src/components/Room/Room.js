@@ -45,7 +45,7 @@ const Room = () => {
                     {/*<RoomCalendar/>*/}
                 </div>
                 <div className="RoomPage__right">
-                    <RoomReservationBox price={room.pricePerNight}/>
+                    <RoomReservationBox price={room?.pricePerNight} maxGuest={room?.maxGuest} query={query}/>
                 </div>
             </div>
             {/*ToDo*/}
