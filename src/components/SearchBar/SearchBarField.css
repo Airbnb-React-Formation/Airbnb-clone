@@ -9,6 +9,9 @@
     padding: 16px 32px 16px 32px;
     box-sizing: border-box;
 }
+.search-bar-panel:empty{
+    padding: 0;
+}
 
 .align-panel-right{
     right: 0;
