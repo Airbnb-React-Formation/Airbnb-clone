@@ -1,8 +1,6 @@
 .calendar-panel{
     /*width: 850px;*/
     /*height: 450px;*/
-    padding: 16px 32px 16px 32px;
-    box-sizing: border-box;
 }
 
 .DateInput,.DateRangePickerInput_arrow_svg {
