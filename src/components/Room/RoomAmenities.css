@@ -3,4 +3,6 @@
 }
 .RoomAmenities__amenities{
     display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
