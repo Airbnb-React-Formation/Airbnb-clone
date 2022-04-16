@@ -34,7 +34,7 @@ const Room = () => {
             <RoomHeader title={room.title} location={room.place}/>
             <RoomGallery pictures={room.pictures}/>
             <div className="RoomPage__details">
-                <div>
+                <div className="RoomPage__left">
                     <RoomTitle room={room}/>
                     <RoomFeatures/>
                     <RoomAbout summary={room.summary}/>
@@ -43,7 +43,7 @@ const Room = () => {
                     {/*Todo*/}
                     {/*<RoomCalendar/>*/}
                 </div>
-                <div>
+                <div className="RoomPage__right">
                     {/*Todo*/}
                     {/*<RoomReservationBox/>*/}
                 </div>

@@ -37,6 +37,20 @@
     margin: 0;
 }
 
+.RoomPage__details{
+    display: flex;
+}
+
+.RoomPage__left{
+
+}
+
+.RoomPage__right{
+    flex-shrink: 0;
+    width: 33.33%;
+    margin-left: 8.33%;
+}
+
 @media (min-width: 1280px) {
     .RoomPage {
         width: 1120px;
