@@ -1,5 +1,6 @@
 import "./RoomFeatures.css"
-import {AutonomousDoorIcon, Icon, WifiIcon} from "../Icon/Icon";
+import {AutonomousDoorIcon, Icon} from "../Icon/Icon";
+import {WifiIcon} from "../Icon/AmenitiesIcons";
 
 const RoomFeatures = () => {
     return (
