@@ -12,6 +12,7 @@ import RoomFeatures from "./RoomFeatures";
 import RoomAbout from "./RoomAbout";
 import RoomSleep from "./RoomSleep";
 import RoomAmenities from "./RoomAmenities";
+import RoomReservationBox from "./RoomReservationBox";
 
 const Room = () => {
     const [room, setRoom] = useState({})
@@ -44,8 +45,7 @@ const Room = () => {
                     {/*<RoomCalendar/>*/}
                 </div>
                 <div className="RoomPage__right">
-                    {/*Todo*/}
-                    {/*<RoomReservationBox/>*/}
+                    <RoomReservationBox price={room.pricePerNight}/>
                 </div>
             </div>
             {/*ToDo*/}
