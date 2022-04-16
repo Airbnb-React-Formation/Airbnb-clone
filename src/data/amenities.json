@@ -1,0 +1,52 @@
+[
+  {
+    "id": 0,
+    "name": "kitchen",
+    "displayName": "Cuisine"
+  },
+  {
+    "id": 1,
+    "name": "tv",
+    "displayName": "TV avec abonnement standard au câble"
+  },
+  {
+    "id": 2,
+    "name": "bath",
+    "displayName": "Baignoire"
+  },
+  {
+    "id": 3,
+    "name": "hairDryer",
+    "displayName": "Sèche-cheveux"
+  },
+  {
+    "id": 4,
+    "name": "microwave",
+    "displayName": "Four à micro-ondes"
+  },
+  {
+    "id": 5,
+    "name": "wifi",
+    "displayName": "Wifi"
+  },
+  {
+    "id": 6,
+    "name": "washingMachine",
+    "displayName": "Lave-linge (Gratuit)"
+  },
+  {
+    "id": 7,
+    "name": "luggageDeposit",
+    "displayName": "Dépôt de bagages autorisé"
+  },
+  {
+    "id": 8,
+    "name": "refrigerator",
+    "displayName": "Réfrigérateur"
+  },
+  {
+    "id": 9,
+    "name": "longTermStay",
+    "displayName": "Séjours longue durée autorisés"
+  }
+]
