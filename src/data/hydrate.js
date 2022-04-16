@@ -1,5 +1,6 @@
 import placeTypeEnum from "./placeType.json"
 import housingTypeEnum from "./housingType.json"
+import amenities from "./amenities.json"
 
 
 const getPlaceType = ([placeTypeId, precisePlaceTypeId]) => {
@@ -21,7 +22,7 @@ const getRandomCoordinates = (mapBounds) => {
     return ([lat, lng])
 }
 
-const hydrateAccommodation = (accommodation,place,coordinate) => {
+const hydrateAccommodation = (accommodation, place, coordinate) => {
     return {
         ...accommodation,
         placeType: getPlaceType(accommodation.placeType),
@@ -34,8 +35,16 @@ const hydrateAccommodation = (accommodation,place,coordinate) => {
 const hydrateAccommodations = (list, place, mapBounds) => {
     return list.map((accommodation) => {
         const randomCoordinates = Object.keys(mapBounds).length !== 0 && getRandomCoordinates(mapBounds)
-        return hydrateAccommodation(accommodation,place,randomCoordinates)
+        return hydrateAccommodation(accommodation, place, randomCoordinates)
     })
 }
 
-export {hydrateAccommodations,hydrateAccommodation}
+const hydrateAmenities = (amenitiesIdList) => {
+    return amenitiesIdList.map(amenityId => {
+        return amenities.find(amenity => {
+           return amenity.id === amenityId
+        })
+    })
+}
+
+export {hydrateAccommodations, hydrateAccommodation, hydrateAmenities}
