@@ -1,6 +1,6 @@
 import "./SearchBar.css"
 import DestinationPanel from "./DestinationPanel";
-import {useEffect, useRef, useState} from "react";
+import {useRef, useState} from "react";
 import GuestsPanel from "./GuestsPanel";
 import {FieldPanel, SearchBarField} from "./SearchBarField";
 import {useNavigate} from "react-router-dom"
@@ -21,7 +21,7 @@ const SearchBar = () => {
     const [endDate, setEndDate] = useState()
     const navigate = useNavigate()
     const {authUser} = useAuth()
-    const {guest,setGuest,resetGuest} = useGuestField()
+    const {guest,setGuest,resetGuest,displayGuestText} = useGuestField()
     const {adults,children,infants,pets} = guest
     const searchBarRef = useRef()
     useClickOutside(searchBarRef, () => setSelectedField(''))
@@ -67,16 +67,6 @@ const SearchBar = () => {
             }
             navigate(`/search/?${params}`)
         }
-    }
-
-    const getGuestsText = () => {
-        const isMany = (number) => number > 1 ? "s" : ""
-        const guests = adults + children
-        const text =
-            guests && (guests + " Voyageur" + isMany(guests))
-            + (infants ? (", " + infants + " Bébé" + isMany(infants)) : "")
-            + (pets ? (", " + pets + (pets > 1 ? " Animaux" : " Animal") + " de compagnie") : "")
-        return (text)
     }
 
     return (
@@ -152,7 +142,7 @@ const SearchBar = () => {
                     fieldName="guest"
                     onSelect={handleSelectField}
                     disabledInput={true}
-                    inputValue={getGuestsText()}
+                    inputValue={displayGuestText}
                     onReset={resetGuest}
                 >
                     <SearchButtonExtended selectedField={selectedField} handleSearch={handleSearch}/>

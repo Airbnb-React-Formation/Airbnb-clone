@@ -57,10 +57,21 @@ const useGuestField = (initState = {}) => {
     const resetGuest = () => {
         dispatch({type: "reset"})
     }
+    const getGuestsText = () => {
+        const isMany = (number) => number > 1 ? "s" : ""
+        const guests = guest.adults + guest.children
+        const text =
+            guests && (guests + " voyageur" + isMany(guests))
+            + (guest.infants ? (", " + guest.infants + " bébé" + isMany(guest.infants)) : "")
+            + (guest.pets ? (", " + guest.pets + (guest.pets > 1 ? " animaux" : " animal") + " de compagnie") : "")
+        return (text)
+    }
+    const displayGuestText = getGuestsText()
     return {
         guest,
         setGuest,
-        resetGuest
+        resetGuest,
+        displayGuestText
     };
 }
 
