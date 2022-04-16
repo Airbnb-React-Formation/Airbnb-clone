@@ -2,7 +2,6 @@ import "./RoomTitle.css"
 import {isMany} from "../../helper/helper";
 
 const RoomTitle = ({room}) => {
-    console.log(room)
     return (
         <div className="RoomTitle RoomPage__block">
             <div className="RoomPage__title-container">
