@@ -5,7 +5,6 @@ import {capitalizeFirstLetter} from "../../helper/helper";
 
 const RoomAmenity = ({amenity}) => {
     const iconName = capitalizeFirstLetter(amenity.name) + "Icon"
-    console.log(iconName)
     const {[iconName]: icon} = require('../Icon/AmenitiesIcons')
     const AmenityIcon = () => {
         if (icon) {
