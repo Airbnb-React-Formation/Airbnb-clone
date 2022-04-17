@@ -54,7 +54,7 @@ const MuiTheme = createTheme({
                 {
                     props: {variant: 'contained-red'},
                     style: {
-                        height:"42px",
+                        minHeight:"42px",
                         fontWeight: "bold",
                         fontSize: "16px",
                         color: "white",
