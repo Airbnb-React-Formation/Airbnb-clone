@@ -2,7 +2,7 @@ import "./SearchBar.css"
 import DestinationPanel from "./DestinationPanel";
 import {useRef, useState} from "react";
 import GuestsPanel from "./GuestsPanel";
-import {FieldPanel, SearchBarField} from "./SearchBarField";
+import {SearchBarField} from "./SearchBarField";
 import {useNavigate} from "react-router-dom"
 import CalendarPanel from "./CalendarPanel";
 import 'moment/locale/fr'
@@ -11,6 +11,7 @@ import SearchButtonExtended from "./SearchButtonExtended";
 import {useAuth} from "../context/AuthContext";
 import {saveSearchHistory} from "../../api/clientApi";
 import useGuestField from "../../hook/useGuestField";
+import {FieldPanel} from "./FieldPanel";
 
 
 const SearchBar = () => {
