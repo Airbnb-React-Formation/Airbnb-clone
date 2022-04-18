@@ -1,7 +1,7 @@
 import React, { useRef } from "react"
-import CalendarPanel from "../SearchBar/CalendarPanel.js";
+import CalendarPanel from "../FieldPanel/CalendarPanel.js";
 import useClickOutside from '../../hook/useClickOutside'
-import {FieldPanel} from "../SearchBar/FieldPanel";
+import {FieldPanel} from "../FieldPanel/FieldPanel";
 
 
 const DateModal = ({calendarProps :{startDate, endDate, setEndDate, setStartDate, selectedField, setSelectedField}}) =>{

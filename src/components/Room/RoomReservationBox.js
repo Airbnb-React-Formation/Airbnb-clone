@@ -2,10 +2,10 @@ import "./RoomReservationBox.css"
 import {Icon, RatingStar} from "../Icon/Icon";
 import {Button} from "@mui/material";
 import useGuestField from "../../hook/useGuestField";
-import GuestsPanel from "../SearchBar/GuestsPanel";
+import GuestsPanel from "../FieldPanel/GuestsPanel";
 import {useRef, useState} from "react";
 import useClickOutside from "../../hook/useClickOutside";
-import {FieldPanel} from "../SearchBar/FieldPanel";
+import {FieldPanel} from "../FieldPanel/FieldPanel";
 
 const RoomReservationBoxField = ({label, placeHolder, value, disabled}) => {
     return (
