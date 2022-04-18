@@ -25,16 +25,19 @@ const RoomReservationBoxField = ({label, placeHolder, value, disabled}) => {
                         <input className="RoomReservationBoxField__input" placeholder={placeHolder} value={value}
                                disabled={disabled}/>
                 }
-
             </div>
         </div>
     )
 }
 
 const RoomReservationBox = ({price, query, maxGuest}) => {
-    const [fieldSelected,setFieldSelected] = useState("")
+    const [fieldSelected, setFieldSelected] = useState("")
+    const [fieldFocused, setFieldFocused] = useState("")
     const fieldsRef = useRef()
-    useClickOutside(fieldsRef,()=>setFieldSelected(""))
+    useClickOutside(fieldsRef, () => {
+        setFieldSelected("")
+        setFieldFocused("")
+    })
     const initGuestState = {
         ...((query.adults && !isNaN(+query.adults)) && {adults: +query.adults}),
         ...((query.children && !isNaN(+query.children)) && {children: +query.children}),
@@ -58,8 +61,14 @@ const RoomReservationBox = ({price, query, maxGuest}) => {
             </div>
         </div>
         <div className="RoomReservationBox__fields" ref={fieldsRef}>
-            <div className="RoomReservationBox__dates">
-                <button className="RoomReservationBox__field-button">
+            <div
+                className={
+                    "RoomReservationBox__field RoomReservationBox__dates"
+                    + (fieldFocused === "guests" ? " RoomReservationBox__dates--unselected" : "")
+                }
+            >
+                <button className="RoomReservationBox__field-button" onFocus={() => setFieldFocused("dates")}
+                        onClick={() => setFieldSelected('dates')}>
                     <div className="RoomReservationBox__dates-container">
                         <RoomReservationBoxField label="Arrivée" placeHolder="Ajouter une date" disabled={true}/>
                         <div className="RoomReservationBox__dates-separator"/>
@@ -67,13 +76,23 @@ const RoomReservationBox = ({price, query, maxGuest}) => {
                     </div>
                 </button>
             </div>
-            <div className="RoomReservationBox__guests">
-                <button className="RoomReservationBox__field-button" onClick={()=>setFieldSelected('guests')}>
-                    <RoomReservationBoxField value={displayGuestText} label="Voyageurs" placeHolder="1 voyageur" disabled={true}/>
+            <div
+                className={
+                    "RoomReservationBox__field RoomReservationBox__guests RoomReservationBox__field--error"
+                    + (fieldFocused === "dates" ? " RoomReservationBox__guests--unselected" : "")
+                }
+            >
+                <button className="RoomReservationBox__field-button" onFocus={() => setFieldFocused("guests")}
+                        onClick={() => setFieldSelected('guests')}>
+                    <RoomReservationBoxField value={displayGuestText} label="Voyageurs" placeHolder="1 voyageur"
+                                             disabled={true}/>
                 </button>
-                    <FieldPanel className="RoomReservationBox__guests-panel" fieldName="guests" isSelected={fieldSelected} align="right">
-                        <GuestsPanel guest={guest} setGuest={setGuest}/>
-                    </FieldPanel>
+                <FieldPanel className="RoomReservationBox__guests-panel" fieldName="guests"
+                            isSelected={fieldSelected === 'guests'}
+                            align="right">
+                    <GuestsPanel guest={guest} setGuest={setGuest} helperText={true} closeButton={true} onClose={()=>{setFieldSelected("")}}/>
+
+                </FieldPanel>
             </div>
         </div>
         <div className="RoomReservationBox__button">

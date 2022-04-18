@@ -35,17 +35,85 @@
     margin-bottom: 16px;
 }
 
-.RoomReservationBox__dates, .RoomReservationBox__guests {
-    border: 1px solid rgb(176, 176, 176);
+.RoomReservationBox__field {
     width: 100%;
     background: none;
-    z-index: 5;
+    color: black;
+    outline-color: black;
+    box-sizing: border-box;
+    border-color: rgb(176, 176, 176);
+}
+
+.RoomReservationBox__field-button {
+    width: 100%;
+    background: none;
+    border-color: inherit;
+    border-width: 0;
+    padding: 0;
+    appearance: none;
+    text-align: unset;
+    cursor: pointer;
+    color: inherit;
+}
+
+.RoomReservationBox__field-button:focus:after{
+    outline: 2px solid;
+    border-radius: 8px!important;
+    box-sizing: border-box;
+    outline-offset: -2px;
+    z-index: 10;
+    background: transparent!important;
+}
+
+.RoomReservationBox__field-button:after{
+    content: "";
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    border-width: 1px;
+    border-style: solid;
+    border-color: inherit;
+    z-index: -1;
+    inset-block-end: -1px;
+}
+.RoomReservationBox__dates .RoomReservationBox__field-button:after{
+    border-radius: 8px 8px 0 0;
+}
+
+.RoomReservationBox__guests .RoomReservationBox__field-button:after{
+    border-radius: 0 0 8px 8px;
+}
+
+.RoomReservationBox__dates--unselected .RoomReservationBox__field-button:after{
+    border-bottom: 0;
+    inset-block-end: -6px;
+    background-color: transparent!important;
+    border-color: rgb(176, 176, 176);
+}
+
+.RoomReservationBox__guests--unselected .RoomReservationBox__field-button:after{
+    border-top: 0;
+    inset-block-start: -5px;
+    background-color: transparent!important;
+    border-color: rgb(176, 176, 176);
+}
+
+.RoomReservationBox__field--error{
+    border-color: rgb(193, 53, 21);
+    color: rgb(193, 53, 21);
+    outline-color: rgb(193, 53, 21);
+    z-index: 9;
+}
+
+.RoomReservationBox__field--error .RoomReservationBox__field-button:after{
+    background-color: rgba(193, 53, 21, 0.05);
 }
 
 .RoomReservationBox__dates {
     position: relative;
     border-radius: 8px 8px 0 0;
-    border-bottom: none;
 }
 
 .RoomReservationBox__dates-container {
@@ -57,12 +125,12 @@
     min-height: 100%;
     width: 1px;
     box-sizing: border-box;
+    z-index: -2;
 }
 
 .RoomReservationBox__guests {
     border-radius: 0 0 8px 8px;
     position: relative;
-
 }
 
 .RoomReservationBox__button {
@@ -71,6 +139,8 @@
 
 .RoomReservationBoxField {
     width: 100%;
+    min-width: 1px;
+    position: relative;
     box-sizing: border-box;
     padding: 8px;
 }
@@ -78,7 +148,7 @@
 .RoomReservationBoxField__label {
     font-size: 10px;
     text-transform: uppercase;
-
+    color: inherit;
 }
 
 .RoomReservationBoxField__label--disabled {
@@ -88,6 +158,10 @@
 .RoomReservationBoxField__value {
     padding-top: 4px;
     font-size: 14px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: black;
 }
 
 .RoomReservationBoxField__input {
@@ -101,23 +175,11 @@
     color: rgb(113, 113, 113);
 }
 
-.RoomReservationBox__field-button {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 0;
-    appearance: none;
-    text-align: unset;
-    cursor: pointer;
-}
 
-.RoomReservationBox__field-button:focus {
-    outline: 2px solid black;
-    border-radius: 8px;
-    box-sizing: border-box;
-}
 
-.RoomReservationBox__guests-panel{
+.RoomReservationBox__guests-panel {
+    color: black;
+    z-index: 5;
     padding: 16px;
     border-radius: 8px;
     width: 323px;
