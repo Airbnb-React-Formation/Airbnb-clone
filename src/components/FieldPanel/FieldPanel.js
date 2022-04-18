@@ -5,9 +5,9 @@ const FieldPanel = ({children, align, isSelected, fieldName, className}) => {
         <>
             <div
                 className={
-                    (align === "right" ? "search-bar-panel align-panel-right" : "search-bar-panel")
-                    + (fieldName === 'startDate' ? " search-bar-panel-start-date" : "")
-                    + (fieldName === 'endDate' ? " search-bar-panel-end-date" : "")
+                    (align === "right" ? "FieldPanel FieldPanel--right" : "FieldPanel")
+                    + (fieldName === 'startDate' ? " FieldPanel__start-date" : "")
+                    + (fieldName === 'endDate' ? " FieldPanel__end-date" : "")
                     + (className ? " " + className : "")
                 }
             >

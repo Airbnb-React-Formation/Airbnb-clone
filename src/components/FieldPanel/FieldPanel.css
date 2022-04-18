@@ -1,4 +1,4 @@
-.search-bar-panel {
+.FieldPanel {
     border-radius: 32px;
     background-color: white;
     position: absolute;
@@ -9,18 +9,18 @@
     padding: 16px 32px 16px 32px;
     box-sizing: border-box;
 }
-.search-bar-panel:empty{
+.FieldPanel:empty{
     padding: 0;
 }
 
-.align-panel-right{
+.FieldPanel--right{
     right: 0;
 }
-.search-bar-panel-start-date{
+.FieldPanel__start-date{
     right: 0;
     transform: translateX(50%);
 }
-.search-bar-panel-end-date{
+.FieldPanel__end-date{
     left: 0;
     transform: translateX(-50%);
 }
