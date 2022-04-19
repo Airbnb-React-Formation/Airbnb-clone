@@ -41,15 +41,15 @@ const DestinationPanel = ({search, onSelect}) => {
     }, [search])
     return (
         isLoaded ?
-            <div className="suggestions-list">
+            <div className="DestinationPanel">
                 {
                     result.length ?
                         result.map(({geometry, properties: {name, type, city, country, county}}, i) => (
-                            <div key={i} className="suggestion" onClick={() => {
+                            <div key={i} className="DestinationPanel__suggestion" onClick={() => {
                                 onSelect({name: name, coordinates: geometry.coordinates})
                             }}>
-                                <div className="localisation-icon-container">
-                                    <Icon className="destination-panel__icon"><LocationIcon/></Icon>
+                                <div className="DestinationPanel__icon-container">
+                                    <Icon className="DestinationPanel__icon"><LocationIcon/></Icon>
                                 </div>
                                 <div>
                                     {name}
@@ -62,7 +62,7 @@ const DestinationPanel = ({search, onSelect}) => {
                         (
                             searchHistory?.length ?
                                 <>
-                                    <div className="suggestion__title bold">Recherches récentes</div>
+                                    <div className="DestinationPanel__suggestion-title bold">Recherches récentes</div>
                                     {searchHistory.map(({
                                                             url,
                                                             destination,
@@ -73,16 +73,16 @@ const DestinationPanel = ({search, onSelect}) => {
                                                             infants,
                                                             pets
                                                         }, i) => (
-                                        <div key={i} className="suggestion" onClick={() => {
+                                        <div key={i} className="DestinationPanel__suggestion" onClick={() => {
                                             navigate(`/search/${url}`)
                                         }}>
-                                            <div className="localisation-icon-container">
-                                                <Icon className="destination-panel__icon"><HistoryIcon/></Icon>
+                                            <div className="DestinationPanel__icon-container">
+                                                <Icon className="DestinationPanel__icon"><HistoryIcon/></Icon>
                                             </div>
                                             <div>
                                                 <div>{destination}</div>
                                                 <div
-                                                    className="suggestion__subtext">{`${moment(startDate).format("DD MMM")} - ${moment(endDate).format("DD MMM")} • ${(adults + children) + " voyageur" + isMany(adults + children)} `}</div>
+                                                    className="DestinationPanel__suggestion-subtext">{`${moment(startDate).format("DD MMM")} - ${moment(endDate).format("DD MMM")} • ${(adults + children) + " voyageur" + isMany(adults + children)} `}</div>
                                             </div>
                                         </div>
                                     ))}

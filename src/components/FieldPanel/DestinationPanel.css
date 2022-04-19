@@ -1,7 +1,7 @@
-.suggestions-list{
+.DestinationPanel{
     padding: 10px 0 10px 0;
 }
-.suggestion{
+.DestinationPanel__suggestion{
     padding: 8px 32px;
     margin: 0 -32px;
     display: flex;
@@ -9,19 +9,19 @@
     cursor: pointer;
     width: 500px;
 }
-.suggestion:hover{
+.DestinationPanel__suggestion:hover{
     background-color: rgb(247,247,247);
 }
 
-.suggestion__title{
+.DestinationPanel__suggestion-title{
     padding: 8px 0;
 }
 
-.suggestion__subtext{
+.DestinationPanel__suggestion-subtext{
     font-size: 12px;
     color: rgb(113,113,113);
 }
-.localisation-icon-container{
+.DestinationPanel__icon-container{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,7 +32,7 @@
     width: 48px;
     margin-right: 16px;
 }
-.destination-panel__icon{
+.DestinationPanel__icon{
     width: 22px;
     height: 22px;
     fill: black;
